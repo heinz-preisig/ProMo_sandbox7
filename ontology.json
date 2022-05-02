@@ -656,7 +656,7 @@
     }
   },
   "rules": {
-    "name_space": true,
+    "name_space": false,
     "network_enable_adding_indices": {
       "control": false,
       "fluid": false,
