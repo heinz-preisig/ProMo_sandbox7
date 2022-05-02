@@ -1,0 +1,87 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+
+\newenvironment{eq}{\begin{minipage}{16cm}$}{$\end{minipage} }
+%\newenvironment{eq}{$}{$}
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section*{Equation assignment sequence for variable $fnd_m$}
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{1cm}|p{1cm}|p{16cm}|p{4cm}|}\hline
+  no &var &equ &quations &token\\\hline\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+15 &2 &- &\begin{eq}t :: \text{port variable}\end{eq} & \\14 &15 &- &\begin{eq}r_x :: \text{port variable}\end{eq} & \\13 &21 &- &\begin{eq}V :: \text{port variable}\end{eq} & \\12 &17 &- &\begin{eq}r_z :: \text{port variable}\end{eq} & \\11 &16 &- &\begin{eq}r_y :: \text{port variable}\end{eq} & \\10 &19 &- &\begin{eq}U :: \text{port variable}\end{eq} & energy\\9 &18 &- &\begin{eq}n :: \text{port variable}\end{eq} & mass\\8 &9 &- &\begin{eq}P_NS_AS :: \text{port variable}\end{eq} & \\7 &1 &- &\begin{eq}F :: \text{port variable}\end{eq} & \\6 &36 &20 &\begin{eq}{v_x}_{N} := \ParDiff{{r_{x}}_{N}}{{t}_{}}\end{eq} & \\5 &53 &36 &\begin{eq}{k^{d}_{x}}_{{N S}} := \left( {\mu}_{{N S}} \right)^{-1} \, . \, \left({v_x}_{N} \, {\odot} \, \left(\left( {V}_{N} \right)^{-1} \, {\odot} \, \ParDiff{{U}_{N}}{{\mu}_{{N S}}}\right)\right)\end{eq} & energy, mass\\4 &80 &63 &\begin{eq}{A_{y,z}}_{N} := {r_{y}}_{N} \, . \, {r_{z}}_{N}\end{eq} & \\3 &70 &53 &\begin{eq}{k^{d}_{x}}_{{N S}} := {k^{d}_{x}}_{{N S}}\end{eq} & energy, mass\\2 &24 &9 &\begin{eq}{\mu}_{{N S}} := \ParDiff{{U}_{N}}{{n}_{{N S}}}\end{eq} & energy, mass\\1 &10 &6 &\begin{eq}{F}_{{N S}, {A S}} := {F}_{N, A} \, {\odot} \, {P}_{{N S}, {A S}}\end{eq} & \\0 &116 &95 &\begin{eq}{fnd_m}_{{N S}, {A S}} := {A_{y,z}}_{N} \, {\odot} \, \left( -{k^{d}_{x}}_{{N S}} \right) \, . \, \left({F}_{{N S}, {A S}} \stackrel{{N S}}{\,\star\,} {\mu}_{{N S}}\right)\end{eq} & energy, mass\\\end{longtable}
+
+\end{document}
+% ================================== end =========================================

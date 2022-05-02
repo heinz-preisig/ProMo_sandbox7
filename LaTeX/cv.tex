@@ -1,0 +1,87 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+
+\newenvironment{eq}{\begin{minipage}{16cm}$}{$\end{minipage} }
+%\newenvironment{eq}{$}{$}
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section*{Equation assignment sequence for variable $c_{v}$}
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{1cm}|p{1cm}|p{16cm}|p{4cm}|}\hline
+  no &var &equ &quations &token\\\hline\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+6 &20 &- &\begin{eq}S :: \text{port variable}\end{eq} & \\5 &19 &- &\begin{eq}U :: \text{port variable}\end{eq} & \\4 &40 &- &\begin{eq}Mm :: \text{port variable}\end{eq} & \\3 &18 &- &\begin{eq}n :: \text{port variable}\end{eq} & \\2 &23 &8 &\begin{eq}{T}_{N} := \ParDiff{{U}_{N}}{{S}_{N}}\end{eq} & \\1 &42 &25 &\begin{eq}{C_{v}}_{N} := \ParDiff{{U}_{N}}{{T}_{N}}\end{eq} & \\0 &44 &27 &\begin{eq}{c_{v}}_{S} := {C_{v}}_{N} \, . \, \left( {\lambda}_{S} \right)^{-1} \stackrel{ N \, \in \, {N S} }{\,\star\,} {n}_{{N S}}\end{eq} & \\\end{longtable}
+
+\end{document}
+% ================================== end =========================================

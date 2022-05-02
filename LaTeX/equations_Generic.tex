@@ -1,0 +1,536 @@
+
+
+\newenvironment{eq}{\begin{minipage}{15cm}$}{$\end{minipage} }
+%\newenvironment{lay}{\catcode`\_=12}{\catcode`\_=8}
+\renewcommand{\arraystretch}{2}
+
+\begin{longtable}{|p{0.5cm}|p{15cm}|p{6cm}|p{3cm}|}\hline
+no & equation &documentation &layer \\\hline\hline
+\endhead
+\hline \multicolumn{4}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+
+\hyperlink{"v:2"}{ 1 }\hypertarget{"e:1"}{  } &
+    \begin{eq}{0}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}numerical value zero\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:3"}{ 2 }\hypertarget{"e:2"}{  } &
+    \begin{eq}{1}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}numerical value one\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:4"}{ 3 }\hypertarget{"e:3"}{  } &
+    \begin{eq}{0.5}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}numerical value one half\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:7"}{ 4 }\hypertarget{"e:4"}{  } &
+    \begin{eq}{t_o}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}starting time\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:8"}{ 5 }\hypertarget{"e:5"}{  } &
+    \begin{eq}{t_e}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}end time\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:15"}{ 6 }\hypertarget{"e:6"}{  } &
+    \begin{eq}{p}{_{N}} := \left( -\ParDiff{{U}{_{N}}}{{V}{_{N}}} \right)\end{eq} &
+    \begin{lay}thermodynamic pressure\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:16"}{ 7 }\hypertarget{"e:7"}{  } &
+    \begin{eq}{T}{_{N}} := \ParDiff{{U}{_{N}}}{{S}{_{N}}}\end{eq} &
+    \begin{lay}temperature\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:18"}{ 9 }\hypertarget{"e:9"}{  } &
+    \begin{eq}{H}{_{N}} := {U}{_{N}}  - {p}{_{N}} \, . \, {V}{_{N}}\end{eq} &
+    \begin{lay}enthalpy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:19"}{ 10 }\hypertarget{"e:10"}{  } &
+    \begin{eq}{A}{_{N}} := {U}{_{N}}  - {T}{_{N}} \, . \, {S}{_{N}}\end{eq} &
+    \begin{lay}Helmholtz energy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:20"}{ 11 }\hypertarget{"e:11"}{  } &
+    \begin{eq}{G}{_{N}} := {U}{_{N}}  + {p}{_{N}} \, . \, {V}{_{N}}  - {T}{_{N}} \, . \, {S}{_{N}}\end{eq} &
+    \begin{lay}Gibbs energy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:21"}{ 12 }\hypertarget{"e:12"}{  } &
+    \begin{eq}{v_x}{_{N}} := \ParDiff{{r_x}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}velocity in x-direction\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:22"}{ 13 }\hypertarget{"e:13"}{  } &
+    \begin{eq}{v_y}{_{N}} := \ParDiff{{r_y}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}velocity in y direction\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:24"}{ 14 }\hypertarget{"e:14"}{  } &
+    \begin{eq}{v_z}{_{N}} := \ParDiff{{r_z}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}velocity in z-direction\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:25"}{ 15 }\hypertarget{"e:15"}{  } &
+    \begin{eq}{v}{_{N}} := \text{Stack}\left( {v_x}{_{N}},{v_y}{_{N}},{v_z}{_{N}} \right)\end{eq} &
+    \begin{lay}velocity vector\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:27"}{ 16 }\hypertarget{"e:16"}{  } &
+    \begin{eq}{Bo}{_{N}} := \text{Instantiate}({S}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}Boltzmann constant\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:28"}{ 17 }\hypertarget{"e:17"}{  } &
+    \begin{eq}{R}{_{N}} := {A^v}{_{}} \, . \, {Bo}{_{N}}\end{eq} &
+    \begin{lay}Gas constant\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:30"}{ 18 }\hypertarget{"e:18"}{  } &
+    \begin{eq}{C_p}{_{N}} := \ParDiff{{H}{_{N}}}{{T}{_{N}}}\end{eq} &
+    \begin{lay}total heat capacity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:31"}{ 19 }\hypertarget{"e:19"}{  } &
+    \begin{eq}{C_v}{_{N}} := \ParDiff{{U}{_{N}}}{{T}{_{N}}}\end{eq} &
+    \begin{lay}total heat capacity at constant volume\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:34"}{ 22 }\hypertarget{"e:22"}{  } &
+    \begin{eq}{k^q_x}{_{N}} := \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{T}{_{N}}} \, . \, {v_x}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:35"}{ 23 }\hypertarget{"e:23"}{  } &
+    \begin{eq}{k^q_y}{_{N}} := \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{T}{_{N}}} \, . \, {v_y}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:36"}{ 24 }\hypertarget{"e:24"}{  } &
+    \begin{eq}{k^q_z}{_{N}} := \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{T}{_{N}}} \, . \, {v_z}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:37"}{ 25 }\hypertarget{"e:25"}{  } &
+    \begin{eq}{k^q}{_{N}} := \text{Stack}\left( {k^q_x}{_{N}},{k^q_y}{_{N}},{k^q_z}{_{N}} \right)\end{eq} &
+    \begin{lay}Carthesian thermal conductivity vector\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:45"}{ 32 }\hypertarget{"e:32"}{  } &
+    \begin{eq}{\mu}{_{{N S}}} := \ParDiff{{U}{_{N}}}{{n}{_{{N S}}}}\end{eq} &
+    \begin{lay}chemical potential\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:50"}{ 37 }\hypertarget{"e:37"}{  } &
+    \begin{eq}{k^c_x}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {v_x}{_{N}}\end{eq} &
+    \begin{lay}convective mass convectivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:51"}{ 38 }\hypertarget{"e:38"}{  } &
+    \begin{eq}{k^c_y}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {v_y}{_{N}}\end{eq} &
+    \begin{lay}convective mass convectivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:52"}{ 39 }\hypertarget{"e:39"}{  } &
+    \begin{eq}{k^c_z}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {v_z}{_{N}}\end{eq} &
+    \begin{lay}convective mass convectivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:53"}{ 40 }\hypertarget{"e:40"}{  } &
+    \begin{eq}{k^c}{_{N}} := \text{Stack}\left( {k^c_x}{_{N}},{k^c_y}{_{N}},{k^c_z}{_{N}} \right)\end{eq} &
+    \begin{lay}Cartesian convective mass convectivity vector\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:54"}{ 41 }\hypertarget{"e:41"}{  } &
+    \begin{eq}{k^d_x}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({v_x}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
+    \begin{lay}diffusional mass conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:55"}{ 42 }\hypertarget{"e:42"}{  } &
+    \begin{eq}{k^d_y}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({v_y}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
+    \begin{lay}diffusional mass conductivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:56"}{ 43 }\hypertarget{"e:43"}{  } &
+    \begin{eq}{k^d_z}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({v_z}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
+    \begin{lay}diffusional mass conductivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:57"}{ 44 }\hypertarget{"e:44"}{  } &
+    \begin{eq}{k^d}{_{{N S}}} := \text{Stack}\left( {k^d_x}{_{{N S}}},{k^d_y}{_{{N S}}},{k^d_z}{_{{N S}}} \right)\end{eq} &
+    \begin{lay}Cartesian dffusional mass conductivity vector\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:58"}{ 45 }\hypertarget{"e:45"}{  } &
+    \begin{eq}{h}{_{{N S}}} := {H}{_{N}} \, {\odot} \, \left( {n}{_{{N S}}} \right)^{-1}\end{eq} &
+    \begin{lay}partial molar enthalpies\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:65"}{ 46 }\hypertarget{"e:46"}{  } &
+    \begin{eq}{d}{_{A}} := \text{sign} \left( {F}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}} \right)\end{eq} &
+    \begin{lay}direction of convective flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:69"}{ 47 }\hypertarget{"e:47"}{  } &
+    \begin{eq}{m}{_{N}} := {\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
+    \begin{lay}mass\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:71"}{ 49 }\hypertarget{"e:49"}{  } &
+    \begin{eq}{\rho}{_{N}} := {m}{_{N}} \, . \, \left( {V}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}mass density\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:73"}{ 51 }\hypertarget{"e:51"}{  } &
+    \begin{eq}{F}{_{{N S}, {A S}}} := {F}{_{N, A}} \, {\odot} \, {P}{_{{N S}, {A S}}}\end{eq} &
+    \begin{lay}incidence matrix of directed graphs for for species NS x AS\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:77"}{ 55 }\hypertarget{"e:55"}{  } &
+    \begin{eq}{T}{_{{N K}}} := {P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {T}{_{N}}\end{eq} &
+    \begin{lay}temperature in reactive systems\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:87"}{ 64 }\hypertarget{"e:64"}{  } &
+    \begin{eq}{E_a}{_{{N K}}} := \text{Instantiate}({P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {R}{_{N}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}Arrhenius's activation energy\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:89"}{ 65 }\hypertarget{"e:65"}{  } &
+    \begin{eq}{K}{_{{N K}}} := {K^o}{_{K}} \, {\odot} \, exp(\left( -{E_a}{_{{N K}}} \right) \, . \, \left( {R}{_{N}} \stackrel{N}{\,\star\,} {P}{_{N, {N K}}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
+    \begin{lay}Arrhenius reaction constant\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:93"}{ 69 }\hypertarget{"e:69"}{  } &
+    \begin{eq}{N}{_{{N S}, {N K}}} := {P}{_{S, {N S}}} \stackrel{S}{\,\star\,} \left(\left({P}{_{K, {N K}}} \, . \, {T}{_{{N K}}} \, . \, \left( {T}{_{{N K}}} \right)^{-1}\right) \stackrel{K}{\,\star\,} {N}{_{S, K}}\right)\end{eq} &
+    \begin{lay}extended stoichiometric matrix\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:95"}{ 71 }\hypertarget{"e:71"}{  } &
+    \begin{eq}{A_{yz}}{_{N}} := {r_y}{_{N}} \, . \, {r_z}{_{N}}\end{eq} &
+    \begin{lay}cross sectional area in x-direction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:96"}{ 72 }\hypertarget{"e:72"}{  } &
+    \begin{eq}{A_{xz}}{_{N}} := {r_x}{_{N}} \, . \, {r_z}{_{N}}\end{eq} &
+    \begin{lay}cross sectional area in y direction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:97"}{ 73 }\hypertarget{"e:73"}{  } &
+    \begin{eq}{A_{xy}}{_{N}} := {r_x}{_{N}} \, . \, {r_y}{_{N}}\end{eq} &
+    \begin{lay}cross sectional area in z-direction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:98"}{ 74 }\hypertarget{"e:74"}{  } &
+    \begin{eq}{\hat{V}}{_{A}} := \left( {\rho}{_{N}} \right)^{-1} \, . \, {k^c_x}{_{N}} \, . \, {A_{yz}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}}\end{eq} &
+    \begin{lay}volumetric flow in x-direction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:104"}{ 80 }\hypertarget{"e:80"}{  } &
+    \begin{eq}{\hat{n}^d}{_{{A S}}} := {A_{yz}}{_{N}} \, {\odot} \, \left( -{k^d_x}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} &
+    \begin{lay}diffusional mass transfer per arc\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:105"}{ 81 }\hypertarget{"e:81"}{  } &
+    \begin{eq}{\hat{n}^d}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} {\hat{n}^d}{_{{A S}}}\end{eq} &
+    \begin{lay}net diffusional mass transfer\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:106"}{ 82 }\hypertarget{"e:82"}{  } &
+    \begin{eq}{\hat{H}^d}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {\hat{n}^d}{_{{A S}}}\end{eq} &
+    \begin{lay}enthalpy flow due to mass diffusion per arc\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:107"}{ 83 }\hypertarget{"e:83"}{  } &
+    \begin{eq}{\hat{H}^d}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {\hat{H}^d}{_{A}}\end{eq} &
+    \begin{lay}net enthalpy flow due to mass diffusion\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:108"}{ 84 }\hypertarget{"e:84"}{  } &
+    \begin{eq}{c}{_{{N S}}} := \left( {V}{_{N}} \right)^{-1} \, {\odot} \, {n}{_{{N S}}}\end{eq} &
+    \begin{lay}molar concentration\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:109"}{ 85 }\hypertarget{"e:85"}{  } &
+    \begin{eq}{c}{_{{A S}}} := \left({0.5}{_{}} \, . \, \left({F}{_{{N S}, {A S}}}  - {d}{_{A}} \, {\odot} \, |{F}{_{{N S}, {A S}}}|\right)\right) \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} &
+    \begin{lay}moler concentration in convective arc\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:110"}{ 86 }\hypertarget{"e:86"}{  } &
+    \begin{eq}{\hat{n}^c}{_{{A S}}} := {\hat{V}}{_{A}} \, {\odot} \, {c}{_{{A S}}}\end{eq} &
+    \begin{lay}convective molar mass flow per arc\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:111"}{ 87 }\hypertarget{"e:87"}{  } &
+    \begin{eq}{\hat{n}^c}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} {\hat{n}^c}{_{{A S}}}\end{eq} &
+    \begin{lay}net convective molar mass flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:114"}{ 90 }\hypertarget{"e:90"}{  } &
+    \begin{eq}{c}{_{{K S}}} := {c}{_{{N S}}} \stackrel{{N S}}{\,\star\,} {P}{_{{N S}, {K S}}}\end{eq} &
+    \begin{lay}molar concentrations in reactive system\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:115"}{ 91 }\hypertarget{"e:91"}{  } &
+    \begin{eq}{c^o}{_{{K S}}} := \text{Instantiate}({c}{_{{K S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}norming molar concentrations\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:116"}{ 92 }\hypertarget{"e:92"}{  } &
+    \begin{eq}{\phi}{_{{K S}}} := \prod\left(  {c}{_{{K S}}} \, . \, \left( {c^o}{_{{K S}}} \right)^{-1}   \right)\end{eq} &
+    \begin{lay}probability of species to meet\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:117"}{ 93 }\hypertarget{"e:93"}{  } &
+    \begin{eq}{\xi}{_{{N K}}} := {K}{_{{N K}}} \, . \, {P}{_{{N K}, {K S}}} \stackrel{{K S}}{\,\star\,} {\phi}{_{{K S}}}\end{eq} &
+    \begin{lay}extend of reaction per volume\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:118"}{ 94 }\hypertarget{"e:94"}{  } &
+    \begin{eq}{\tilde{n}}{_{{N S}}} := {V}{_{N}} \, {\odot} \, \left({N}{_{{N S}, {N K}}} \stackrel{{N K}}{\,\star\,} {\xi}{_{{N K}}}\right)\end{eq} &
+    \begin{lay}production term\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:119"}{ 95 }\hypertarget{"e:95"}{  } &
+    \begin{eq}{\dot{n}}{_{{N S}}} := {\hat{n}^c}{_{{N S}}}  + {\hat{n}^d}{_{{N S}}}  + {\tilde{n}}{_{{N S}}}\end{eq} &
+    \begin{lay}differential molar mass balance\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:120"}{ 96 }\hypertarget{"e:96"}{  } &
+    \begin{eq}{\hat{H}^c}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {\hat{n}^c}{_{{A S}}}\end{eq} &
+    \begin{lay}enthalpy flow due to convective mass flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:121"}{ 97 }\hypertarget{"e:97"}{  } &
+    \begin{eq}{\hat{H}^c}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {\hat{H}^c}{_{A}}\end{eq} &
+    \begin{lay}net enthalpy flow due to convective mass flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:122"}{ 98 }\hypertarget{"e:98"}{  } &
+    \begin{eq}{\hat{w}}{_{A}} := \text{Instantiate}({\hat{H}^c}{_{A}}, {\#}{_{}})\end{eq} &
+    \begin{lay}example of work flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:123"}{ 99 }\hypertarget{"e:99"}{  } &
+    \begin{eq}{\hat{w}}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {\hat{w}}{_{A}}\end{eq} &
+    \begin{lay}net work flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:124"}{ 100 }\hypertarget{"e:100"}{  } &
+    \begin{eq}{\hat{q}}{_{A}} := {A_{yz}}{_{N}} \, . \, {k^q_x}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {T}{_{N}}\end{eq} &
+    \begin{lay}heat flow in x-direction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:125"}{ 101 }\hypertarget{"e:101"}{  } &
+    \begin{eq}{\hat{q}}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {\hat{q}}{_{A}}\end{eq} &
+    \begin{lay}net heat flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:126"}{ 102 }\hypertarget{"e:102"}{  } &
+    \begin{eq}{\dot{H}}{_{N}} := {\hat{H}^c}{_{N}}  + {\hat{H}^d}{_{N}}  + {\hat{q}}{_{N}}  + {\hat{w}}{_{N}}\end{eq} &
+    \begin{lay}differential enthalpy balance\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:138"}{ 103 }\hypertarget{"e:103"}{  } &
+    \begin{eq}{x^o}{_{N}} := \text{Instantiate}({x}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}controller initial condition\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:140"}{ 104 }\hypertarget{"e:104"}{  } &
+    \begin{eq}{e}{_{A}} := {m}{_{A}}  - {y^o}{_{A}}\end{eq} &
+    \begin{lay}control error\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:144"}{ 106 }\hypertarget{"e:106"}{  } &
+    \begin{eq}{\dot{x}}{_{D}} := {A}{_{N, D}} \stackrel{N}{\,\star\,} {x}{_{N}}  + {B}{_{A, D}} \stackrel{A}{\,\star\,} {e}{_{A}}\end{eq} &
+    \begin{lay}differential controller state\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:137"}{ 112 }\hypertarget{"e:112"}{  } &
+    \begin{eq}{x}{_{N}} := \int_{ {t_o}{_{}} }^{ {t_e}{_{}} } \, {I}{_{N, D}} \stackrel{D}{\,\star\,} {\dot{x}}{_{D}} \enskip d\,{t}{_{}}\end{eq} &
+    \begin{lay}controller state\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:16"}{ 113 }\hypertarget{"e:113"}{  } &
+    \begin{eq}{T}{_{N}} := \text{Instantiate}({T}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}temperature\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:45"}{ 114 }\hypertarget{"e:114"}{  } &
+    \begin{eq}{\mu}{_{{N S}}} := \text{Instantiate}({\mu}{_{{N S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}chemical potential\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:15"}{ 115 }\hypertarget{"e:115"}{  } &
+    \begin{eq}{p}{_{N}} := \text{Instantiate}({p}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}thermodynamic pressure\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:42"}{ 116 }\hypertarget{"e:116"}{  } &
+    \begin{eq}{n}{_{{N S}}} := \int_{ {t_o}{_{}} }^{ {t_e}{_{}} } \, {\dot{n}}{_{{N S}}} \enskip d\,{t}{_{}}  + {{n^o}}{_{{N S}}}\end{eq} &
+    \begin{lay}species molar mass\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:145"}{ 117 }\hypertarget{"e:117"}{  } &
+    \begin{eq}{T_{ref}}{_{N}} := \text{Instantiate}({T}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}refernce temperature\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:148"}{ 120 }\hypertarget{"e:120"}{  } &
+    \begin{eq}{cp}{_{N}} := {C_p}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}specific heat capacity at constant pressure\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:149"}{ 121 }\hypertarget{"e:121"}{  } &
+    \begin{eq}{cv}{_{N}} := {C_v}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}specific heat capacity at constant volume\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:18"}{ 122 }\hypertarget{"e:122"}{  } &
+    \begin{eq}{H}{_{N}} := {m}{_{N}} \, . \, \int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \, {cp}{_{N}} \enskip d\,{T}{_{N}}\end{eq} &
+    \begin{lay}enthalpy\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:18"}{ 123 }\hypertarget{"e:123"}{  } &
+    \begin{eq}{H}{_{N}} := \int_{ {t_o}{_{}} }^{ {t_e}{_{}} } \, {\dot{H}}{_{N}} \enskip d\,{t}{_{}}  + {{H^o}}{_{N}}\end{eq} &
+    \begin{lay}enthalpy\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:150"}{ 124 }\hypertarget{"e:124"}{  } &
+    \begin{eq}{{n^o}}{_{{N S}}} := \text{Instantiate}({n}{_{{N S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}initial condition for species mass in nodes\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:151"}{ 125 }\hypertarget{"e:125"}{  } &
+    \begin{eq}{{H^o}}{_{N}} := \text{Instantiate}({H}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}initial condition for enthalpy in nodes\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:152"}{ 126 }\hypertarget{"e:126"}{  } &
+    \begin{eq}{\psi}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}} \right)\end{eq} &
+    \begin{lay}collected intensities\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:108"}{ 127 }\hypertarget{"e:127"}{  } &
+    \begin{eq}{c}{_{{N S}}} := \text{Instantiate}({c}{_{{N S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}molar concentration\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:126"}{ 128 }\hypertarget{"e:128"}{  } &
+    \begin{eq}{\dot{H}}{_{N}} := \text{Instantiate}({\dot{H}}{_{N}}, {0}{_{}})\end{eq} &
+    \begin{lay}differential enthalpy balance\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:119"}{ 129 }\hypertarget{"e:129"}{  } &
+    \begin{eq}{\dot{n}}{_{{N S}}} := \text{Instantiate}({\dot{n}}{_{{N S}}}, {0}{_{}})\end{eq} &
+    \begin{lay}differential molar mass balance\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:153"}{ 130 }\hypertarget{"e:130"}{  } &
+    \begin{eq}{phi}{_{}} := \text{MixedStack}\left( {n}{_{{N S}}},{H}{_{N}} \right)\end{eq} &
+    \begin{lay}state for mass and energy\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:34"}{ 131 }\hypertarget{"e:131"}{  } &
+    \begin{eq}{k^q_x}{_{N}} := \text{Instantiate}({k^q_x}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}thermal conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:35"}{ 132 }\hypertarget{"e:132"}{  } &
+    \begin{eq}{k^q_y}{_{N}} := \text{Instantiate}({k^q_y}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}thermal conductivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:36"}{ 133 }\hypertarget{"e:133"}{  } &
+    \begin{eq}{k^q_z}{_{N}} := \text{Instantiate}({k^q_z}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}thermal conductivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:50"}{ 134 }\hypertarget{"e:134"}{  } &
+    \begin{eq}{k^c_x}{_{N}} := \text{Instantiate}({k^c_x}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}convective mass convectivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:51"}{ 135 }\hypertarget{"e:135"}{  } &
+    \begin{eq}{k^c_y}{_{N}} := \text{Instantiate}({k^c_y}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}convective mass convectivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:52"}{ 136 }\hypertarget{"e:136"}{  } &
+    \begin{eq}{k^c_z}{_{N}} := \text{Instantiate}({k^c_z}{_{N}} \, . \, {\#}{_{}}, -)\end{eq} &
+    \begin{lay}convective mass convectivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:54"}{ 137 }\hypertarget{"e:137"}{  } &
+    \begin{eq}{k^d_x}{_{{N S}}} := \text{Instantiate}({k^d_x}{_{{N S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}diffusional mass conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:55"}{ 138 }\hypertarget{"e:138"}{  } &
+    \begin{eq}{k^d_y}{_{{N S}}} := \text{Instantiate}({k^d_y}{_{{N S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}diffusional mass conductivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:58"}{ 139 }\hypertarget{"e:139"}{  } &
+    \begin{eq}{h}{_{{N S}}} := \text{Instantiate}({h}{_{{N S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}partial molar enthalpies\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:148"}{ 140 }\hypertarget{"e:140"}{  } &
+    \begin{eq}{cp}{_{N}} := \text{Instantiate}({cp}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}specific heat capacity at constant pressure\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:149"}{ 141 }\hypertarget{"e:141"}{  } &
+    \begin{eq}{cv}{_{N}} := \text{Instantiate}({cv}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}specific heat capacity at constant volume\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:29"}{ 142 }\hypertarget{"e:142"}{  } &
+    \begin{eq}{\lambda}{_{S}} := \text{Instantiate}({\lambda}{_{S}}, {\#}{_{}})\end{eq} &
+    \begin{lay}species molecular masses\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:154"}{ 143 }\hypertarget{"e:143"}{  } &
+    \begin{eq}{\theta}{_{}} := \text{MixedStack}\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{cp}{_{N}},{cv}{_{N}},{\lambda}{_{S}},{\rho}{_{N}} \right)\end{eq} &
+    \begin{lay}available data set\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:133"}{ 144 }\hypertarget{"e:144"}{  } &
+    \begin{eq}{C}{_{N, A}} := \text{Instantiate}({C}{_{N, A}}, {\#}{_{}})\end{eq} &
+    \begin{lay}measurement matrix\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:134"}{ 145 }\hypertarget{"e:145"}{  } &
+    \begin{eq}{D}{_{N, D}} := \text{Instantiate}({D}{_{N, D}}, {\#}{_{}})\end{eq} &
+    \begin{lay}event matrix (dimension issue)\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:135"}{ 146 }\hypertarget{"e:146"}{  } &
+    \begin{eq}{y^o}{_{A}} := \text{Instantiate}({y^o}{_{A}}, {\#}{_{}})\end{eq} &
+    \begin{lay}set point\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:136"}{ 147 }\hypertarget{"e:147"}{  } &
+    \begin{eq}{D}{_{A}} := \text{Instantiate}({D}{_{A}}, {\#}{_{}})\end{eq} &
+    \begin{lay}event diagonal matrix (no dimension problem)\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:142"}{ 148 }\hypertarget{"e:148"}{  } &
+    \begin{eq}{A}{_{N, D}} := \text{Instantiate}({A}{_{N, D}}, {\#}{_{}})\end{eq} &
+    \begin{lay}dynamic control matrix\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:143"}{ 149 }\hypertarget{"e:149"}{  } &
+    \begin{eq}{B}{_{A, D}} := \text{Instantiate}({B}{_{A, D}}, {\#}{_{}})\end{eq} &
+    \begin{lay}input matrix\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:155"}{ 150 }\hypertarget{"e:150"}{  } &
+    \begin{eq}{y}{_{A}} := {C}{_{N, A}} \stackrel{N}{\,\star\,} {x}{_{N}}  + {D}{_{A}} \, . \, {e}{_{A}}\end{eq} &
+    \begin{lay}controller output\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:155"}{ 153 }\hypertarget{"e:153"}{  } &
+    \begin{eq}{y}{_{A}} := {D}{_{A}} \, . \, {e}{_{A}}\end{eq} &
+    \begin{lay}controller output\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:71"}{ 154 }\hypertarget{"e:154"}{  } &
+    \begin{eq}{\rho}{_{N}} := \text{Instantiate}({\rho}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}mass density\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:158"}{ 155 }\hypertarget{"e:155"}{  } &
+    \begin{eq}{u}{_{A}} := {1}{_{}} \, . \, {y}{_{A}}\end{eq} &
+    \begin{lay}data link\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:165"}{ 161 }\hypertarget{"e:161"}{  } &
+    \begin{eq}{c_{norm}}{_{N}} := {1}{_{{N S}}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {c}{_{{N S}}}\end{eq} &
+    \begin{lay}moles per node\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:166"}{ 162 }\hypertarget{"e:162"}{  } &
+    \begin{eq}{\xi}{_{{N S}}} := \left( {c_{norm}}{_{N}} \right)^{-1} \, {\odot} \, {c}{_{{N S}}}\end{eq} &
+    \begin{lay}mole fractions \end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:175"}{ 171 }\hypertarget{"e:171"}{  } &
+    \begin{eq}{\xi}{_{N}} := \text{Instantiate}({\xi}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}active additive fraction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:179"}{ 176 }\hypertarget{"e:176"}{  } &
+    \begin{eq}{Ue}{_{N}} := \left( {C}{_{}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
+    \begin{lay}electrical potential\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:180"}{ 177 }\hypertarget{"e:177"}{  } &
+    \begin{eq}{i}{_{}} := \TotDiff{{C}{_{}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}electrical current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:181"}{ 178 }\hypertarget{"e:178"}{  } &
+    \begin{eq}{R^{e}}{_{N}} := \left( {i}{_{}} \right)^{-1} \, . \, {Ue}{_{N}}\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:182"}{ 179 }\hypertarget{"e:179"}{  } &
+    \begin{eq}{k^{e,\xi}}{_{N}} := \left( {R^{e}}{_{N}} \right)^{-1} \, . \, {\xi}{_{N}}\end{eq} &
+    \begin{lay}electrical conductivity of electrolyte simple model\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:181"}{ 180 }\hypertarget{"e:180"}{  } &
+    \begin{eq}{R^{e}}{_{N}} := \text{Instantiate}({R^{e}}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:179"}{ 181 }\hypertarget{"e:181"}{  } &
+    \begin{eq}{Ue}{_{N}} := \left( {k^{e,\xi}}{_{N}} \right)^{-1} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}electrical potential\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:183"}{ 182 }\hypertarget{"e:182"}{  } &
+    \begin{eq}{{\dot{U}^{e}}}{_{N}} := {1}{_{N}} \, . \, {Ue}{_{N}}\end{eq} &
+    \begin{lay}Kirkhoff first law\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:183"}{ 183 }\hypertarget{"e:183"}{  } &
+    \begin{eq}{{\dot{U}^{e}}}{_{N}} := \text{Instantiate}({{\dot{U}^{e}}}{_{N}}, {0}{_{}})\end{eq} &
+    \begin{lay}Kirkhoff first law\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:180"}{ 185 }\hypertarget{"e:185"}{  } &
+    \begin{eq}{i}{_{}} := Root\left( {{\dot{U}^{e}}}{_{N}}\right)\end{eq} &
+    \begin{lay}electrical current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:185"}{ 186 }\hypertarget{"e:186"}{  } &
+    \begin{eq}{i}{_{A}} := {1}{_{A}} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}current in arcs is the same in the circuit\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:186"}{ 187 }\hypertarget{"e:187"}{  } &
+    \begin{eq}{k^{e}}{_{N}} := \left( {R^{e}}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:179"}{ 188 }\hypertarget{"e:188"}{  } &
+    \begin{eq}{Ue}{_{N}} := {R^{e}}{_{N}} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}electrical potential\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:180"}{ 189 }\hypertarget{"e:189"}{  } &
+    \begin{eq}{i}{_{}} := Root\left( {Ue}{_{N}}\right)\end{eq} &
+    \begin{lay}electrical current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:187"}{ 190 }\hypertarget{"e:190"}{  } &
+    \begin{eq}{I}{_{}} := {i}{_{}}\end{eq} &
+    \begin{lay}measured current\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:188"}{ 191 }\hypertarget{"e:191"}{  } &
+    \begin{eq}{U}{_{N}} := {Ue}{_{N}}\end{eq} &
+    \begin{lay}measured potential differences\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:189"}{ 192 }\hypertarget{"e:192"}{  } &
+    \begin{eq}{a}{_{N}} := {\xi}{_{N}}\end{eq} &
+    \begin{lay}var doc : \end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:190"}{ 193 }\hypertarget{"e:193"}{  } &
+    \begin{eq}{R}{_{N}} := \left( {I}{_{}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
+    \begin{lay}computed potential difference\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:191"}{ 194 }\hypertarget{"e:194"}{  } &
+    \begin{eq}{store}{_{}} := \text{MixedStack}\left( {I}{_{}},{U}{_{N}},{R}{_{N}},{a}{_{N}} \right)\end{eq} &
+    \begin{lay}var doc : \end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:179"}{ 195 }\hypertarget{"e:195"}{  } &
+    \begin{eq}{Ue}{_{N}} := \text{Instantiate}({Ue}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}electrical potential\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hline
+\end{longtable}

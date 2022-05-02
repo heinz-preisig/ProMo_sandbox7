@@ -1,0 +1,193 @@
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{3cm}|p{7cm}|p{3.0cm}|p{3cm}|p{2cm}|p{1cm}|}\hline
+ &var & \text{symbol} &documentation &type &units &tokens &eqs \\\hline\hline
+\endhead
+\hline \multicolumn{4}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+
+
+139
+             & \hypertarget{"v:139"}{ $ {m}{_{A}} $}
+             & \verb|mc|
+             & measurements
+             & \begin{lay}input \end{lay}
+             & $  $
+             & []
+             & \\
+    158
+             & \hypertarget{"v:158"}{ $ {u}{_{A}} $}
+             & \verb|u|
+             & data link
+             & \begin{lay}input \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:155"}{ 155 }
+                 \\
+    129
+             & \hypertarget{"v:129"}{ $ {I}{_{N, D}} $}
+             & \verb|I_N_D|
+             & identity to shift from differential space integral space
+             & \begin{lay}network \end{lay}
+             & $  $
+             & []
+             & \\
+    130
+             & \hypertarget{"v:130"}{ $ {I}{_{A, D}} $}
+             & \verb|I_A_D|
+             & identity to shift from differential space to arc
+             & \begin{lay}network \end{lay}
+             & $  $
+             & []
+             & \\
+    137
+             & \hypertarget{"v:137"}{ $ {x}{_{N}} $}
+             & \verb|x|
+             & controller state
+             & \begin{lay}state \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:112"}{ 112 }
+                 \\
+    138
+             & \hypertarget{"v:138"}{ $ {x^o}{_{N}} $}
+             & \verb|xo|
+             & controller initial condition
+             & \begin{lay}state \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:103"}{ 103 }
+                 \\
+    133
+             & \hypertarget{"v:133"}{ $ {C}{_{N, A}} $}
+             & \verb|Cx|
+             & measurement matrix
+             & \begin{lay}constant \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:144"}{ 144 }
+                 \\
+    134
+             & \hypertarget{"v:134"}{ $ {D}{_{N, D}} $}
+             & \verb|Dx|
+             & event matrix (dimension issue)
+             & \begin{lay}constant \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:145"}{ 145 }
+                 \\
+    135
+             & \hypertarget{"v:135"}{ $ {y^o}{_{A}} $}
+             & \verb|setpoint|
+             & set point
+             & \begin{lay}constant \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:146"}{ 146 }
+                 \\
+    136
+             & \hypertarget{"v:136"}{ $ {D}{_{A}} $}
+             & \verb|D_A|
+             & event diagonal matrix (no dimension problem)
+             & \begin{lay}constant \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:147"}{ 147 }
+                 \\
+    142
+             & \hypertarget{"v:142"}{ $ {A}{_{N, D}} $}
+             & \verb|Ax|
+             & dynamic control matrix
+             & \begin{lay}constant \end{lay}
+             & $ s^{-1} \, $
+             & []
+             & \hyperlink{"e:148"}{ 148 }
+                 \\
+    143
+             & \hypertarget{"v:143"}{ $ {B}{_{A, D}} $}
+             & \verb|Bx|
+             & input matrix
+             & \begin{lay}constant \end{lay}
+             & $ s^{-1} \, $
+             & []
+             & \hyperlink{"e:149"}{ 149 }
+                 \\
+    144
+             & \hypertarget{"v:144"}{ $ {\dot{x}}{_{D}} $}
+             & \verb|dxdt|
+             & differential controller state
+             & \begin{lay}diffState \end{lay}
+             & $ s^{-1} \, $
+             & []
+             & \hyperlink{"e:106"}{ 106 }
+                 \\
+    140
+             & \hypertarget{"v:140"}{ $ {e}{_{A}} $}
+             & \verb|e|
+             & control error
+             & \begin{lay}algebraic \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:104"}{ 104 }
+                 \\
+    155
+             & \hypertarget{"v:155"}{ $ {y}{_{A}} $}
+             & \verb|y|
+             & controller output
+             & \begin{lay}algebraic \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:150"}{ 150 }
+                 \hyperlink{"e:153"}{ 153 }
+                 \\
+    187
+             & \hypertarget{"v:187"}{ $ {I}{_{}} $}
+             & \verb|measuredCurrent|
+             & measured current
+             & \begin{lay}algebraic \end{lay}
+             & $ A \, $
+             & []
+             & \hyperlink{"e:190"}{ 190 }
+                 \\
+    188
+             & \hypertarget{"v:188"}{ $ {U}{_{N}} $}
+             & \verb|measuredPotentialDiff|
+             & measured potential differences
+             & \begin{lay}algebraic \end{lay}
+             & $ kg \,m^{2} \,A^{-1} s^{-3} \, $
+             & []
+             & \hyperlink{"e:191"}{ 191 }
+                 \\
+    189
+             & \hypertarget{"v:189"}{ $ {a}{_{N}} $}
+             & \verb|measuredAdditive|
+             & 
+             & \begin{lay}algebraic \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:192"}{ 192 }
+                 \\
+    190
+             & \hypertarget{"v:190"}{ $ {R}{_{N}} $}
+             & \verb|compResistance|
+             & computed potential difference
+             & \begin{lay}algebraic \end{lay}
+             & $ kg \,m^{2} \,A^{-2} s^{-3} \, $
+             & []
+             & \hyperlink{"e:193"}{ 193 }
+                 \\
+    191
+             & \hypertarget{"v:191"}{ $ {store}{_{}} $}
+             & \verb|store|
+             & 
+             & \begin{lay}algebraic \end{lay}
+             & $  $
+             & []
+             & \hyperlink{"e:194"}{ 194 }
+                 \\
+    \end{longtable}

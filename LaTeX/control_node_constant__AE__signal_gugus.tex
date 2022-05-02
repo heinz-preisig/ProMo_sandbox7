@@ -1,0 +1,102 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+
+\newenvironment{eq}{\begin{minipage}{16cm}$}{$\end{minipage} }
+%\newenvironment{eq}{$}{$}
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section*{Equation assignment sequence for variable $R$}
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{1cm}|p{1cm}|p{16cm}|p{4cm}|}\hline
+  no &var &equ &quations &token\\\hline\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+13 &177 &- &\begin{eq}{P}{_{N, {N S}}} :: \text{port variable}\end{eq} & \\
+12 &170 &- &\begin{eq}{1}{_{N}} :: \text{port variable}\end{eq} & \\
+11 &1 &- &\begin{eq}{\#}{_{}} :: \text{port variable}\end{eq} & \\
+10 &191 &194 &\begin{eq}{k^{e,\xi}}{_{N}} := \text{Instantiate}({k^{e,\xi}}{_{N}}, {\#}{_{}})\end{eq} & \\
+9 &183 &179 &\begin{eq}{i}{_{{N S}}} := {P}{_{N, {N S}}} \stackrel{N}{\,\star\,} {i}{_{N}}\end{eq} & \\
+8 &187 &198 &\begin{eq}{i}{_{}} := Root\left( {i}{_{N}}\right)\end{eq} & \\
+7 &182 &195 &\begin{eq}{k^{e}}{_{N}} := {k^{e,\xi}}{_{N}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {\xi}{_{{N S}}}\end{eq} & \\
+6 &182 &178 &\begin{eq}{k^{e}}{_{N}} := {i}{_{N}} \, . \, \left( {U^{e}}{_{N}} \right)^{-1}\end{eq} & \\
+5 &185 &181 &\begin{eq}{k^{e,\xi}}{_{N}} := \left( {U^{e}}{_{N}} \right)^{-1} \, . \, \left({i}{_{{N S}}} \stackrel{ S \, \in \, {N S} }{\,\star\,} ln({\xi}{_{{N S}}})\right)\end{eq} & \\
+4 &173 &197 &\begin{eq}{i}{_{N}} := {1}{_{N}} \, . \, {i}{_{}}\end{eq} & \\
+3 &173 &196 &\begin{eq}{i}{_{N}} := {k^{e}}{_{N}} \, . \, {U^{e}}{_{N}}\end{eq} & \\
+2 &160 &182 &\begin{eq}{U^{e}}{_{N}} := \left( {k^{e,\xi}}{_{N}} \right)^{-1} \, . \, {i}{_{N}}\end{eq} & \\
+1 &160 &177 &\begin{eq}{U^{e}}{_{N}} := \text{Instantiate}({U^{e}}{_{N}}, {\#}{_{}})\end{eq} & \\
+0 &195 &202 &\begin{eq}{R}{_{N}} := {U^{e}}{_{N}} \, . \, \left( {I}{_{}} \right)^{-1}\end{eq} & \\
+
+\end{longtable}
+
+\end{document}
+% ================================== end =========================================

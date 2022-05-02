@@ -1,0 +1,106 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+
+\newenvironment{eq}{\begin{minipage}{16cm}$}{$\end{minipage} }
+%\newenvironment{eq}{$}{$}
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section*{Equation assignment sequence for variable $\theta$}
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{1cm}|p{1cm}|p{16cm}|p{4cm}|}\hline
+  no &var &equ &quations &token\\\hline\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+17 &1 &- &\begin{eq}{\#}{_{}} :: \text{port variable}\end{eq} & \\
+16 &55 &138 &\begin{eq}{k^d_y}{_{{N S}}} := \text{Instantiate}({k^d_y}{_{{N S}}}, {\#}{_{}})\end{eq} & \\
+15 &54 &137 &\begin{eq}{k^d_x}{_{{N S}}} := \text{Instantiate}({k^d_x}{_{{N S}}}, {\#}{_{}})\end{eq} & \\
+14 &52 &136 &\begin{eq}{k^c_z}{_{N}} := \text{Instantiate}({k^c_z}{_{N}} \, . \, {\#}{_{}}, -)\end{eq} & \\
+13 &51 &135 &\begin{eq}{k^c_y}{_{N}} := \text{Instantiate}({k^c_y}{_{N}}, {\#}{_{}})\end{eq} & \\
+12 &50 &134 &\begin{eq}{k^c_x}{_{N}} := \text{Instantiate}({k^c_x}{_{N}}, {\#}{_{}})\end{eq} & \\
+11 &36 &133 &\begin{eq}{k^q_z}{_{N}} := \text{Instantiate}({k^q_z}{_{N}}, {\#}{_{}})\end{eq} & \\
+10 &35 &132 &\begin{eq}{k^q_y}{_{N}} := \text{Instantiate}({k^q_y}{_{N}}, {\#}{_{}})\end{eq} & \\
+9 &34 &131 &\begin{eq}{k^q_x}{_{N}} := \text{Instantiate}({k^q_x}{_{N}}, {\#}{_{}})\end{eq} & \\
+8 &71 &154 &\begin{eq}{\rho}{_{N}} := \text{Instantiate}({\rho}{_{N}}, {\#}{_{}})\end{eq} & \\
+7 &58 &139 &\begin{eq}{h}{_{{N S}}} := \text{Instantiate}({h}{_{{N S}}}, {\#}{_{}})\end{eq} & \\
+6 &57 &44 &\begin{eq}{k^d}{_{{N S}}} := \text{Stack}\left( {k^d_x}{_{{N S}}},{k^d_y}{_{{N S}}},{k^d_z}{_{{N S}}} \right)\end{eq} & \\
+5 &53 &40 &\begin{eq}{k^c}{_{N}} := \text{Stack}\left( {k^c_x}{_{N}},{k^c_y}{_{N}},{k^c_z}{_{N}} \right)\end{eq} & \\
+4 &37 &25 &\begin{eq}{k^q}{_{N}} := \text{Stack}\left( {k^q_x}{_{N}},{k^q_y}{_{N}},{k^q_z}{_{N}} \right)\end{eq} & \\
+3 &29 &142 &\begin{eq}{\lambda}{_{S}} := \text{Instantiate}({\lambda}{_{S}}, {\#}{_{}})\end{eq} & \\
+2 &149 &141 &\begin{eq}{cv}{_{N}} := \text{Instantiate}({cv}{_{N}}, {\#}{_{}})\end{eq} & \\
+1 &148 &140 &\begin{eq}{cp}{_{N}} := \text{Instantiate}({cp}{_{N}}, {\#}{_{}})\end{eq} & \\
+0 &154 &143 &\begin{eq}{\theta}{_{}} := \text{MixedStack}\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{cp}{_{N}},{cv}{_{N}},{\lambda}{_{S}},{\rho}{_{N}} \right)\end{eq} & \\
+
+\end{longtable}
+
+\end{document}
+% ================================== end =========================================

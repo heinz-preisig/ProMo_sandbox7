@@ -1,0 +1,99 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+
+\newenvironment{eq}{\begin{minipage}{16cm}$}{$\end{minipage} }
+%\newenvironment{eq}{$}{$}
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section*{Equation assignment sequence for variable $\hat{n}^d$}
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{1cm}|p{1cm}|p{16cm}|p{4cm}|}\hline
+  no &var &equ &quations &token\\\hline\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+10 &23 &- &\begin{eq}{r_z}{_{N}} :: \text{port variable}\end{eq} & \\
+9 &10 &- &\begin{eq}{r_y}{_{N}} :: \text{port variable}\end{eq} & \\
+8 &1 &- &\begin{eq}{\#}{_{}} :: \text{port variable}\end{eq} & \\
+7 &59 &- &\begin{eq}{P}{_{{N S}, {A S}}} :: \text{port variable}\end{eq} & \\
+6 &5 &- &\begin{eq}{F}{_{N, A}} :: \text{port variable}\end{eq} & \\
+5 &128 &- &\begin{eq}{D}{_{{N S}, {A S}}} :: \text{port variable}\end{eq} & \\
+4 &95 &71 &\begin{eq}{A_{yz}}{_{N}} := {r_y}{_{N}} \, . \, {r_z}{_{N}}\end{eq} & \\
+3 &54 &137 &\begin{eq}{k^d_x}{_{{N S}}} := \text{Instantiate}({k^d_x}{_{{N S}}}, {\#}{_{}})\end{eq} & \\
+2 &73 &51 &\begin{eq}{F}{_{{N S}, {A S}}} := {F}{_{N, A}} \, {\odot} \, {P}{_{{N S}, {A S}}}\end{eq} & \\
+1 &104 &80 &\begin{eq}{\hat{n}^d}{_{{A S}}} := {A_{yz}}{_{N}} \, {\odot} \, \left( -{k^d_x}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} & \\
+0 &105 &81 &\begin{eq}{\hat{n}^d}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} {\hat{n}^d}{_{{A S}}}\end{eq} & \\
+
+\end{longtable}
+
+\end{document}
+% ================================== end =========================================
