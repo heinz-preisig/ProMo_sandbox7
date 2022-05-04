@@ -4,5 +4,35 @@
     "lhs": "{a}{_{N}}",
     "network": "material >>> macroscopic",
     "rhs": "{a}{_{N}}"
+  },
+  "2": {
+    "variable_ID": 3,
+    "lhs": "{b}{_{N}}",
+    "network": "material",
+    "rhs": "{a}{_{N}}  + {a}{_{N}}"
+  },
+  "3": {
+    "variable_ID": 4,
+    "lhs": "{c}{_{N}}",
+    "network": "material",
+    "rhs": "{a}{_{N}}  + {a}{_{N}}  + {a}{_{N}}"
+  },
+  "4": {
+    "variable_ID": 5,
+    "lhs": "{b}{_{N}}",
+    "network": "material >>> macroscopic",
+    "rhs": "{b}{_{N}}"
+  },
+  "5": {
+    "variable_ID": 6,
+    "lhs": "{b}{_{N}}",
+    "network": "material >>> macroscopic",
+    "rhs": "{b}{_{N}}"
+  },
+  "6": {
+    "variable_ID": 7,
+    "lhs": "{b}{_{N}}",
+    "network": "material >>> macroscopic",
+    "rhs": "{b}{_{N}}"
   }
 }

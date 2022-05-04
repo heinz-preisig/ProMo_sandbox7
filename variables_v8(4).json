@@ -1,54 +1,6 @@
 {
   "version": "8",
   "variables": {
-    "1": {
-      "aliases": "{'global_ID': ' V_1', 'python': 'a', 'cpp': 'a', 'matlab': 'a', 'latex': 'a', 'internal_code': 'a'}",
-      "doc": "test",
-      "equations": "{}",
-      "index_structures": "[1]",
-      "label": "a",
-      "network": "material",
-      "port_variable": "True",
-      "tokens": "[]",
-      "type": "constant",
-      "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
-    },
-    "2": {
-      "aliases": "{'global_ID': ' V_2', 'python': 'a', 'cpp': 'a', 'matlab': 'a', 'latex': 'a', 'internal_code': 'a'}",
-      "doc": "link variable a to interface material >>> macroscopic",
-      "equations": "{1: {'rhs': ' V_1', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'material >>> macroscopic', 'incidence_list': ['1']}}",
-      "index_structures": "[1]",
-      "label": "a",
-      "network": "material >>> macroscopic",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "get",
-      "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
-    },
-    "3": {
-      "aliases": "{'global_ID': ' V_3', 'python': 'b', 'cpp': 'b', 'matlab': 'b', 'latex': 'b', 'internal_code': 'b'}",
-      "doc": "",
-      "equations": "{2: {'rhs': ' V_1 O_0 V_1', 'type': 'generic', 'doc': '', 'network': 'material', 'incidence_list': ['1']}}",
-      "index_structures": "[1]",
-      "label": "b",
-      "network": "material",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "property",
-      "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
-    },
-    "4": {
-      "aliases": "{'global_ID': ' V_4', 'python': 'c', 'cpp': 'c', 'matlab': 'c', 'latex': 'c', 'internal_code': 'c'}",
-      "doc": "",
-      "equations": "{3: {'rhs': ' V_1 O_0 V_1 O_0 V_1', 'type': 'generic', 'doc': '', 'network': 'material', 'incidence_list': ['1']}}",
-      "index_structures": "[1]",
-      "label": "c",
-      "network": "material",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "effort",
-      "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
-    }
   },
   "indices": {
     "1": {
@@ -341,7 +293,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 4,
-    "equation": 3
+    "variable": 2,
+    "equation": 1
   }
 }
