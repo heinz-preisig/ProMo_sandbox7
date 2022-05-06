@@ -1,1 +1,122 @@
-{}
+{
+  "1": {
+    "variable_ID": 2,
+    "lhs": "one",
+    "network": "root",
+    "rhs": "np.ones(np.shape(value)), value"
+  },
+  "2": {
+    "variable_ID": 3,
+    "lhs": "zero",
+    "network": "root",
+    "rhs": "np.ones(np.shape(value)), value"
+  },
+  "3": {
+    "variable_ID": 4,
+    "lhs": "onehalf",
+    "network": "root",
+    "rhs": "np.ones(np.shape(value)), value"
+  },
+  "4": {
+    "variable_ID": 6,
+    "lhs": "to",
+    "network": "root",
+    "rhs": "np.ones(np.shape(t)), value"
+  },
+  "5": {
+    "variable_ID": 7,
+    "lhs": "te",
+    "network": "root",
+    "rhs": "np.ones(np.shape(t)), value"
+  },
+  "6": {
+    "variable_ID": 17,
+    "lhs": "p",
+    "network": "physical",
+    "rhs": "np.negative(ParDiff(U, V))"
+  },
+  "7": {
+    "variable_ID": 18,
+    "lhs": "T",
+    "network": "physical",
+    "rhs": "ParDiff(U, S)"
+  },
+  "8": {
+    "variable_ID": 19,
+    "lhs": "chemPot",
+    "network": "physical",
+    "rhs": "ParDiff(U, n)"
+  },
+  "9": {
+    "variable_ID": 20,
+    "lhs": "H",
+    "network": "physical",
+    "rhs": "np.subtract(U, ganger(p, V))"
+  },
+  "10": {
+    "variable_ID": 21,
+    "lhs": "A",
+    "network": "physical",
+    "rhs": "np.subtract(U, ganger(T, S))"
+  },
+  "11": {
+    "variable_ID": 22,
+    "lhs": "G",
+    "network": "physical",
+    "rhs": "np.subtract(np.add(U, ganger(p, V)), ganger(T, S))"
+  },
+  "12": {
+    "variable_ID": 25,
+    "lhs": "Boltzmann",
+    "network": "physical",
+    "rhs": "np.ones(np.shape(S)), value"
+  },
+  "13": {
+    "variable_ID": 26,
+    "lhs": "GasConstant",
+    "network": "physical",
+    "rhs": "ganger(Avogadro, Boltzmann)"
+  },
+  "14": {
+    "variable_ID": 27,
+    "lhs": "UC",
+    "network": "physical",
+    "rhs": "ganger(np.reciprocal(charge), U)"
+  },
+  "15": {
+    "variable_ID": 28,
+    "lhs": "v_x",
+    "network": "physical",
+    "rhs": "ParDiff(r_x, t)"
+  },
+  "16": {
+    "variable_ID": 29,
+    "lhs": "v_y",
+    "network": "physical",
+    "rhs": "ParDiff(r_y, t)"
+  },
+  "17": {
+    "variable_ID": 30,
+    "lhs": "v_z",
+    "network": "physical",
+    "rhs": "ParDiff(r_z, t)"
+  },
+  "18": {
+    "variable_ID": 39,
+    "lhs": "Ea",
+    "network": "reactions",
+    "rhs": "ganger(np.dot(np.transpose(P_N_NK), GasConstant), T)"
+  },
+  "19": {
+    "variable_ID": 39,
+    "lhs": "Ea",
+    "network": "reactions",
+    "rhs": "np.ones(np.shape(Ea)), value"
+  },
+  "20": {
+    "variable_ID": 41,
+    "lhs": "Mm",
+    "network": "material >>> macroscopic",
+    "rhs": "Mm"
+  }
+}

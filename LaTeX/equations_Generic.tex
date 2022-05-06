@@ -12,13 +12,81 @@ no & equation &documentation &layer \\\hline\hline
 \hline
 \endlastfoot
 
+\hyperlink{"v:2"}{ 1 }\hypertarget{"e:1"}{  } &
+    \begin{eq}{1}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}numerical value 1\end{lay} &
+    \begin{lay}root\end{lay} \\
 \hyperlink{"v:3"}{ 2 }\hypertarget{"e:2"}{  } &
-    \begin{eq}{b}{_{N}} := {a}{_{N}}  + {a}{_{N}}\end{eq} &
-    \begin{lay}var doc : \end{lay} &
-    \begin{lay}material\end{lay} \\
+    \begin{eq}{0}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}numerical value zero\end{lay} &
+    \begin{lay}root\end{lay} \\
 \hyperlink{"v:4"}{ 3 }\hypertarget{"e:3"}{  } &
-    \begin{eq}{c}{_{N}} := {a}{_{N}}  + {a}{_{N}}  + {a}{_{N}}\end{eq} &
-    \begin{lay}var doc : \end{lay} &
-    \begin{lay}material\end{lay} \\
+    \begin{eq}{0.5}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}numerical value one half\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:6"}{ 4 }\hypertarget{"e:4"}{  } &
+    \begin{eq}{{t^o}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}starting time\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:7"}{ 5 }\hypertarget{"e:5"}{  } &
+    \begin{eq}{{t^e}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} &
+    \begin{lay}end time\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:17"}{ 6 }\hypertarget{"e:6"}{  } &
+    \begin{eq}{p}{_{N}} := \left( -\ParDiff{{U}{_{N}}}{{V}{_{N}}} \right)\end{eq} &
+    \begin{lay}thermodynamic pressure\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:18"}{ 7 }\hypertarget{"e:7"}{  } &
+    \begin{eq}{T}{_{N}} := \ParDiff{{U}{_{N}}}{{S}{_{N}}}\end{eq} &
+    \begin{lay}temperature\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:19"}{ 8 }\hypertarget{"e:8"}{  } &
+    \begin{eq}{\mu}{_{{N S}}} := \ParDiff{{U}{_{N}}}{{n}{_{{N S}}}}\end{eq} &
+    \begin{lay}chemical potential\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:20"}{ 9 }\hypertarget{"e:9"}{  } &
+    \begin{eq}{H}{_{N}} := {U}{_{N}}  - {p}{_{N}} \, . \, {V}{_{N}}\end{eq} &
+    \begin{lay}enthalpy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:21"}{ 10 }\hypertarget{"e:10"}{  } &
+    \begin{eq}{A}{_{N}} := {U}{_{N}}  - {T}{_{N}} \, . \, {S}{_{N}}\end{eq} &
+    \begin{lay}Helmholtz energy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:22"}{ 11 }\hypertarget{"e:11"}{  } &
+    \begin{eq}{G}{_{N}} := {U}{_{N}}  + {p}{_{N}} \, . \, {V}{_{N}}  - {T}{_{N}} \, . \, {S}{_{N}}\end{eq} &
+    \begin{lay}Gibbs free energy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:25"}{ 12 }\hypertarget{"e:12"}{  } &
+    \begin{eq}{{k^B}}{_{N}} := \text{Instantiate}({S}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}Boltzmann constant\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:26"}{ 13 }\hypertarget{"e:13"}{  } &
+    \begin{eq}{R}{_{N}} := {{A^v}}{_{}} \, . \, {{k^B}}{_{N}}\end{eq} &
+    \begin{lay}gas constant\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:27"}{ 14 }\hypertarget{"e:14"}{  } &
+    \begin{eq}{{U^C}}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
+    \begin{lay}electrical potential -- voltage\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:28"}{ 15 }\hypertarget{"e:15"}{  } &
+    \begin{eq}{{v_x}}{_{N}} := \ParDiff{{{r_x}}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}velocitiy in x-direction\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:29"}{ 16 }\hypertarget{"e:16"}{  } &
+    \begin{eq}{{v_y}}{_{N}} := \ParDiff{{{r_y}}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}velocity in y direction\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:30"}{ 17 }\hypertarget{"e:17"}{  } &
+    \begin{eq}{{v_z}}{_{N}} := \ParDiff{{{r_z}}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}velocity in z-direction\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:39"}{ 18 }\hypertarget{"e:18"}{  } &
+    \begin{eq}{{E^a}}{_{N, {N K}}} := {P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {R}{_{N}} \, . \, {T}{_{N}}\end{eq} &
+    \begin{lay}Arrhenius activation energy\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:39"}{ 19 }\hypertarget{"e:19"}{  } &
+    \begin{eq}{{E^a}}{_{N, {N K}}} := \text{Instantiate}({{E^a}}{_{N, {N K}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}Arrhenius activation energy\end{lay} &
+    \begin{lay}reactions\end{lay} \\
 \hline
 \end{longtable}

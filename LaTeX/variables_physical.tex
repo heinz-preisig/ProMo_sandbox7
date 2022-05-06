@@ -3,8 +3,8 @@
 
 \renewcommand{\arraystretch}{1.5}
 
-\begin{longtable}{|p{1cm}|p{3cm}|p{3cm}|p{7cm}|p{3.0cm}|p{3cm}|p{2cm}|p{1cm}|}\hline
- &var & \text{symbol} &documentation &type &units &tokens &eqs \\\hline\hline
+\begin{longtable}{|p{1cm}|p{2.5cm}|p{4.5cm}|p{8cm}|p{3.0cm}|p{3cm}|p{1cm}|}\hline
+ &var & \text{symbol} &documentation &type &units &eqs \\\hline\hline
 \endhead
 \hline \multicolumn{4}{r}{\textit{Continued on next page}} \\
 \endfoot
@@ -12,4 +12,212 @@
 \endlastfoot
 
 
-\end{longtable}
+9
+             & \hypertarget{"v:9"}{ $ {P}{_{N, A}} $}
+             & \verb|P_N_A|
+             & projection from node to arc for arc properties
+             & \begin{lay}projection \end{lay}
+             & $  $
+             & \\
+    32
+             & \hypertarget{"v:32"}{ $ {P}{_{{N S}, {A S}}} $}
+             & \verb|P_NS_AS|
+             & projection node species to arc species
+             & \begin{lay}projection \end{lay}
+             & $  $
+             & \\
+    33
+             & \hypertarget{"v:33"}{ $ {P}{_{K, {N K}}} $}
+             & \verb|P_K_NK|
+             & projection of conversion to node conversion
+             & \begin{lay}projection \end{lay}
+             & $  $
+             & \\
+    34
+             & \hypertarget{"v:34"}{ $ {P}{_{S, {N S}}} $}
+             & \verb|P_S_NS|
+             & projection species to node species
+             & \begin{lay}projection \end{lay}
+             & $  $
+             & \\
+    35
+             & \hypertarget{"v:35"}{ $ {P}{_{N, {N K}}} $}
+             & \verb|P_N_NK|
+             & projection node to node conversion
+             & \begin{lay}projection \end{lay}
+             & $  $
+             & \\
+    36
+             & \hypertarget{"v:36"}{ $ {P}{_{{N S}, {K S}}} $}
+             & \verb|P_NS_KS|
+             & projection node species to conversion species
+             & \begin{lay}projection \end{lay}
+             & $  $
+             & \\
+    37
+             & \hypertarget{"v:37"}{ $ {P}{_{A, {N S}}} $}
+             & \verb|P_A_NS|
+             & projection arc to node species for conductivity
+             & \begin{lay}projection \end{lay}
+             & $  $
+             & \\
+    10
+             & \hypertarget{"v:10"}{ $ {{r_x}}{_{N}} $}
+             & \verb|r_x|
+             & x-coordinate
+             & \begin{lay}frame \end{lay}
+             & $ m  $
+             & \\
+    11
+             & \hypertarget{"v:11"}{ $ {{r_y}}{_{N}} $}
+             & \verb|r_y|
+             & y-coordinate
+             & \begin{lay}frame \end{lay}
+             & $ m  $
+             & \\
+    12
+             & \hypertarget{"v:12"}{ $ {{r_z}}{_{N}} $}
+             & \verb|r_z|
+             & z coordinate
+             & \begin{lay}frame \end{lay}
+             & $ m  $
+             & \\
+    13
+             & \hypertarget{"v:13"}{ $ {U}{_{N}} $}
+             & \verb|U|
+             & fundamental state -- internal energy
+             & \begin{lay}state \end{lay}
+             & $ kg \,m^{2} \,s^{-2} \, $
+             & \\
+    14
+             & \hypertarget{"v:14"}{ $ {S}{_{N}} $}
+             & \verb|S|
+             & fundamental state -- entropy
+             & \begin{lay}state \end{lay}
+             & $ kg \,m^{2} \,K^{-1} \,s^{-2} \, $
+             & \\
+    15
+             & \hypertarget{"v:15"}{ $ {V}{_{N}} $}
+             & \verb|V|
+             & fundamental state -- volume
+             & \begin{lay}state \end{lay}
+             & $ m^{3} \, $
+             & \\
+    16
+             & \hypertarget{"v:16"}{ $ {n}{_{{N S}}} $}
+             & \verb|n|
+             & fundamental state -- molar mass
+             & \begin{lay}state \end{lay}
+             & $ mol \, $
+             & \\
+    20
+             & \hypertarget{"v:20"}{ $ {H}{_{N}} $}
+             & \verb|H|
+             & enthalpy
+             & \begin{lay}state \end{lay}
+             & $ kg \,m^{2} \,s^{-2} \, $
+             & \hyperlink{"e:9"}{ 9 }
+                 \\
+    21
+             & \hypertarget{"v:21"}{ $ {A}{_{N}} $}
+             & \verb|A|
+             & Helmholtz energy
+             & \begin{lay}state \end{lay}
+             & $ kg \,m^{2} \,s^{-2} \, $
+             & \hyperlink{"e:10"}{ 10 }
+                 \\
+    22
+             & \hypertarget{"v:22"}{ $ {G}{_{N}} $}
+             & \verb|G|
+             & Gibbs free energy
+             & \begin{lay}state \end{lay}
+             & $ kg \,m^{2} \,s^{-2} \, $
+             & \hyperlink{"e:11"}{ 11 }
+                 \\
+    23
+             & \hypertarget{"v:23"}{ $ {C}{_{N}} $}
+             & \verb|charge|
+             & fundamental state -- charge
+             & \begin{lay}state \end{lay}
+             & $ A \,s \, $
+             & \\
+    24
+             & \hypertarget{"v:24"}{ $ {{A^v}}{_{}} $}
+             & \verb|Avogadro|
+             & Avogadro number
+             & \begin{lay}constant \end{lay}
+             & $ mol^{-1} \, $
+             & \\
+    25
+             & \hypertarget{"v:25"}{ $ {{k^B}}{_{N}} $}
+             & \verb|Boltzmann|
+             & Boltzmann constant
+             & \begin{lay}constant \end{lay}
+             & $ kg \,m^{2} \,K^{-1} \,s^{-2} \, $
+             & \hyperlink{"e:12"}{ 12 }
+                 \\
+    26
+             & \hypertarget{"v:26"}{ $ {R}{_{N}} $}
+             & \verb|GasConstant|
+             & gas constant
+             & \begin{lay}constant \end{lay}
+             & $ kg \,m^{2} \,mol^{-1} \,K^{-1} \,s^{-2} \, $
+             & \hyperlink{"e:13"}{ 13 }
+                 \\
+    17
+             & \hypertarget{"v:17"}{ $ {p}{_{N}} $}
+             & \verb|p|
+             & thermodynamic pressure
+             & \begin{lay}effort \end{lay}
+             & $ kg \,m^{-1} \,s^{-2} \, $
+             & \hyperlink{"e:6"}{ 6 }
+                 \\
+    18
+             & \hypertarget{"v:18"}{ $ {T}{_{N}} $}
+             & \verb|T|
+             & temperature
+             & \begin{lay}effort \end{lay}
+             & $ K \, $
+             & \hyperlink{"e:7"}{ 7 }
+                 \\
+    19
+             & \hypertarget{"v:19"}{ $ {\mu}{_{{N S}}} $}
+             & \verb|chemPot|
+             & chemical potential
+             & \begin{lay}effort \end{lay}
+             & $ kg \,m^{2} \,mol^{-1} \,s^{-2} \, $
+             & \hyperlink{"e:8"}{ 8 }
+                 \\
+    27
+             & \hypertarget{"v:27"}{ $ {{U^C}}{_{N}} $}
+             & \verb|UC|
+             & electrical potential -- voltage
+             & \begin{lay}effort \end{lay}
+             & $ kg \,m^{2} \,A^{-1} s^{-3} \, $
+             & \hyperlink{"e:14"}{ 14 }
+                 \\
+    28
+             & \hypertarget{"v:28"}{ $ {{v_x}}{_{N}} $}
+             & \verb|v_x|
+             & velocitiy in x-direction
+             & \begin{lay}secondaryState \end{lay}
+             & $ m s^{-1} \, $
+             & \hyperlink{"e:15"}{ 15 }
+                 \\
+    29
+             & \hypertarget{"v:29"}{ $ {{v_y}}{_{N}} $}
+             & \verb|v_y|
+             & velocity in y-direction
+             & \begin{lay}secondaryState \end{lay}
+             & $ m s^{-1} \, $
+             & \hyperlink{"e:16"}{ 16 }
+                 \\
+    30
+             & \hypertarget{"v:30"}{ $ {{v_z}}{_{N}} $}
+             & \verb|v_z|
+             & velocity in z-direction
+             & \begin{lay}secondaryState \end{lay}
+             & $ m s^{-1} \, $
+             & \hyperlink{"e:17"}{ 17 }
+                 \\
+    \end{longtable}
