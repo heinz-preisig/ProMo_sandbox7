@@ -768,42 +768,6 @@
       "tokens": "[]",
       "type": "secondaryState",
       "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
-    },
-    "67": {
-      "aliases": "{'global_ID': ' V_67', 'python': 'c', 'cpp': 'c', 'matlab': 'c', 'latex': 'c', 'internal_code': 'c'}",
-      "doc": "link variable c to interface macroscopic >>> reactions",
-      "equations": "{45: {'rhs': ' V_66', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'macroscopic >>> reactions', 'incidence_list': ['66']}}",
-      "index_structures": "[5]",
-      "label": "c",
-      "network": "macroscopic >>> reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "get",
-      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
-    },
-    "68": {
-      "aliases": "{'global_ID': ' V_68', 'python': 'c_KS', 'cpp': 'c_KS', 'matlab': 'c_KS', 'latex': 'c_KS', 'internal_code': 'c_KS'}",
-      "doc": "concentrations associated with reactions",
-      "equations": "{46: {'rhs': ' V_67  O_5  I_5 O_5  V_36', 'type': 'generic', 'doc': 'concentrations associated with reactions', 'network': 'reactions', 'incidence_list': ['36', '67']}}",
-      "index_structures": "[8]",
-      "label": "c_KS",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "secondaryState",
-      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
-    },
-    "69": {
-      "aliases": "{'global_ID': ' V_69', 'python': 'co_KS', 'cpp': 'co_KS', 'matlab': 'co_KS', 'latex': 'co_KS', 'internal_code': 'co_KS'}",
-      "doc": "norming concentrations",
-      "equations": "{47: {'rhs': ' O_11 D_0 V_68 D_7 V_1 D_1', 'type': 'generic', 'doc': 'norming concentrations', 'network': 'reactions', 'incidence_list': ['1', '68']}}",
-      "index_structures": "[8]",
-      "label": "co_KS",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "secondaryState",
-      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1097,7 +1061,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 69,
-    "equation": 47
+    "variable": 66,
+    "equation": 44
   }
 }

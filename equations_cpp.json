@@ -101,22 +101,166 @@
     "network": "physical",
     "rhs": "ParDiff(r_z, t)"
   },
-  "18": {
-    "variable_ID": 39,
-    "lhs": "Ea",
-    "network": "reactions",
-    "rhs": "ganger(np.dot(np.transpose(P_N_NK), GasConstant), T)"
-  },
-  "19": {
-    "variable_ID": 39,
-    "lhs": "Ea",
-    "network": "reactions",
-    "rhs": "np.ones(np.shape(Ea)), value"
-  },
   "20": {
     "variable_ID": 41,
     "lhs": "Mm",
     "network": "material >>> macroscopic",
     "rhs": "Mm"
+  },
+  "21": {
+    "variable_ID": 42,
+    "lhs": "Cp",
+    "network": "material",
+    "rhs": "ParDiff(H, T)"
+  },
+  "22": {
+    "variable_ID": 43,
+    "lhs": "Cv",
+    "network": "material",
+    "rhs": "ParDiff(U, T)"
+  },
+  "23": {
+    "variable_ID": 44,
+    "lhs": "kq_x",
+    "network": "material",
+    "rhs": "ganger(ganger(np.reciprocal(V), ParDiff(U, T)), v_x)"
+  },
+  "24": {
+    "variable_ID": 45,
+    "lhs": "kq_y",
+    "network": "material",
+    "rhs": "ganger(ganger(np.reciprocal(V), ParDiff(U, T)), v_y)"
+  },
+  "25": {
+    "variable_ID": 46,
+    "lhs": "kq_z",
+    "network": "material",
+    "rhs": "ganger(ganger(np.reciprocal(V), ParDiff(U, T)), v_z)"
+  },
+  "26": {
+    "variable_ID": 47,
+    "lhs": "kq",
+    "network": "material",
+    "rhs": "Stack(kq_x,kq_y,kq_z)"
+  },
+  "27": {
+    "variable_ID": 48,
+    "lhs": "kc_x",
+    "network": "material",
+    "rhs": "ganger(ganger(ganger((blockReduce(Mm, S, N_x_S, np.reciprocal(chemPot))), np.reciprocal(V)), ParDiff(U, p)), v_x)"
+  },
+  "28": {
+    "variable_ID": 49,
+    "lhs": "kc_y",
+    "network": "material",
+    "rhs": "ganger(ganger(ganger((blockReduce(Mm, S, N_x_S, np.reciprocal(chemPot))), np.reciprocal(V)), ParDiff(U, p)), v_y)"
+  },
+  "29": {
+    "variable_ID": 50,
+    "lhs": "kc_z",
+    "network": "material",
+    "rhs": "ganger(ganger(ganger((blockReduce(Mm, S, N_x_S, np.reciprocal(chemPot))), np.reciprocal(V)), ParDiff(U, p)), v_z)"
+  },
+  "30": {
+    "variable_ID": 51,
+    "lhs": "kc",
+    "network": "material",
+    "rhs": "Stack(kc_x,kc_y,kc_z)"
+  },
+  "31": {
+    "variable_ID": 52,
+    "lhs": "kd_x",
+    "network": "material",
+    "rhs": "ganger(np.reciprocal(chemPot), (khatriRao(v_x, [N], (khatriRao(np.reciprocal(V), [N], ParDiff(U, chemPot), [N_x_S])), [N_x_S])))"
+  },
+  "32": {
+    "variable_ID": 53,
+    "lhs": "kd_y",
+    "network": "material",
+    "rhs": "ganger(np.reciprocal(chemPot), (khatriRao(v_y, [N], (khatriRao(np.reciprocal(V), [N], ParDiff(U, chemPot), [N_x_S])), [N_x_S])))"
+  },
+  "33": {
+    "variable_ID": 54,
+    "lhs": "kd_z",
+    "network": "material",
+    "rhs": "ganger(np.reciprocal(chemPot), (khatriRao(v_z, [N], (khatriRao(np.reciprocal(V), [N], ParDiff(U, chemPot), [N_x_S])), [N_x_S])))"
+  },
+  "34": {
+    "variable_ID": 55,
+    "lhs": "kd",
+    "network": "material",
+    "rhs": "Stack(kd_x,kd_y,kd_z)"
+  },
+  "35": {
+    "variable_ID": 56,
+    "lhs": "h",
+    "network": "material",
+    "rhs": "khatriRao(H, [N], np.reciprocal(n), [N_x_S])"
+  },
+  "36": {
+    "variable_ID": 57,
+    "lhs": "m",
+    "network": "macroscopic",
+    "rhs": "blockReduce(Mm, S, N_x_S, n)"
+  },
+  "37": {
+    "variable_ID": 58,
+    "lhs": "m",
+    "network": "macroscopic >>> material",
+    "rhs": "m"
+  },
+  "38": {
+    "variable_ID": 59,
+    "lhs": "density",
+    "network": "material",
+    "rhs": "ganger(m, np.reciprocal(V))"
+  },
+  "39": {
+    "variable_ID": 60,
+    "lhs": "T_NK",
+    "network": "reactions",
+    "rhs": "np.dot(np.transpose(P_N_NK), T)"
+  },
+  "41": {
+    "variable_ID": 62,
+    "lhs": "Ea",
+    "network": "reactions",
+    "rhs": "np.ones(np.shape(ganger(np.dot(np.transpose(P_N_NK), GasConstant), T_NK))), value"
+  },
+  "42": {
+    "variable_ID": 63,
+    "lhs": "K_NK",
+    "network": "reactions",
+    "rhs": "khatriRao(Ko, [K], np.exp(ganger(np.negative(Ea), np.reciprocal(ganger(np.transpose(np.dot(np.transpose(GasConstant), P_N_NK)), T_NK)))), [N_x_K])"
+  },
+  "43": {
+    "variable_ID": 64,
+    "lhs": "N_NS_NK",
+    "network": "reactions",
+    "rhs": "np.dot(np.transpose(P_S_NS), (np.transpose(np.dot(np.transpose(P_K_NK), np.transpose(N)))))"
+  },
+  "44": {
+    "variable_ID": 66,
+    "lhs": "c",
+    "network": "macroscopic",
+    "rhs": "khatriRao(np.reciprocal(V), [N], n, [N_x_S])"
+  },
+  "45": {
+    "variable_ID": 67,
+    "lhs": "c",
+    "network": "macroscopic >>> reactions",
+    "rhs": "c"
+  },
+  "46": {
+    "variable_ID": 68,
+    "lhs": "c_KS",
+    "network": "reactions",
+    "rhs": "np.transpose(np.dot(np.transpose(c), P_NS_KS))"
+  },
+  "47": {
+    "variable_ID": 69,
+    "lhs": "co_KS",
+    "network": "reactions",
+    "rhs": "np.ones(np.shape(c_KS)), value"
   }
 }

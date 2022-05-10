@@ -457,6 +457,18 @@
       "type": "constant",
       "units": "[-1, -3, 1, 0, 0, 0, 0, 0]"
     },
+    "39": {
+      "aliases": "{'global_ID': ' V_39', 'python': 'Ea', 'cpp': 'Ea', 'matlab': 'Ea', 'latex': '{E^a}', 'internal_code': 'Ea'}",
+      "doc": "Arrhenius activation energy",
+      "equations": "{18: {'rhs': ' V_35  O_5  I_1 O_5  V_26 O_4 V_18', 'type': 'generic', 'doc': 'Arrhenius activation energy', 'network': 'reactions', 'incidence_list': ['18', '26', '35']}, 19: {'rhs': ' O_11 D_0 V_39 D_7 V_1 D_1', 'type': 'generic', 'doc': 'Arrhenius activation energy', 'network': 'reactions', 'incidence_list': ['1', '39']}}",
+      "index_structures": "[1, 7]",
+      "label": "Ea",
+      "network": "reactions",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[-2, 2, -1, 1, 0, 0, 0, 0]"
+    },
     "40": {
       "aliases": "{'global_ID': ' V_40', 'python': 'Mm', 'cpp': 'Mm', 'matlab': 'Mm', 'latex': '\\\\lambda', 'internal_code': 'Mm'}",
       "doc": "species molecular mass",
@@ -698,7 +710,7 @@
       "units": "[0, -3, 0, 1, 0, 0, 0, 0]"
     },
     "60": {
-      "aliases": "{'global_ID': ' V_60', 'python': 'T_NK', 'cpp': 'T_NK', 'matlab': 'T_NK', 'latex': 'T', 'internal_code': 'T_NK'}",
+      "aliases": "{'global_ID': ' V_60', 'python': 'T_NK', 'cpp': 'T_NK', 'matlab': 'T_NK', 'latex': 'T_NK', 'internal_code': 'T_NK'}",
       "doc": "temperature of the reactive system",
       "equations": "{39: {'rhs': ' V_35  O_5  I_1 O_5  V_18', 'type': 'generic', 'doc': 'temperature of the reactive system', 'network': 'reactions', 'incidence_list': ['18', '35']}}",
       "index_structures": "[7]",
@@ -709,101 +721,17 @@
       "type": "effort",
       "units": "[0, 0, 0, 0, 1, 0, 0, 0]"
     },
-    "62": {
-      "aliases": "{'global_ID': ' V_62', 'python': 'Ea', 'cpp': 'Ea', 'matlab': 'Ea', 'latex': '{E^a}', 'internal_code': 'Ea'}",
-      "doc": "Arrhenius activation energy",
-      "equations": "{41: {'rhs': ' O_11 D_0 V_35  O_5  I_1 O_5  V_26 O_4 V_60 D_7 V_1 D_1', 'type': 'generic', 'doc': 'Arrhenius activation energy', 'network': 'reactions', 'incidence_list': ['1', '26', '35', '60']}}",
-      "index_structures": "[7]",
-      "label": "Ea",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "constant",
-      "units": "[-2, 2, -1, 1, 0, 0, 0, 0]"
-    },
-    "63": {
-      "aliases": "{'global_ID': ' V_63', 'python': 'K_NK', 'cpp': 'K_NK', 'matlab': 'K_NK', 'latex': 'K', 'internal_code': 'K_NK'}",
-      "doc": "Arrhenius reaction 'constant'",
-      "equations": "{42: {'rhs': ' V_38 O_3 F_0 D_0 F_11 D_0 V_62 D_1 O_4 F_15 D_0 V_26  O_5  I_1 O_5  V_35 O_4 V_60 D_1 D_1', 'type': 'generic', 'doc': \"Arrhenius reaction 'constant'\", 'network': 'reactions', 'incidence_list': ['26', '35', '38', '60', '62']}}",
-      "index_structures": "[7]",
+    "61": {
+      "aliases": "{'global_ID': ' V_61', 'python': 'K_NK', 'cpp': 'K_NK', 'matlab': 'K_NK', 'latex': 'K_NK', 'internal_code': 'K_NK'}",
+      "doc": "reaction 'constant'",
+      "equations": "{40: {'rhs': ' V_38 O_3 F_0 D_0 F_11 D_0 V_39 D_1 O_4 F_15 D_0 V_26  O_5  I_1 O_5  V_35 O_4 V_60 D_1 D_1', 'type': 'generic', 'doc': \"reaction 'constant'\", 'network': 'reactions', 'incidence_list': ['26', '35', '38', '39', '60']}}",
+      "index_structures": "[1, 7]",
       "label": "K_NK",
       "network": "reactions",
       "port_variable": "False",
       "tokens": "[]",
-      "type": "constant",
+      "type": "effort",
       "units": "[-1, -3, 1, 0, 0, 0, 0, 0]"
-    },
-    "64": {
-      "aliases": "{'global_ID': ' V_64', 'python': 'N_NS_NK', 'cpp': 'N_NS_NK', 'matlab': 'N_NS_NK', 'latex': 'N', 'internal_code': 'N_NS_NK'}",
-      "doc": "soichiometric block matrix node species and node reaction",
-      "equations": "{43: {'rhs': ' V_34  O_5  I_3 O_5  D_0 V_33  O_5  I_4 O_5  V_31 D_1', 'type': 'generic', 'doc': 'soichiometric block matrix node species and node reaction', 'network': 'reactions', 'incidence_list': ['31', '33', '34']}}",
-      "index_structures": "[5, 7]",
-      "label": "N_NS_NK",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "constant",
-      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
-    },
-    "65": {
-      "aliases": "{'global_ID': ' V_65', 'python': 'P_NK_KS', 'cpp': 'P_NK_KS', 'matlab': 'P_NK_KS', 'latex': 'P', 'internal_code': 'P_NK_KS'}",
-      "doc": "projection node conversion to conversion species",
-      "equations": "{}",
-      "index_structures": "[7, 8]",
-      "label": "P_NK_KS",
-      "network": "physical",
-      "port_variable": "True",
-      "tokens": "[]",
-      "type": "projection",
-      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
-    },
-    "66": {
-      "aliases": "{'global_ID': ' V_66', 'python': 'c', 'cpp': 'c', 'matlab': 'c', 'latex': 'c', 'internal_code': 'c'}",
-      "doc": "molar composition",
-      "equations": "{44: {'rhs': ' F_15 D_0 V_15 D_1 O_3 V_16', 'type': 'generic', 'doc': 'molar composition', 'network': 'macroscopic', 'incidence_list': ['15', '16']}}",
-      "index_structures": "[5]",
-      "label": "c",
-      "network": "macroscopic",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "secondaryState",
-      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
-    },
-    "67": {
-      "aliases": "{'global_ID': ' V_67', 'python': 'c', 'cpp': 'c', 'matlab': 'c', 'latex': 'c', 'internal_code': 'c'}",
-      "doc": "link variable c to interface macroscopic >>> reactions",
-      "equations": "{45: {'rhs': ' V_66', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'macroscopic >>> reactions', 'incidence_list': ['66']}}",
-      "index_structures": "[5]",
-      "label": "c",
-      "network": "macroscopic >>> reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "get",
-      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
-    },
-    "68": {
-      "aliases": "{'global_ID': ' V_68', 'python': 'c_KS', 'cpp': 'c_KS', 'matlab': 'c_KS', 'latex': 'c_KS', 'internal_code': 'c_KS'}",
-      "doc": "concentrations associated with reactions",
-      "equations": "{46: {'rhs': ' V_67  O_5  I_5 O_5  V_36', 'type': 'generic', 'doc': 'concentrations associated with reactions', 'network': 'reactions', 'incidence_list': ['36', '67']}}",
-      "index_structures": "[8]",
-      "label": "c_KS",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "secondaryState",
-      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
-    },
-    "69": {
-      "aliases": "{'global_ID': ' V_69', 'python': 'co_KS', 'cpp': 'co_KS', 'matlab': 'co_KS', 'latex': 'co_KS', 'internal_code': 'co_KS'}",
-      "doc": "norming concentrations",
-      "equations": "{47: {'rhs': ' O_11 D_0 V_68 D_7 V_1 D_1', 'type': 'generic', 'doc': 'norming concentrations', 'network': 'reactions', 'incidence_list': ['1', '68']}}",
-      "index_structures": "[8]",
-      "label": "co_KS",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "secondaryState",
-      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1097,7 +1025,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 69,
-    "equation": 47
+    "variable": 61,
+    "equation": 40
   }
 }

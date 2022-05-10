@@ -80,13 +80,101 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{v_z}}{_{N}} := \ParDiff{{{r_z}}{_{N}}}{{t}{_{}}}\end{eq} &
     \begin{lay}velocity in z-direction\end{lay} &
     \begin{lay}physical\end{lay} \\
-\hyperlink{"v:39"}{ 18 }\hypertarget{"e:18"}{  } &
-    \begin{eq}{{E^a}}{_{N, {N K}}} := {P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {R}{_{N}} \, . \, {T}{_{N}}\end{eq} &
+\hyperlink{"v:42"}{ 21 }\hypertarget{"e:21"}{  } &
+    \begin{eq}{{C_p}}{_{N}} := \ParDiff{{H}{_{N}}}{{T}{_{N}}}\end{eq} &
+    \begin{lay}total heat capacity at constant pressure\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:43"}{ 22 }\hypertarget{"e:22"}{  } &
+    \begin{eq}{{C_V}}{_{N}} := \ParDiff{{U}{_{N}}}{{T}{_{N}}}\end{eq} &
+    \begin{lay}total heat capacity at constant volume\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:44"}{ 23 }\hypertarget{"e:23"}{  } &
+    \begin{eq}{{k^q_x}}{_{N}} := \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{T}{_{N}}} \, . \, {{v_x}}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:45"}{ 24 }\hypertarget{"e:24"}{  } &
+    \begin{eq}{{k^q_y}}{_{N}} := \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{T}{_{N}}} \, . \, {{v_y}}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:46"}{ 25 }\hypertarget{"e:25"}{  } &
+    \begin{eq}{{k^q_z}}{_{N}} := \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{T}{_{N}}} \, . \, {{v_z}}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in z-direction'\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:47"}{ 26 }\hypertarget{"e:26"}{  } &
+    \begin{eq}{kq}{_{N}} := \text{Stack}\left( {{k^q_x}}{_{N}},{{k^q_y}}{_{N}},{{k^q_z}}{_{N}} \right)\end{eq} &
+    \begin{lay}thermal conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:48"}{ 27 }\hypertarget{"e:27"}{  } &
+    \begin{eq}{{k^c_x}}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {{v_x}}{_{N}}\end{eq} &
+    \begin{lay}convecitve mass conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:49"}{ 28 }\hypertarget{"e:28"}{  } &
+    \begin{eq}{{k^c_y}}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {{v_y}}{_{N}}\end{eq} &
+    \begin{lay}convecitve mass conductivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:50"}{ 29 }\hypertarget{"e:29"}{  } &
+    \begin{eq}{{k^c_z}}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {{v_z}}{_{N}}\end{eq} &
+    \begin{lay}convecitve mass conductivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:51"}{ 30 }\hypertarget{"e:30"}{  } &
+    \begin{eq}{{k^c}}{_{N}} := \text{Stack}\left( {{k^c_x}}{_{N}},{{k^c_y}}{_{N}},{{k^c_z}}{_{N}} \right)\end{eq} &
+    \begin{lay}convective mass conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:52"}{ 31 }\hypertarget{"e:31"}{  } &
+    \begin{eq}{{k^d_x}}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({{v_x}}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
+    \begin{lay}diffusional mass conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:53"}{ 32 }\hypertarget{"e:32"}{  } &
+    \begin{eq}{{k^d_y}}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({{v_y}}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
+    \begin{lay}diffusional mass conductivity in y-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:54"}{ 33 }\hypertarget{"e:33"}{  } &
+    \begin{eq}{{k^d_z}}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({{v_z}}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
+    \begin{lay}diffusional mass conductivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:55"}{ 34 }\hypertarget{"e:34"}{  } &
+    \begin{eq}{{k^d}}{_{{N S}}} := \text{Stack}\left( {{k^d_x}}{_{{N S}}},{{k^d_y}}{_{{N S}}},{{k^d_z}}{_{{N S}}} \right)\end{eq} &
+    \begin{lay}diffusional mass condctivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:56"}{ 35 }\hypertarget{"e:35"}{  } &
+    \begin{eq}{h}{_{{N S}}} := {H}{_{N}} \, {\odot} \, \left( {n}{_{{N S}}} \right)^{-1}\end{eq} &
+    \begin{lay}partial molar enthalpies\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:57"}{ 36 }\hypertarget{"e:36"}{  } &
+    \begin{eq}{m}{_{N}} := {Mm}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
+    \begin{lay}total mass\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:59"}{ 38 }\hypertarget{"e:38"}{  } &
+    \begin{eq}{density}{_{N}} := {m}{_{N}} \, . \, \left( {V}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}density\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:60"}{ 39 }\hypertarget{"e:39"}{  } &
+    \begin{eq}{T}{_{{N K}}} := {P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {T}{_{N}}\end{eq} &
+    \begin{lay}temperature of the reactive system\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:62"}{ 41 }\hypertarget{"e:41"}{  } &
+    \begin{eq}{{E^a}}{_{{N K}}} := \text{Instantiate}({P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {R}{_{N}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} &
     \begin{lay}Arrhenius activation energy\end{lay} &
     \begin{lay}reactions\end{lay} \\
-\hyperlink{"v:39"}{ 19 }\hypertarget{"e:19"}{  } &
-    \begin{eq}{{E^a}}{_{N, {N K}}} := \text{Instantiate}({{E^a}}{_{N, {N K}}}, {\#}{_{}})\end{eq} &
-    \begin{lay}Arrhenius activation energy\end{lay} &
+\hyperlink{"v:63"}{ 42 }\hypertarget{"e:42"}{  } &
+    \begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {R}{_{N}} \stackrel{N}{\,\star\,} {P}{_{N, {N K}}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
+    \begin{lay}Arrhenius reaction 'constant'\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:64"}{ 43 }\hypertarget{"e:43"}{  } &
+    \begin{eq}{N}{_{{N S}, {N K}}} := {P}{_{S, {N S}}} \stackrel{S}{\,\star\,} \left({P}{_{K, {N K}}} \stackrel{K}{\,\star\,} {N}{_{S, K}}\right)\end{eq} &
+    \begin{lay}soichiometric block matrix node species and node reaction\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:66"}{ 44 }\hypertarget{"e:44"}{  } &
+    \begin{eq}{c}{_{{N S}}} := \left( {V}{_{N}} \right)^{-1} \, {\odot} \, {n}{_{{N S}}}\end{eq} &
+    \begin{lay}molar composition\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:68"}{ 46 }\hypertarget{"e:46"}{  } &
+    \begin{eq}{c}{_{{K S}}} := {c}{_{{N S}}} \stackrel{{N S}}{\,\star\,} {P}{_{{N S}, {K S}}}\end{eq} &
+    \begin{lay}concentrations associated with reactions\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:69"}{ 47 }\hypertarget{"e:47"}{  } &
+    \begin{eq}{{c^o}}{_{{K S}}} := \text{Instantiate}({c}{_{{K S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}norming concentrations\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hline
 \end{longtable}

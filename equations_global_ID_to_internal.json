@@ -84,19 +84,139 @@
     "network": "physical",
     "rhs": " ParDiff ( r_z , t )"
   },
-  "18": {
-    "lhs": "Ea",
-    "network": "reactions",
-    "rhs": " P_N_NK | N | GasConstant . T"
-  },
-  "19": {
-    "lhs": "Ea",
-    "network": "reactions",
-    "rhs": " Instantiate ( Ea , value )"
-  },
   "20": {
     "lhs": "Mm",
     "network": "material >>> macroscopic",
     "rhs": " Mm"
+  },
+  "21": {
+    "lhs": "Cp",
+    "network": "material",
+    "rhs": " ParDiff ( H , T )"
+  },
+  "22": {
+    "lhs": "Cv",
+    "network": "material",
+    "rhs": " ParDiff ( U , T )"
+  },
+  "23": {
+    "lhs": "kq_x",
+    "network": "material",
+    "rhs": " inv ( V ) . ParDiff ( U , T ) . v_x"
+  },
+  "24": {
+    "lhs": "kq_y",
+    "network": "material",
+    "rhs": " inv ( V ) . ParDiff ( U , T ) . v_y"
+  },
+  "25": {
+    "lhs": "kq_z",
+    "network": "material",
+    "rhs": " inv ( V ) . ParDiff ( U , T ) . v_z"
+  },
+  "26": {
+    "lhs": "kq",
+    "network": "material",
+    "rhs": " Stack ( kq_x , kq_y , kq_z )"
+  },
+  "27": {
+    "lhs": "kc_x",
+    "network": "material",
+    "rhs": " ( Mm | S in N & S | inv ( chemPot ) ) . inv ( V ) . ParDiff ( U , p ) . v_x"
+  },
+  "28": {
+    "lhs": "kc_y",
+    "network": "material",
+    "rhs": " ( Mm | S in N & S | inv ( chemPot ) ) . inv ( V ) . ParDiff ( U , p ) . v_y"
+  },
+  "29": {
+    "lhs": "kc_z",
+    "network": "material",
+    "rhs": " ( Mm | S in N & S | inv ( chemPot ) ) . inv ( V ) . ParDiff ( U , p ) . v_z"
+  },
+  "30": {
+    "lhs": "kc",
+    "network": "material",
+    "rhs": " Stack ( kc_x , kc_y , kc_z )"
+  },
+  "31": {
+    "lhs": "kd_x",
+    "network": "material",
+    "rhs": " inv ( chemPot ) . ( v_x : ( inv ( V ) : ParDiff ( U , chemPot ) ) )"
+  },
+  "32": {
+    "lhs": "kd_y",
+    "network": "material",
+    "rhs": " inv ( chemPot ) . ( v_y : ( inv ( V ) : ParDiff ( U , chemPot ) ) )"
+  },
+  "33": {
+    "lhs": "kd_z",
+    "network": "material",
+    "rhs": " inv ( chemPot ) . ( v_z : ( inv ( V ) : ParDiff ( U , chemPot ) ) )"
+  },
+  "34": {
+    "lhs": "kd",
+    "network": "material",
+    "rhs": " Stack ( kd_x , kd_y , kd_z )"
+  },
+  "35": {
+    "lhs": "h",
+    "network": "material",
+    "rhs": " H : inv ( n )"
+  },
+  "36": {
+    "lhs": "m",
+    "network": "macroscopic",
+    "rhs": " Mm | S in N & S | n"
+  },
+  "37": {
+    "lhs": "m",
+    "network": "macroscopic >>> material",
+    "rhs": " m"
+  },
+  "38": {
+    "lhs": "density",
+    "network": "material",
+    "rhs": " m . inv ( V )"
+  },
+  "39": {
+    "lhs": "T_NK",
+    "network": "reactions",
+    "rhs": " P_N_NK | N | T"
+  },
+  "41": {
+    "lhs": "Ea",
+    "network": "reactions",
+    "rhs": " Instantiate ( P_N_NK | N | GasConstant . T_NK , value )"
+  },
+  "42": {
+    "lhs": "K_NK",
+    "network": "reactions",
+    "rhs": " Ko : exp ( neg ( Ea ) . inv ( GasConstant | N | P_N_NK . T_NK ) )"
+  },
+  "43": {
+    "lhs": "N_NS_NK",
+    "network": "reactions",
+    "rhs": " P_S_NS | S | ( P_K_NK | K | N )"
+  },
+  "44": {
+    "lhs": "c",
+    "network": "macroscopic",
+    "rhs": " inv ( V ) : n"
+  },
+  "45": {
+    "lhs": "c",
+    "network": "macroscopic >>> reactions",
+    "rhs": " c"
+  },
+  "46": {
+    "lhs": "c_KS",
+    "network": "reactions",
+    "rhs": " c | N & S | P_NS_KS"
+  },
+  "47": {
+    "lhs": "co_KS",
+    "network": "reactions",
+    "rhs": " Instantiate ( c_KS , value )"
   }
 }
