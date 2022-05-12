@@ -79,7 +79,7 @@
   },
   "14": {
     "variable_ID": 27,
-    "lhs": "UC",
+    "lhs": "Ue",
     "network": "physical",
     "rhs": "inv(charge) .* U"
   },
@@ -262,5 +262,347 @@
     "lhs": "co_KS",
     "network": "reactions",
     "rhs": "Instantiate(c_KS, value)"
+  },
+  "48": {
+    "variable_ID": 71,
+    "lhs": "Ayz",
+    "network": "macroscopic",
+    "rhs": "r_y .* r_z"
+  },
+  "49": {
+    "variable_ID": 72,
+    "lhs": "Axz",
+    "network": "macroscopic",
+    "rhs": "r_x .* r_z"
+  },
+  "50": {
+    "variable_ID": 73,
+    "lhs": "Axy",
+    "network": "macroscopic",
+    "rhs": "r_x .* r_y"
+  },
+  "51": {
+    "variable_ID": 74,
+    "lhs": "density",
+    "network": "material >>> macroscopic",
+    "rhs": "density"
+  },
+  "52": {
+    "variable_ID": 75,
+    "lhs": "h",
+    "network": "material >>> macroscopic",
+    "rhs": "h"
+  },
+  "53": {
+    "variable_ID": 76,
+    "lhs": "kq_x",
+    "network": "material >>> macroscopic",
+    "rhs": "kq_x"
+  },
+  "54": {
+    "variable_ID": 77,
+    "lhs": "Cv",
+    "network": "material >>> macroscopic",
+    "rhs": "Cv"
+  },
+  "55": {
+    "variable_ID": 78,
+    "lhs": "kq_y",
+    "network": "material >>> macroscopic",
+    "rhs": "kq_y"
+  },
+  "56": {
+    "variable_ID": 79,
+    "lhs": "kq_z",
+    "network": "material >>> macroscopic",
+    "rhs": "kq_z"
+  },
+  "57": {
+    "variable_ID": 80,
+    "lhs": "kq",
+    "network": "material >>> macroscopic",
+    "rhs": "kq"
+  },
+  "58": {
+    "variable_ID": 81,
+    "lhs": "kc_x",
+    "network": "material >>> macroscopic",
+    "rhs": "kc_x"
+  },
+  "59": {
+    "variable_ID": 82,
+    "lhs": "Cp",
+    "network": "material >>> macroscopic",
+    "rhs": "Cp"
+  },
+  "60": {
+    "variable_ID": 83,
+    "lhs": "kc_y",
+    "network": "material >>> macroscopic",
+    "rhs": "kc_y"
+  },
+  "61": {
+    "variable_ID": 84,
+    "lhs": "kc_z",
+    "network": "material >>> macroscopic",
+    "rhs": "kc_z"
+  },
+  "62": {
+    "variable_ID": 85,
+    "lhs": "kc",
+    "network": "material >>> macroscopic",
+    "rhs": "kc"
+  },
+  "63": {
+    "variable_ID": 86,
+    "lhs": "kd_x",
+    "network": "material >>> macroscopic",
+    "rhs": "kd_x"
+  },
+  "64": {
+    "variable_ID": 87,
+    "lhs": "kd_y",
+    "network": "material >>> macroscopic",
+    "rhs": "kd_y"
+  },
+  "65": {
+    "variable_ID": 88,
+    "lhs": "kd_z",
+    "network": "material >>> macroscopic",
+    "rhs": "kd_z"
+  },
+  "66": {
+    "variable_ID": 89,
+    "lhs": "kd",
+    "network": "material >>> macroscopic",
+    "rhs": "kd"
+  },
+  "67": {
+    "variable_ID": 92,
+    "lhs": "fV",
+    "network": "macroscopic",
+    "rhs": "( inv(density) .* kc_x .* Ayz .* D )'  * p"
+  },
+  "68": {
+    "variable_ID": 93,
+    "lhs": "fnd_AS",
+    "network": "macroscopic",
+    "rhs": "( khatriRao(Ayz, [N], - kd_x, [N_x_S]) .* D_NS_AS )'  * chemPot"
+  },
+  "69": {
+    "variable_ID": 94,
+    "lhs": "fnd",
+    "network": "macroscopic",
+    "rhs": "F_NS_AS * fnd_AS"
+  },
+  "70": {
+    "variable_ID": 95,
+    "lhs": "fHd_A",
+    "network": "macroscopic",
+    "rhs": "blockReduce((( F_NS_AS )'  * h), S, A_x_S, fnd_AS)"
+  },
+  "71": {
+    "variable_ID": 96,
+    "lhs": "fHd",
+    "network": "macroscopic",
+    "rhs": "F_N_A * fHd_A"
+  },
+  "72": {
+    "variable_ID": 97,
+    "lhs": "d",
+    "network": "macroscopic",
+    "rhs": "sign(( F_N_A )'  * p)"
+  },
+  "73": {
+    "variable_ID": 98,
+    "lhs": "c_AS",
+    "network": "macroscopic",
+    "rhs": "( (onehalf .* (F_NS_AS - khatriRao(d, [A], abs(F_NS_AS), [N_x_S, A_x_S]))) )'  * c"
+  },
+  "74": {
+    "variable_ID": 99,
+    "lhs": "fnc_AS",
+    "network": "macroscopic",
+    "rhs": "khatriRao(fV, [A], c_AS, [A_x_S])"
+  },
+  "75": {
+    "variable_ID": 100,
+    "lhs": "fnc",
+    "network": "macroscopic",
+    "rhs": "F_NS_AS * fnc_AS"
+  },
+  "76": {
+    "variable_ID": 101,
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": "fnc + fnd"
+  },
+  "77": {
+    "variable_ID": 102,
+    "lhs": "fHc_A",
+    "network": "macroscopic",
+    "rhs": "blockReduce((( F_NS_AS )'  * h), S, A_x_S, fnc_AS)"
+  },
+  "78": {
+    "variable_ID": 103,
+    "lhs": "fHc",
+    "network": "macroscopic",
+    "rhs": "F_N_A * fHc_A"
+  },
+  "79": {
+    "variable_ID": 104,
+    "lhs": "fw_A",
+    "network": "macroscopic",
+    "rhs": "Instantiate(fHc_A, value)"
+  },
+  "80": {
+    "variable_ID": 105,
+    "lhs": "fw",
+    "network": "macroscopic",
+    "rhs": "F_N_A * fw_A"
+  },
+  "81": {
+    "variable_ID": 106,
+    "lhs": "fq_A_x",
+    "network": "macroscopic",
+    "rhs": "( Ayz .* kq_x .* D )'  * T"
+  },
+  "82": {
+    "variable_ID": 107,
+    "lhs": "fq",
+    "network": "macroscopic",
+    "rhs": "F_N_A * fq_A_x"
+  },
+  "83": {
+    "variable_ID": 108,
+    "lhs": "dHdt",
+    "network": "macroscopic",
+    "rhs": "fHc + fHd + fq + fw"
+  },
+  "84": {
+    "variable_ID": 109,
+    "lhs": "Ho",
+    "network": "macroscopic",
+    "rhs": "Instantiate(H, value)"
+  },
+  "85": {
+    "variable_ID": 110,
+    "lhs": "no",
+    "network": "macroscopic",
+    "rhs": "Instantiate(n, value)"
+  },
+  "86": {
+    "variable_ID": 16,
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": "Integral(dndt,t,to,te)"
+  },
+  "87": {
+    "variable_ID": 20,
+    "lhs": "H",
+    "network": "macroscopic",
+    "rhs": "Integral(dHdt,t,to,te)"
+  },
+  "88": {
+    "variable_ID": 112,
+    "lhs": "additive",
+    "network": "material",
+    "rhs": "Instantiate(additive, value)"
+  },
+  "89": {
+    "variable_ID": 113,
+    "lhs": "i",
+    "network": "macroscopic",
+    "rhs": "TotalDiff(charge,t)"
+  },
+  "90": {
+    "variable_ID": 114,
+    "lhs": "i",
+    "network": "macroscopic >>> material",
+    "rhs": "i"
+  },
+  "91": {
+    "variable_ID": 115,
+    "lhs": "elResist",
+    "network": "material",
+    "rhs": "inv(i) .* Ue"
+  },
+  "92": {
+    "variable_ID": 115,
+    "lhs": "elResist",
+    "network": "material",
+    "rhs": "Instantiate(elResist, value)"
+  },
+  "93": {
+    "variable_ID": 116,
+    "lhs": "elConductC",
+    "network": "material",
+    "rhs": "inv(elResist) .* additive"
+  },
+  "94": {
+    "variable_ID": 117,
+    "lhs": "elConductC",
+    "network": "material >>> macroscopic",
+    "rhs": "elConductC"
+  },
+  "95": {
+    "variable_ID": 27,
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": "inv(elConductC) .* i"
+  },
+  "96": {
+    "variable_ID": 118,
+    "lhs": "dUedt",
+    "network": "macroscopic",
+    "rhs": "one .* Ue"
+  },
+  "97": {
+    "variable_ID": 118,
+    "lhs": "dUedt",
+    "network": "macroscopic",
+    "rhs": "Root(Ue)"
+  },
+  "98": {
+    "variable_ID": 118,
+    "lhs": "dUedt",
+    "network": "macroscopic",
+    "rhs": "Instantiate(dUedt, zero)"
+  },
+  "99": {
+    "variable_ID": 119,
+    "lhs": "i",
+    "network": "macroscopic >>> control",
+    "rhs": "i"
+  },
+  "100": {
+    "variable_ID": 120,
+    "lhs": "Uem",
+    "network": "macroscopic",
+    "rhs": "one .* Ue"
+  },
+  "101": {
+    "variable_ID": 121,
+    "lhs": "im",
+    "network": "macroscopic",
+    "rhs": "one .* i"
+  },
+  "102": {
+    "variable_ID": 122,
+    "lhs": "Uem",
+    "network": "macroscopic >>> control",
+    "rhs": "Uem"
+  },
+  "103": {
+    "variable_ID": 123,
+    "lhs": "im",
+    "network": "macroscopic >>> control",
+    "rhs": "im"
+  },
+  "104": {
+    "variable_ID": 124,
+    "lhs": "additive",
+    "network": "material >>> control",
+    "rhs": "additive"
   }
 }
