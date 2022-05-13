@@ -479,20 +479,10 @@
     "network": "macroscopic >>> control",
     "rhs": " i"
   },
-  "100": {
-    "lhs": "Uem",
-    "network": "macroscopic",
-    "rhs": " one . Ue"
-  },
   "101": {
     "lhs": "im",
     "network": "macroscopic",
     "rhs": " one . i"
-  },
-  "102": {
-    "lhs": "Uem",
-    "network": "macroscopic >>> control",
-    "rhs": " Uem"
   },
   "103": {
     "lhs": "im",
@@ -503,5 +493,10 @@
     "lhs": "additive",
     "network": "material >>> control",
     "rhs": " additive"
+  },
+  "105": {
+    "lhs": "T",
+    "network": "macroscopic >>> control",
+    "rhs": " T"
   }
 }

@@ -94,8 +94,5 @@
 97 :: dUedt =  Root ( Ue )
 98 :: dUedt =  Instantiate ( dUedt , zero )
 99 :: i =  i
-100 :: Uem =  one . Ue
-101 :: im =  one . i
-102 :: Uem =  Uem
-103 :: im =  im
 104 :: additive =  additive
+105 :: T =  T

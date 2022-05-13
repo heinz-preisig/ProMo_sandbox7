@@ -575,23 +575,11 @@
     "network": "macroscopic >>> control",
     "rhs": "{I}{_{N}}"
   },
-  "100": {
-    "variable_ID": 120,
-    "lhs": "{Uem}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "{1}{_{}} \\, . \\, {Ue}{_{N}}"
-  },
   "101": {
     "variable_ID": 121,
     "lhs": "{im}{_{N}}",
     "network": "macroscopic",
     "rhs": "{1}{_{}} \\, . \\, {I}{_{N}}"
-  },
-  "102": {
-    "variable_ID": 122,
-    "lhs": "{U}{_{N}}",
-    "network": "macroscopic >>> control",
-    "rhs": "{U}{_{N}}"
   },
   "103": {
     "variable_ID": 123,
@@ -604,5 +592,11 @@
     "lhs": "{\\xi}{_{}}",
     "network": "material >>> control",
     "rhs": "{\\xi}{_{}}"
+  },
+  "105": {
+    "variable_ID": 125,
+    "lhs": "{T}{_{N}}",
+    "network": "macroscopic >>> control",
+    "rhs": "{T}{_{N}}"
   }
 }

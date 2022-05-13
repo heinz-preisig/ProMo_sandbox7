@@ -1393,6 +1393,54 @@
       "type": "get",
       "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
     },
+    "120": {
+      "aliases": "{'global_ID': ' V_120', 'python': 'Uem', 'cpp': 'Uem', 'matlab': 'Uem', 'latex': 'Uem', 'internal_code': 'Uem'}",
+      "doc": "a fix",
+      "equations": "{100: {'rhs': ' V_2 O_4 V_27', 'type': 'generic', 'doc': 'a fix', 'network': 'macroscopic', 'incidence_list': ['2', '27']}}",
+      "index_structures": "[1]",
+      "label": "Uem",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "effort",
+      "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
+    },
+    "121": {
+      "aliases": "{'global_ID': ' V_121', 'python': 'im', 'cpp': 'im', 'matlab': 'im', 'latex': 'im', 'internal_code': 'im'}",
+      "doc": "also a fix",
+      "equations": "{101: {'rhs': ' V_2 O_4 V_113', 'type': 'generic', 'doc': 'also a fix', 'network': 'macroscopic', 'incidence_list': ['113', '2']}}",
+      "index_structures": "[1]",
+      "label": "im",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "transport",
+      "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
+    },
+    "122": {
+      "aliases": "{'global_ID': ' V_122', 'python': 'Uem', 'cpp': 'Uem', 'matlab': 'Uem', 'latex': 'U', 'internal_code': 'Uem'}",
+      "doc": "link variable Uem to interface macroscopic >>> control",
+      "equations": "{102: {'rhs': ' V_120', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'macroscopic >>> control', 'incidence_list': ['120']}}",
+      "index_structures": "[1]",
+      "label": "Uem",
+      "network": "macroscopic >>> control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "get",
+      "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
+    },
+    "123": {
+      "aliases": "{'global_ID': ' V_123', 'python': 'im', 'cpp': 'im', 'matlab': 'im', 'latex': 'I_m', 'internal_code': 'im'}",
+      "doc": "link variable im to interface macroscopic >>> control",
+      "equations": "{103: {'rhs': ' V_121', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'macroscopic >>> control', 'incidence_list': ['121']}}",
+      "index_structures": "[1]",
+      "label": "im",
+      "network": "macroscopic >>> control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "get",
+      "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
+    },
     "124": {
       "aliases": "{'global_ID': ' V_124', 'python': 'additive', 'cpp': 'additive', 'matlab': 'additive', 'latex': '\\\\xi', 'internal_code': 'additive'}",
       "doc": "link variable additive to interface material >>> control",
@@ -1404,18 +1452,6 @@
       "tokens": "[]",
       "type": "get",
       "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
-    },
-    "125": {
-      "aliases": "{'global_ID': ' V_125', 'python': 'T', 'cpp': 'T', 'matlab': 'T', 'latex': 'T', 'internal_code': 'T'}",
-      "doc": "link variable T to interface macroscopic >>> control",
-      "equations": "{105: {'rhs': ' V_18', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'macroscopic >>> control', 'incidence_list': ['18']}}",
-      "index_structures": "[1]",
-      "label": "T",
-      "network": "macroscopic >>> control",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "get",
-      "units": "[0, 0, 0, 0, 1, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1709,7 +1745,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 125,
-    "equation": 105
+    "variable": 124,
+    "equation": 104
   }
 }
