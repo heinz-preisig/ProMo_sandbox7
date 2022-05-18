@@ -139,7 +139,7 @@
   },
   "26": {
     "variable_ID": 47,
-    "lhs": "{kq}{_{N}}",
+    "lhs": "{{k^q}}{_{N}}",
     "network": "material",
     "rhs": "\\text{Stack}\\left( {{k^q_x}}{_{N}},{{k^q_y}}{_{N}},{{k^q_z}}{_{N}} \\right)"
   },
@@ -233,12 +233,6 @@
     "network": "reactions",
     "rhs": "{{K^o}}{_{K}} \\, {\\odot} \\, exp(\\left( -{{E^a}}{_{{N K}}} \\right) \\, . \\, \\left( {R}{_{N}} \\stackrel{N}{\\,\\star\\,} {P}{_{N, {N K}}} \\, . \\, {T}{_{{N K}}} \\right)^{-1})"
   },
-  "43": {
-    "variable_ID": 64,
-    "lhs": "{N}{_{{N S}, {N K}}}",
-    "network": "reactions",
-    "rhs": "{P}{_{S, {N S}}} \\stackrel{S}{\\,\\star\\,} \\left({P}{_{K, {N K}}} \\stackrel{K}{\\,\\star\\,} {N}{_{S, K}}\\right)"
-  },
   "44": {
     "variable_ID": 66,
     "lhs": "{c}{_{{N S}}}",
@@ -253,15 +247,15 @@
   },
   "46": {
     "variable_ID": 68,
-    "lhs": "{c_KS}{_{{K S}}}",
+    "lhs": "{c}{_{{K S}}}",
     "network": "reactions",
     "rhs": "{c}{_{{N S}}} \\stackrel{{N S}}{\\,\\star\\,} {P}{_{{N S}, {K S}}}"
   },
   "47": {
     "variable_ID": 69,
-    "lhs": "{co_KS}{_{{K S}}}",
+    "lhs": "{{c^o}}{_{{K S}}}",
     "network": "reactions",
-    "rhs": "\\text{Instantiate}({c_KS}{_{{K S}}}, {\\#}{_{}})"
+    "rhs": "\\text{Instantiate}({c}{_{{K S}}}, {\\#}{_{}})"
   },
   "48": {
     "variable_ID": 71,
@@ -457,7 +451,7 @@
   },
   "80": {
     "variable_ID": 105,
-    "lhs": "{fw}{_{N}}",
+    "lhs": "{{\\hat{w}}}{_{N}}",
     "network": "macroscopic",
     "rhs": "{F}{_{N, A}} \\stackrel{A}{\\,\\star\\,} {{\\hat{w}}}{_{A}}"
   },
@@ -477,7 +471,7 @@
     "variable_ID": 108,
     "lhs": "{{\\dot{H}}}{_{N}}",
     "network": "macroscopic",
-    "rhs": "{{\\hat{H}^c}}{_{N}}  + {{\\hat{H}^d}}{_{N}}  + {{\\hat{q}}}{_{N}}  + {fw}{_{N}}"
+    "rhs": "{{\\hat{H}^c}}{_{N}}  + {{\\hat{H}^d}}{_{N}}  + {{\\hat{q}}}{_{N}}  + {{\\hat{w}}}{_{N}}"
   },
   "84": {
     "variable_ID": 109,
@@ -575,18 +569,6 @@
     "network": "macroscopic >>> control",
     "rhs": "{I}{_{N}}"
   },
-  "101": {
-    "variable_ID": 121,
-    "lhs": "{im}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "{1}{_{}} \\, . \\, {I}{_{N}}"
-  },
-  "103": {
-    "variable_ID": 123,
-    "lhs": "{I_m}{_{N}}",
-    "network": "macroscopic >>> control",
-    "rhs": "{I_m}{_{N}}"
-  },
   "104": {
     "variable_ID": 124,
     "lhs": "{\\xi}{_{}}",
@@ -598,5 +580,17 @@
     "lhs": "{T}{_{N}}",
     "network": "macroscopic >>> control",
     "rhs": "{T}{_{N}}"
+  },
+  "106": {
+    "variable_ID": 126,
+    "lhs": "{\\phi}{_{}}",
+    "network": "macroscopic",
+    "rhs": "\\text{MixedStack}\\left( {p}{_{N}},{T}{_{N}},{\\mu}{_{{N S}}},{c}{_{{N S}}},{Ue}{_{N}} \\right)"
+  },
+  "107": {
+    "variable_ID": 128,
+    "lhs": "{{n^t}}{_{N}}",
+    "network": "macroscopic",
+    "rhs": "{{1}}{_{S}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} {n}{_{{N S}}}"
   }
 }

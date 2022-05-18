@@ -361,18 +361,6 @@
       "type": "secondaryState",
       "units": "[-1, 1, 0, 0, 0, 0, 0, 0]"
     },
-    "31": {
-      "aliases": "{'global_ID': ' V_31', 'python': 'N', 'cpp': 'N', 'matlab': 'N', 'latex': 'N', 'internal_code': 'N'}",
-      "doc": "soichiometric matrix",
-      "equations": "{}",
-      "index_structures": "[3, 4]",
-      "label": "N",
-      "network": "reactions",
-      "port_variable": "True",
-      "tokens": "[]",
-      "type": "constant",
-      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
-    },
     "32": {
       "aliases": "{'global_ID': ' V_32', 'python': 'P_NS_AS', 'cpp': 'P_NS_AS', 'matlab': 'P_NS_AS', 'latex': 'P', 'internal_code': 'P_NS_AS'}",
       "doc": "projection node species to arc species",
@@ -542,7 +530,7 @@
       "units": "[-3, 0, 0, 1, -1, 0, 0, 0]"
     },
     "47": {
-      "aliases": "{'global_ID': ' V_47', 'python': 'kq', 'cpp': 'kq', 'matlab': 'kq', 'latex': 'kq', 'internal_code': 'kq'}",
+      "aliases": "{'global_ID': ' V_47', 'python': 'kq', 'cpp': 'kq', 'matlab': 'kq', 'latex': '{k^q}', 'internal_code': 'kq'}",
       "doc": "thermal conductivity",
       "equations": "{26: {'rhs': ' F_20 D_0 V_44 D_7 V_45 D_7 V_46 D_1', 'type': 'generic', 'doc': 'thermal conductivity', 'network': 'material', 'incidence_list': ['44', '45', '46']}}",
       "index_structures": "[1]",
@@ -733,18 +721,6 @@
       "type": "constant",
       "units": "[-1, -3, 1, 0, 0, 0, 0, 0]"
     },
-    "64": {
-      "aliases": "{'global_ID': ' V_64', 'python': 'N_NS_NK', 'cpp': 'N_NS_NK', 'matlab': 'N_NS_NK', 'latex': 'N', 'internal_code': 'N_NS_NK'}",
-      "doc": "soichiometric block matrix node species and node reaction",
-      "equations": "{43: {'rhs': ' V_34  O_5  I_3 O_5  D_0 V_33  O_5  I_4 O_5  V_31 D_1', 'type': 'generic', 'doc': 'soichiometric block matrix node species and node reaction', 'network': 'reactions', 'incidence_list': ['31', '33', '34']}}",
-      "index_structures": "[5, 7]",
-      "label": "N_NS_NK",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "constant",
-      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
-    },
     "65": {
       "aliases": "{'global_ID': ' V_65', 'python': 'P_NK_KS', 'cpp': 'P_NK_KS', 'matlab': 'P_NK_KS', 'latex': 'P', 'internal_code': 'P_NK_KS'}",
       "doc": "projection node conversion to conversion species",
@@ -782,7 +758,7 @@
       "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
     },
     "68": {
-      "aliases": "{'global_ID': ' V_68', 'python': 'c_KS', 'cpp': 'c_KS', 'matlab': 'c_KS', 'latex': 'c_KS', 'internal_code': 'c_KS'}",
+      "aliases": "{'global_ID': ' V_68', 'python': 'c_KS', 'cpp': 'c_KS', 'matlab': 'c_KS', 'latex': 'c', 'internal_code': 'c_KS'}",
       "doc": "concentrations associated with reactions",
       "equations": "{46: {'rhs': ' V_67  O_5  I_5 O_5  V_36', 'type': 'generic', 'doc': 'concentrations associated with reactions', 'network': 'reactions', 'incidence_list': ['36', '67']}}",
       "index_structures": "[8]",
@@ -794,7 +770,7 @@
       "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
     },
     "69": {
-      "aliases": "{'global_ID': ' V_69', 'python': 'co_KS', 'cpp': 'co_KS', 'matlab': 'co_KS', 'latex': 'co_KS', 'internal_code': 'co_KS'}",
+      "aliases": "{'global_ID': ' V_69', 'python': 'co_KS', 'cpp': 'co_KS', 'matlab': 'co_KS', 'latex': '{c^o}', 'internal_code': 'co_KS'}",
       "doc": "norming concentrations",
       "equations": "{47: {'rhs': ' O_11 D_0 V_68 D_7 V_1 D_1', 'type': 'generic', 'doc': 'norming concentrations', 'network': 'reactions', 'incidence_list': ['1', '68']}}",
       "index_structures": "[8]",
@@ -1226,7 +1202,7 @@
       "units": "[-3, 2, 0, 1, 0, 0, 0, 0]"
     },
     "105": {
-      "aliases": "{'global_ID': ' V_105', 'python': 'fw', 'cpp': 'fw', 'matlab': 'fw', 'latex': 'fw', 'internal_code': 'fw'}",
+      "aliases": "{'global_ID': ' V_105', 'python': 'fw', 'cpp': 'fw', 'matlab': 'fw', 'latex': '{\\\\hat{w}}', 'internal_code': 'fw'}",
       "doc": "net work stream",
       "equations": "{80: {'rhs': ' V_8  O_5  I_2 O_5  V_104', 'type': 'generic', 'doc': 'net work stream', 'network': 'macroscopic', 'incidence_list': ['104', '8']}}",
       "index_structures": "[1]",
@@ -1416,6 +1392,42 @@
       "tokens": "[]",
       "type": "get",
       "units": "[0, 0, 0, 0, 1, 0, 0, 0]"
+    },
+    "126": {
+      "aliases": "{'global_ID': ' V_126', 'python': 'intensities', 'cpp': 'intensities', 'matlab': 'intensities', 'latex': '\\\\phi', 'internal_code': 'intensities'}",
+      "doc": "collected intensities",
+      "equations": "{106: {'rhs': ' F_19 D_0 V_17 D_7 V_18 D_7 V_19 D_7 V_66 D_7 V_27 D_1', 'type': 'generic', 'doc': 'collected intensities', 'network': 'macroscopic', 'incidence_list': ['17', '18', '19', '27', '66']}}",
+      "index_structures": "[]",
+      "label": "intensities",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "secondaryState",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "127": {
+      "aliases": "{'global_ID': ' V_127', 'python': 'one_S', 'cpp': 'one_S', 'matlab': 'one_S', 'latex': '{1}', 'internal_code': 'one_S'}",
+      "doc": "a vector of ones with the length of the ordinal number of S",
+      "equations": "{}",
+      "index_structures": "[3]",
+      "label": "one_S",
+      "network": "macroscopic",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "128": {
+      "aliases": "{'global_ID': ' V_128', 'python': 'nTotal', 'cpp': 'nTotal', 'matlab': 'nTotal', 'latex': '{n^t}', 'internal_code': 'nTotal'}",
+      "doc": "total number of moles",
+      "equations": "{107: {'rhs': ' V_127 O_5 I_3 O_14 I_5 O_5 V_16', 'type': 'generic', 'doc': 'total number of moles', 'network': 'macroscopic', 'incidence_list': ['127', '16']}}",
+      "index_structures": "[1]",
+      "label": "nTotal",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "secondaryState",
+      "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1709,7 +1721,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 125,
-    "equation": 105
+    "variable": 128,
+    "equation": 107
   }
 }

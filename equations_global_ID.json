@@ -233,12 +233,6 @@
     "network": "reactions",
     "rhs": " V_38 O_3 F_0 D_0 F_11 D_0 V_62 D_1 O_4 F_15 D_0 V_26  O_5  I_1 O_5  V_35 O_4 V_60 D_1 D_1"
   },
-  "43": {
-    "variable_ID": 64,
-    "lhs": " V_64",
-    "network": "reactions",
-    "rhs": " V_34  O_5  I_3 O_5  D_0 V_33  O_5  I_4 O_5  V_31 D_1"
-  },
   "44": {
     "variable_ID": 66,
     "lhs": " V_66",
@@ -575,18 +569,6 @@
     "network": "macroscopic >>> control",
     "rhs": " V_119"
   },
-  "101": {
-    "variable_ID": 121,
-    "lhs": " V_121",
-    "network": "macroscopic",
-    "rhs": " V_2 O_4 V_113"
-  },
-  "103": {
-    "variable_ID": 123,
-    "lhs": " V_123",
-    "network": "macroscopic >>> control",
-    "rhs": " V_123"
-  },
   "104": {
     "variable_ID": 124,
     "lhs": " V_124",
@@ -598,5 +580,17 @@
     "lhs": " V_125",
     "network": "macroscopic >>> control",
     "rhs": " V_125"
+  },
+  "106": {
+    "variable_ID": 126,
+    "lhs": " V_126",
+    "network": "macroscopic",
+    "rhs": " F_19 D_0 V_17 D_7 V_18 D_7 V_19 D_7 V_66 D_7 V_27 D_1"
+  },
+  "107": {
+    "variable_ID": 128,
+    "lhs": " V_128",
+    "network": "macroscopic",
+    "rhs": " V_127 O_5 I_3 O_14 I_5 O_5 V_16"
   }
 }

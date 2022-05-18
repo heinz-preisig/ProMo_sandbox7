@@ -101,7 +101,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}thermal conductivity in z-direction'\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:47"}{ 26 }\hypertarget{"e:26"}{  } &
-    \begin{eq}{kq}{_{N}} := \text{Stack}\left( {{k^q_x}}{_{N}},{{k^q_y}}{_{N}},{{k^q_z}}{_{N}} \right)\end{eq} &
+    \begin{eq}{{k^q}}{_{N}} := \text{Stack}\left( {{k^q_x}}{_{N}},{{k^q_y}}{_{N}},{{k^q_z}}{_{N}} \right)\end{eq} &
     \begin{lay}thermal conductivity\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:48"}{ 27 }\hypertarget{"e:27"}{  } &
@@ -160,20 +160,16 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {R}{_{N}} \stackrel{N}{\,\star\,} {P}{_{N, {N K}}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
     \begin{lay}Arrhenius reaction 'constant'\end{lay} &
     \begin{lay}reactions\end{lay} \\
-\hyperlink{"v:64"}{ 43 }\hypertarget{"e:43"}{  } &
-    \begin{eq}{N}{_{{N S}, {N K}}} := {P}{_{S, {N S}}} \stackrel{S}{\,\star\,} \left({P}{_{K, {N K}}} \stackrel{K}{\,\star\,} {N}{_{S, K}}\right)\end{eq} &
-    \begin{lay}soichiometric block matrix node species and node reaction\end{lay} &
-    \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:66"}{ 44 }\hypertarget{"e:44"}{  } &
     \begin{eq}{c}{_{{N S}}} := \left( {V}{_{N}} \right)^{-1} \, {\odot} \, {n}{_{{N S}}}\end{eq} &
     \begin{lay}molar composition\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:68"}{ 46 }\hypertarget{"e:46"}{  } &
-    \begin{eq}{c_KS}{_{{K S}}} := {c}{_{{N S}}} \stackrel{{N S}}{\,\star\,} {P}{_{{N S}, {K S}}}\end{eq} &
+    \begin{eq}{c}{_{{K S}}} := {c}{_{{N S}}} \stackrel{{N S}}{\,\star\,} {P}{_{{N S}, {K S}}}\end{eq} &
     \begin{lay}concentrations associated with reactions\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:69"}{ 47 }\hypertarget{"e:47"}{  } &
-    \begin{eq}{co_KS}{_{{K S}}} := \text{Instantiate}({c_KS}{_{{K S}}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{{c^o}}{_{{K S}}} := \text{Instantiate}({c}{_{{K S}}}, {\#}{_{}})\end{eq} &
     \begin{lay}norming concentrations\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:71"}{ 48 }\hypertarget{"e:48"}{  } &
@@ -241,7 +237,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}sample work stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:105"}{ 80 }\hypertarget{"e:80"}{  } &
-    \begin{eq}{fw}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {{\hat{w}}}{_{A}}\end{eq} &
+    \begin{eq}{{\hat{w}}}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {{\hat{w}}}{_{A}}\end{eq} &
     \begin{lay}net work stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:106"}{ 81 }\hypertarget{"e:81"}{  } &
@@ -253,7 +249,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}net heat flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:108"}{ 83 }\hypertarget{"e:83"}{  } &
-    \begin{eq}{{\dot{H}}}{_{N}} := {{\hat{H}^c}}{_{N}}  + {{\hat{H}^d}}{_{N}}  + {{\hat{q}}}{_{N}}  + {fw}{_{N}}\end{eq} &
+    \begin{eq}{{\dot{H}}}{_{N}} := {{\hat{H}^c}}{_{N}}  + {{\hat{H}^d}}{_{N}}  + {{\hat{q}}}{_{N}}  + {{\hat{w}}}{_{N}}\end{eq} &
     \begin{lay}differential enthalpy balance\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:109"}{ 84 }\hypertarget{"e:84"}{  } &
@@ -307,6 +303,14 @@ no & equation &documentation &layer \\\hline\hline
 \hyperlink{"v:118"}{ 98 }\hypertarget{"e:98"}{  } &
     \begin{eq}{{\dot{U}^e}}{_{N}} := \text{Instantiate}({{\dot{U}^e}}{_{N}}, {0}{_{}})\end{eq} &
     \begin{lay}Kirkhoff first law\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:126"}{ 106 }\hypertarget{"e:106"}{  } &
+    \begin{eq}{\phi}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}},{Ue}{_{N}} \right)\end{eq} &
+    \begin{lay}collected intensities\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:128"}{ 107 }\hypertarget{"e:107"}{  } &
+    \begin{eq}{{n^t}}{_{N}} := {{1}}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
+    \begin{lay}total number of moles\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hline
 \end{longtable}

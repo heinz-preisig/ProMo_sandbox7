@@ -233,12 +233,6 @@
     "network": "reactions",
     "rhs": "khatriRao(Ko, [K], exp(- Ea .* inv(( ( GasConstant )'  * P_N_NK )'  .* T_NK)), [N_x_K])"
   },
-  "43": {
-    "variable_ID": 64,
-    "lhs": "N_NS_NK",
-    "network": "reactions",
-    "rhs": "( P_S_NS )'  * (( ( P_K_NK )'  * ( N )'  )' )"
-  },
   "44": {
     "variable_ID": 66,
     "lhs": "c",
@@ -575,18 +569,6 @@
     "network": "macroscopic >>> control",
     "rhs": "i"
   },
-  "101": {
-    "variable_ID": 121,
-    "lhs": "im",
-    "network": "macroscopic",
-    "rhs": "one .* i"
-  },
-  "103": {
-    "variable_ID": 123,
-    "lhs": "im",
-    "network": "macroscopic >>> control",
-    "rhs": "im"
-  },
   "104": {
     "variable_ID": 124,
     "lhs": "additive",
@@ -598,5 +580,17 @@
     "lhs": "T",
     "network": "macroscopic >>> control",
     "rhs": "T"
+  },
+  "106": {
+    "variable_ID": 126,
+    "lhs": "intensities",
+    "network": "macroscopic",
+    "rhs": "MixedStack(p,T,chemPot,c,Ue)"
+  },
+  "107": {
+    "variable_ID": 128,
+    "lhs": "nTotal",
+    "network": "macroscopic",
+    "rhs": "blockReduce(one_S, S, N_x_S, n)"
   }
 }

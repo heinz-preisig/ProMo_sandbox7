@@ -194,11 +194,6 @@
     "network": "reactions",
     "rhs": " Ko : exp ( neg ( Ea ) . inv ( GasConstant | N | P_N_NK . T_NK ) )"
   },
-  "43": {
-    "lhs": "N_NS_NK",
-    "network": "reactions",
-    "rhs": " P_S_NS | S | ( P_K_NK | K | N )"
-  },
   "44": {
     "lhs": "c",
     "network": "macroscopic",
@@ -479,16 +474,6 @@
     "network": "macroscopic >>> control",
     "rhs": " i"
   },
-  "101": {
-    "lhs": "im",
-    "network": "macroscopic",
-    "rhs": " one . i"
-  },
-  "103": {
-    "lhs": "im",
-    "network": "macroscopic >>> control",
-    "rhs": " im"
-  },
   "104": {
     "lhs": "additive",
     "network": "material >>> control",
@@ -498,5 +483,15 @@
     "lhs": "T",
     "network": "macroscopic >>> control",
     "rhs": " T"
+  },
+  "106": {
+    "lhs": "intensities",
+    "network": "macroscopic",
+    "rhs": " MixedStack ( p , T , chemPot , c , Ue )"
+  },
+  "107": {
+    "lhs": "nTotal",
+    "network": "macroscopic",
+    "rhs": " one_S | S in N & S | n"
   }
 }

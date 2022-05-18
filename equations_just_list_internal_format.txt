@@ -37,7 +37,6 @@
 39 :: T_NK =  P_N_NK | N | T
 41 :: Ea =  Instantiate ( P_N_NK | N | GasConstant . T_NK , value )
 42 :: K_NK =  Ko : exp ( neg ( Ea ) . inv ( GasConstant | N | P_N_NK . T_NK ) )
-43 :: N_NS_NK =  P_S_NS | S | ( P_K_NK | K | N )
 44 :: c =  inv ( V ) : n
 45 :: c =  c
 46 :: c_KS =  c | N & S | P_NS_KS
@@ -96,3 +95,5 @@
 99 :: i =  i
 104 :: additive =  additive
 105 :: T =  T
+106 :: intensities =  MixedStack ( p , T , chemPot , c , Ue )
+107 :: nTotal =  one_S | S in N & S | n
