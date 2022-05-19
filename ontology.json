@@ -658,7 +658,7 @@
   "rules": {
     "name_space": false,
     "network_enable_adding_indices": {
-      "control": false,
+      "control": true,
       "fluid": false,
       "gas": false,
       "liquid": false,

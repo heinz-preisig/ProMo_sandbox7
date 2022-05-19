@@ -97,3 +97,15 @@
 105 :: T =  T
 106 :: intensities =  MixedStack ( p , T , chemPot , c , Ue )
 107 :: nTotal =  one_S | S in N & S | n
+108 :: e =  meas - setPoint
+109 :: xo =  Instantiate ( x , value )
+110 :: dxdt =  A | N | x + B | A | e
+111 :: x =  Integral ( I_N_D | D | dxdt :: t in [ to , te ] )
+112 :: additive =  additive
+113 :: Imeasured =  i
+114 :: Ue =  Ue
+115 :: UeMeasured =  Ue
+116 :: addMeasured =  additive
+117 :: RComputed =  inv ( Imeasured ) . UeMeasured
+118 :: store =  MixedStack ( Imeasured , UeMeasured , RComputed , addMeasured )
+119 :: setPoint =  Instantiate ( setPoint , value )

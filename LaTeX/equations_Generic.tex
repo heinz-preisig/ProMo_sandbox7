@@ -312,5 +312,45 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{n^t}}{_{N}} := {{1}}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
     \begin{lay}total number of moles\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:135"}{ 108 }\hypertarget{"e:108"}{  } &
+    \begin{eq}{e}{_{A}} := {m}{_{A}}  - {{y^o}}{_{A}}\end{eq} &
+    \begin{lay}control error\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:137"}{ 109 }\hypertarget{"e:109"}{  } &
+    \begin{eq}{xo}{_{N}} := \text{Instantiate}({x}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}initial state\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:138"}{ 110 }\hypertarget{"e:110"}{  } &
+    \begin{eq}{{\dot{x}}}{_{D}} := {A}{_{N, D}} \stackrel{N}{\,\star\,} {x}{_{N}}  + {B}{_{A, D}} \stackrel{A}{\,\star\,} {e}{_{A}}\end{eq} &
+    \begin{lay}differential state (ABCD) model\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:136"}{ 111 }\hypertarget{"e:111"}{  } &
+    \begin{eq}{x}{_{N}} := \int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \, {1}{_{N, D}} \stackrel{D}{\,\star\,} {{\dot{x}}}{_{D}} \enskip d\,{t}{_{}}\end{eq} &
+    \begin{lay}state\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:141"}{ 113 }\hypertarget{"e:113"}{  } &
+    \begin{eq}{{\ckeck{I}}}{_{N}} := {I}{_{N}}\end{eq} &
+    \begin{lay}measured current\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:143"}{ 115 }\hypertarget{"e:115"}{  } &
+    \begin{eq}{{\check{U}^e}}{_{N}} := {Ue}{_{N}}\end{eq} &
+    \begin{lay}measured electrical potential\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:144"}{ 116 }\hypertarget{"e:116"}{  } &
+    \begin{eq}{{\check{\xi}}}{_{}} := {\xi}{_{}}\end{eq} &
+    \begin{lay}measured additive fraction\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:145"}{ 117 }\hypertarget{"e:117"}{  } &
+    \begin{eq}{RComputed}{_{N}} := \left( {{\ckeck{I}}}{_{N}} \right)^{-1} \, . \, {{\check{U}^e}}{_{N}}\end{eq} &
+    \begin{lay}measured resistance \end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:146"}{ 118 }\hypertarget{"e:118"}{  } &
+    \begin{eq}{store}{_{}} := \text{MixedStack}\left( {{\ckeck{I}}}{_{N}},{{\check{U}^e}}{_{N}},{RComputed}{_{N}},{{\check{\xi}}}{_{}} \right)\end{eq} &
+    \begin{lay}quantities to be stored\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:133"}{ 119 }\hypertarget{"e:119"}{  } &
+    \begin{eq}{{y^o}}{_{A}} := \text{Instantiate}({{y^o}}{_{A}}, {\#}{_{}})\end{eq} &
+    \begin{lay}set point\end{lay} &
+    \begin{lay}control\end{lay} \\
 \hline
 \end{longtable}

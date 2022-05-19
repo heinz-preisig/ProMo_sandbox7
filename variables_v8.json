@@ -1428,6 +1428,222 @@
       "tokens": "[]",
       "type": "secondaryState",
       "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
+    },
+    "129": {
+      "aliases": "{'global_ID': ' V_129', 'python': 'A', 'cpp': 'A', 'matlab': 'A', 'latex': 'A', 'internal_code': 'A'}",
+      "doc": "dynamic matrix",
+      "equations": "{}",
+      "index_structures": "[1, 9]",
+      "label": "A",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "130": {
+      "aliases": "{'global_ID': ' V_130', 'python': 'B', 'cpp': 'B', 'matlab': 'B', 'latex': 'B', 'internal_code': 'B'}",
+      "doc": "input matrix",
+      "equations": "{}",
+      "index_structures": "[2, 9]",
+      "label": "B",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "131": {
+      "aliases": "{'global_ID': ' V_131', 'python': 'C', 'cpp': 'C', 'matlab': 'C', 'latex': 'C', 'internal_code': 'C'}",
+      "doc": "measurement matrix",
+      "equations": "{}",
+      "index_structures": "[1, 2]",
+      "label": "C",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "132": {
+      "aliases": "{'global_ID': ' V_132', 'python': 'D', 'cpp': 'D', 'matlab': 'D', 'latex': 'D', 'internal_code': 'D'}",
+      "doc": "diagonal event matrix (no dimensional problems)",
+      "equations": "{}",
+      "index_structures": "[2]",
+      "label": "D",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "133": {
+      "aliases": "{'global_ID': ' V_133', 'python': 'setPoint', 'cpp': 'setPoint', 'matlab': 'setPoint', 'latex': '{y^o}', 'internal_code': 'setPoint'}",
+      "doc": "set point",
+      "equations": "{119: {'rhs': ' O_11 D_0 V_133 D_7 V_1 D_1', 'type': 'generic', 'doc': 'set point', 'network': 'control', 'incidence_list': ['1', '133']}}",
+      "index_structures": "[2]",
+      "label": "setPoint",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "134": {
+      "aliases": "{'global_ID': ' V_134', 'python': 'meas', 'cpp': 'meas', 'matlab': 'meas', 'latex': 'm', 'internal_code': 'meas'}",
+      "doc": "measurements",
+      "equations": "{}",
+      "index_structures": "[2]",
+      "label": "meas",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "135": {
+      "aliases": "{'global_ID': ' V_135', 'python': 'e', 'cpp': 'e', 'matlab': 'e', 'latex': 'e', 'internal_code': 'e'}",
+      "doc": "control error",
+      "equations": "{108: {'rhs': ' V_134 O_1 V_133', 'type': 'generic', 'doc': 'control error', 'network': 'control', 'incidence_list': ['133', '134']}}",
+      "index_structures": "[2]",
+      "label": "e",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "136": {
+      "aliases": "{'global_ID': ' V_136', 'python': 'x', 'cpp': 'x', 'matlab': 'x', 'latex': 'x', 'internal_code': 'x'}",
+      "doc": "state",
+      "equations": "{111: {'rhs': ' O_9 D_0 V_139  O_5  I_9 O_5  V_138 D_8 V_5 O_14 D_2 V_6 D_7 V_7 D_3 D_1', 'type': 'generic', 'doc': 'state', 'network': 'control', 'incidence_list': ['138', '139', '5', '6', '7']}}",
+      "index_structures": "[1]",
+      "label": "x",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "state",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "137": {
+      "aliases": "{'global_ID': ' V_137', 'python': 'xo', 'cpp': 'xo', 'matlab': 'xo', 'latex': 'xo', 'internal_code': 'xo'}",
+      "doc": "initial state",
+      "equations": "{109: {'rhs': ' O_11 D_0 V_136 D_7 V_1 D_1', 'type': 'generic', 'doc': 'initial state', 'network': 'control', 'incidence_list': ['1', '136']}}",
+      "index_structures": "[1]",
+      "label": "xo",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "state",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "138": {
+      "aliases": "{'global_ID': ' V_138', 'python': 'dxdt', 'cpp': 'dxdt', 'matlab': 'dxdt', 'latex': '{\\\\dot{x}}', 'internal_code': 'dxdt'}",
+      "doc": "differential state (ABCD) model",
+      "equations": "{110: {'rhs': ' V_129  O_5  I_1 O_5  V_136 O_0 V_130  O_5  I_2 O_5  V_135', 'type': 'generic', 'doc': 'differential state (ABCD) model', 'network': 'control', 'incidence_list': ['129', '130', '135', '136']}}",
+      "index_structures": "[9]",
+      "label": "dxdt",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "diffState",
+      "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "139": {
+      "aliases": "{'global_ID': ' V_139', 'python': 'I_N_D', 'cpp': 'I_N_D', 'matlab': 'I_N_D', 'latex': '1', 'internal_code': 'I_N_D'}",
+      "doc": "space transformation D to N",
+      "equations": "{}",
+      "index_structures": "[1, 9]",
+      "label": "I_N_D",
+      "network": "control",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "140": {
+      "aliases": "{'global_ID': ' V_140', 'python': 'additive', 'cpp': 'additive', 'matlab': 'additive', 'latex': 'additive', 'internal_code': 'additive'}",
+      "doc": "link variable additive to interface material >>> macroscopic",
+      "equations": "{112: {'rhs': ' V_112', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'material >>> macroscopic', 'incidence_list': ['112']}}",
+      "index_structures": "[]",
+      "label": "additive",
+      "network": "material >>> macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "get",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "141": {
+      "aliases": "{'global_ID': ' V_141', 'python': 'Imeasured', 'cpp': 'Imeasured', 'matlab': 'Imeasured', 'latex': '{\\\\ckeck{I}}', 'internal_code': 'Imeasured'}",
+      "doc": "measured current",
+      "equations": "{113: {'rhs': ' V_119', 'type': 'generic', 'doc': 'measured current', 'network': 'control', 'incidence_list': ['119']}}",
+      "index_structures": "[1]",
+      "label": "Imeasured",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
+    },
+    "142": {
+      "aliases": "{'global_ID': ' V_142', 'python': 'Ue', 'cpp': 'Ue', 'matlab': 'Ue', 'latex': 'Ue', 'internal_code': 'Ue'}",
+      "doc": "link variable Ue to interface macroscopic >>> control",
+      "equations": "{114: {'rhs': ' V_27', 'type': 'interface_link_equation', 'doc': 'interface equation', 'network': 'macroscopic >>> control', 'incidence_list': ['27']}}",
+      "index_structures": "[1]",
+      "label": "Ue",
+      "network": "macroscopic >>> control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "get",
+      "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
+    },
+    "143": {
+      "aliases": "{'global_ID': ' V_143', 'python': 'UeMeasured', 'cpp': 'UeMeasured', 'matlab': 'UeMeasured', 'latex': '{\\\\check{U}^e}', 'internal_code': 'UeMeasured'}",
+      "doc": "measured electrical potential",
+      "equations": "{115: {'rhs': ' V_142', 'type': 'generic', 'doc': 'measured electrical potential', 'network': 'control', 'incidence_list': ['142']}}",
+      "index_structures": "[1]",
+      "label": "UeMeasured",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
+    },
+    "144": {
+      "aliases": "{'global_ID': ' V_144', 'python': 'addMeasured', 'cpp': 'addMeasured', 'matlab': 'addMeasured', 'latex': '{\\\\check{\\\\xi}}', 'internal_code': 'addMeasured'}",
+      "doc": "measured additive fraction",
+      "equations": "{116: {'rhs': ' V_124', 'type': 'generic', 'doc': 'measured additive fraction', 'network': 'control', 'incidence_list': ['124']}}",
+      "index_structures": "[]",
+      "label": "addMeasured",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "145": {
+      "aliases": "{'global_ID': ' V_145', 'python': 'RComputed', 'cpp': 'RComputed', 'matlab': 'RComputed', 'latex': 'RComputed', 'internal_code': 'RComputed'}",
+      "doc": "measured resistance ",
+      "equations": "{117: {'rhs': ' F_15 D_0 V_141 D_1 O_4 V_143', 'type': 'generic', 'doc': 'measured resistance ', 'network': 'control', 'incidence_list': ['141', '143']}}",
+      "index_structures": "[1]",
+      "label": "RComputed",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[-3, 2, 0, 1, 0, -2, 0, 0]"
+    },
+    "146": {
+      "aliases": "{'global_ID': ' V_146', 'python': 'store', 'cpp': 'store', 'matlab': 'store', 'latex': 'store', 'internal_code': 'store'}",
+      "doc": "quantities to be stored",
+      "equations": "{118: {'rhs': ' F_19 D_0 V_141 D_7 V_143 D_7 V_145 D_7 V_144 D_1', 'type': 'generic', 'doc': 'quantities to be stored', 'network': 'control', 'incidence_list': ['141', '143', '144', '145']}}",
+      "index_structures": "[]",
+      "label": "store",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1718,10 +1934,26 @@
           ]
         }
       ]
+    },
+    "9": {
+      "type": "index",
+      "label": "diffSpace",
+      "network": [
+        "control"
+      ],
+      "aliases": {
+        "global_ID": " I_9",
+        "python": "D",
+        "cpp": "D",
+        "matlab": "D",
+        "latex": "D",
+        "internal_code": "D"
+      },
+      "tokens": null
     }
   },
   "Ontology_global_IDs": {
-    "variable": 128,
-    "equation": 107
+    "variable": 146,
+    "equation": 119
   }
 }

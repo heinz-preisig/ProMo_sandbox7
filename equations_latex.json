@@ -592,5 +592,77 @@
     "lhs": "{{n^t}}{_{N}}",
     "network": "macroscopic",
     "rhs": "{{1}}{_{S}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} {n}{_{{N S}}}"
+  },
+  "108": {
+    "variable_ID": 135,
+    "lhs": "{e}{_{A}}",
+    "network": "control",
+    "rhs": "{m}{_{A}}  - {{y^o}}{_{A}}"
+  },
+  "109": {
+    "variable_ID": 137,
+    "lhs": "{xo}{_{N}}",
+    "network": "control",
+    "rhs": "\\text{Instantiate}({x}{_{N}}, {\\#}{_{}})"
+  },
+  "110": {
+    "variable_ID": 138,
+    "lhs": "{{\\dot{x}}}{_{D}}",
+    "network": "control",
+    "rhs": "{A}{_{N, D}} \\stackrel{N}{\\,\\star\\,} {x}{_{N}}  + {B}{_{A, D}} \\stackrel{A}{\\,\\star\\,} {e}{_{A}}"
+  },
+  "111": {
+    "variable_ID": 136,
+    "lhs": "{x}{_{N}}",
+    "network": "control",
+    "rhs": "\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {1}{_{N, D}} \\stackrel{D}{\\,\\star\\,} {{\\dot{x}}}{_{D}} \\enskip d\\,{t}{_{}}"
+  },
+  "112": {
+    "variable_ID": 140,
+    "lhs": "{additive}{_{}}",
+    "network": "material >>> macroscopic",
+    "rhs": "{additive}{_{}}"
+  },
+  "113": {
+    "variable_ID": 141,
+    "lhs": "{{\\ckeck{I}}}{_{N}}",
+    "network": "control",
+    "rhs": "{I}{_{N}}"
+  },
+  "114": {
+    "variable_ID": 142,
+    "lhs": "{Ue}{_{N}}",
+    "network": "macroscopic >>> control",
+    "rhs": "{Ue}{_{N}}"
+  },
+  "115": {
+    "variable_ID": 143,
+    "lhs": "{{\\check{U}^e}}{_{N}}",
+    "network": "control",
+    "rhs": "{Ue}{_{N}}"
+  },
+  "116": {
+    "variable_ID": 144,
+    "lhs": "{{\\check{\\xi}}}{_{}}",
+    "network": "control",
+    "rhs": "{\\xi}{_{}}"
+  },
+  "117": {
+    "variable_ID": 145,
+    "lhs": "{RComputed}{_{N}}",
+    "network": "control",
+    "rhs": "\\left( {{\\ckeck{I}}}{_{N}} \\right)^{-1} \\, . \\, {{\\check{U}^e}}{_{N}}"
+  },
+  "118": {
+    "variable_ID": 146,
+    "lhs": "{store}{_{}}",
+    "network": "control",
+    "rhs": "\\text{MixedStack}\\left( {{\\ckeck{I}}}{_{N}},{{\\check{U}^e}}{_{N}},{RComputed}{_{N}},{{\\check{\\xi}}}{_{}} \\right)"
+  },
+  "119": {
+    "variable_ID": 133,
+    "lhs": "{{y^o}}{_{A}}",
+    "network": "control",
+    "rhs": "\\text{Instantiate}({{y^o}}{_{A}}, {\\#}{_{}})"
   }
 }

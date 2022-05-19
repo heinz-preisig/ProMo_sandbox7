@@ -592,5 +592,77 @@
     "lhs": "nTotal",
     "network": "macroscopic",
     "rhs": "blockReduce(one_S, S, N_x_S, n)"
+  },
+  "108": {
+    "variable_ID": 135,
+    "lhs": "e",
+    "network": "control",
+    "rhs": "meas - setPoint"
+  },
+  "109": {
+    "variable_ID": 137,
+    "lhs": "xo",
+    "network": "control",
+    "rhs": "Instantiate(x, value)"
+  },
+  "110": {
+    "variable_ID": 138,
+    "lhs": "dxdt",
+    "network": "control",
+    "rhs": "( A )'  * x + ( B )'  * e"
+  },
+  "111": {
+    "variable_ID": 136,
+    "lhs": "x",
+    "network": "control",
+    "rhs": "Integral(I_N_D * dxdt,t,to,te)"
+  },
+  "112": {
+    "variable_ID": 140,
+    "lhs": "additive",
+    "network": "material >>> macroscopic",
+    "rhs": "additive"
+  },
+  "113": {
+    "variable_ID": 141,
+    "lhs": "Imeasured",
+    "network": "control",
+    "rhs": "i"
+  },
+  "114": {
+    "variable_ID": 142,
+    "lhs": "Ue",
+    "network": "macroscopic >>> control",
+    "rhs": "Ue"
+  },
+  "115": {
+    "variable_ID": 143,
+    "lhs": "UeMeasured",
+    "network": "control",
+    "rhs": "Ue"
+  },
+  "116": {
+    "variable_ID": 144,
+    "lhs": "addMeasured",
+    "network": "control",
+    "rhs": "additive"
+  },
+  "117": {
+    "variable_ID": 145,
+    "lhs": "RComputed",
+    "network": "control",
+    "rhs": "inv(Imeasured) .* UeMeasured"
+  },
+  "118": {
+    "variable_ID": 146,
+    "lhs": "store",
+    "network": "control",
+    "rhs": "MixedStack(Imeasured,UeMeasured,RComputed,addMeasured)"
+  },
+  "119": {
+    "variable_ID": 133,
+    "lhs": "setPoint",
+    "network": "control",
+    "rhs": "Instantiate(setPoint, value)"
   }
 }

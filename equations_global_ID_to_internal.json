@@ -493,5 +493,65 @@
     "lhs": "nTotal",
     "network": "macroscopic",
     "rhs": " one_S | S in N & S | n"
+  },
+  "108": {
+    "lhs": "e",
+    "network": "control",
+    "rhs": " meas - setPoint"
+  },
+  "109": {
+    "lhs": "xo",
+    "network": "control",
+    "rhs": " Instantiate ( x , value )"
+  },
+  "110": {
+    "lhs": "dxdt",
+    "network": "control",
+    "rhs": " A | N | x + B | A | e"
+  },
+  "111": {
+    "lhs": "x",
+    "network": "control",
+    "rhs": " Integral ( I_N_D | D | dxdt :: t in [ to , te ] )"
+  },
+  "112": {
+    "lhs": "additive",
+    "network": "material >>> macroscopic",
+    "rhs": " additive"
+  },
+  "113": {
+    "lhs": "Imeasured",
+    "network": "control",
+    "rhs": " i"
+  },
+  "114": {
+    "lhs": "Ue",
+    "network": "macroscopic >>> control",
+    "rhs": " Ue"
+  },
+  "115": {
+    "lhs": "UeMeasured",
+    "network": "control",
+    "rhs": " Ue"
+  },
+  "116": {
+    "lhs": "addMeasured",
+    "network": "control",
+    "rhs": " additive"
+  },
+  "117": {
+    "lhs": "RComputed",
+    "network": "control",
+    "rhs": " inv ( Imeasured ) . UeMeasured"
+  },
+  "118": {
+    "lhs": "store",
+    "network": "control",
+    "rhs": " MixedStack ( Imeasured , UeMeasured , RComputed , addMeasured )"
+  },
+  "119": {
+    "lhs": "setPoint",
+    "network": "control",
+    "rhs": " Instantiate ( setPoint , value )"
   }
 }
