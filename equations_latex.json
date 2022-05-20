@@ -245,18 +245,6 @@
     "network": "macroscopic >>> reactions",
     "rhs": "{c}{_{{N S}}}"
   },
-  "46": {
-    "variable_ID": 68,
-    "lhs": "{c}{_{{K S}}}",
-    "network": "reactions",
-    "rhs": "{c}{_{{N S}}} \\stackrel{{N S}}{\\,\\star\\,} {P}{_{{N S}, {K S}}}"
-  },
-  "47": {
-    "variable_ID": 69,
-    "lhs": "{{c^o}}{_{{K S}}}",
-    "network": "reactions",
-    "rhs": "\\text{Instantiate}({c}{_{{K S}}}, {\\#}{_{}})"
-  },
   "48": {
     "variable_ID": 71,
     "lhs": "{{A_{yz}}}{_{N}}",
@@ -297,7 +285,7 @@
     "variable_ID": 77,
     "lhs": "{Cv}{_{N}}",
     "network": "material >>> macroscopic",
-    "rhs": "{Cv}{_{N}}"
+    "rhs": "{{C_V}}{_{N}}"
   },
   "55": {
     "variable_ID": 78,
@@ -327,7 +315,7 @@
     "variable_ID": 82,
     "lhs": "{Cp}{_{N}}",
     "network": "material >>> macroscopic",
-    "rhs": "{Cp}{_{N}}"
+    "rhs": "{{C_p}}{_{N}}"
   },
   "60": {
     "variable_ID": 83,
@@ -513,7 +501,7 @@
     "variable_ID": 114,
     "lhs": "{i}{_{N}}",
     "network": "macroscopic >>> material",
-    "rhs": "{i}{_{N}}"
+    "rhs": "{I}{_{N}}"
   },
   "91": {
     "variable_ID": 115,
@@ -537,7 +525,7 @@
     "variable_ID": 117,
     "lhs": "{{R^e}}{_{N}}",
     "network": "material >>> macroscopic",
-    "rhs": "{{R^e}}{_{N}}"
+    "rhs": "{{k^{e,\\xi}}}{_{N}}"
   },
   "95": {
     "variable_ID": 27,
@@ -621,11 +609,11 @@
     "variable_ID": 140,
     "lhs": "{additive}{_{}}",
     "network": "material >>> macroscopic",
-    "rhs": "{additive}{_{}}"
+    "rhs": "{\\xi}{_{}}"
   },
   "113": {
     "variable_ID": 141,
-    "lhs": "{{\\ckeck{I}}}{_{N}}",
+    "lhs": "{{\\check{I}}}{_{N}}",
     "network": "control",
     "rhs": "{I}{_{N}}"
   },
@@ -651,18 +639,36 @@
     "variable_ID": 145,
     "lhs": "{RComputed}{_{N}}",
     "network": "control",
-    "rhs": "\\left( {{\\ckeck{I}}}{_{N}} \\right)^{-1} \\, . \\, {{\\check{U}^e}}{_{N}}"
+    "rhs": "\\left( {{\\check{I}}}{_{N}} \\right)^{-1} \\, . \\, {{\\check{U}^e}}{_{N}}"
   },
   "118": {
     "variable_ID": 146,
     "lhs": "{store}{_{}}",
     "network": "control",
-    "rhs": "\\text{MixedStack}\\left( {{\\ckeck{I}}}{_{N}},{{\\check{U}^e}}{_{N}},{RComputed}{_{N}},{{\\check{\\xi}}}{_{}} \\right)"
+    "rhs": "\\text{MixedStack}\\left( {{\\check{I}}}{_{N}},{{\\check{U}^e}}{_{N}},{RComputed}{_{N}},{{\\check{\\xi}}}{_{}} \\right)"
   },
   "119": {
     "variable_ID": 133,
     "lhs": "{{y^o}}{_{A}}",
     "network": "control",
     "rhs": "\\text{Instantiate}({{y^o}}{_{A}}, {\\#}{_{}})"
+  },
+  "123": {
+    "variable_ID": 151,
+    "lhs": "{c}{_{{N K}, {K S}}}",
+    "network": "reactions",
+    "rhs": "{P}{_{{N K}}} \\, . \\, \\left({P}{_{{N S}, {K S}}} \\stackrel{{N S}}{\\,\\star\\,} {c}{_{{N S}}}\\right)"
+  },
+  "124": {
+    "variable_ID": 152,
+    "lhs": "{co}{_{{N K}, {K S}}}",
+    "network": "reactions",
+    "rhs": "\\text{Instantiate}({c}{_{{N K}, {K S}}}, {\\#}{_{}})"
+  },
+  "125": {
+    "variable_ID": 153,
+    "lhs": "{x}{_{{N K}, {K S}}}",
+    "network": "reactions",
+    "rhs": "\\left( {co}{_{{N K}, {K S}}} \\right)^{-1} \\, . \\, {c}{_{{N K}, {K S}}}"
   }
 }

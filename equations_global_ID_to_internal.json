@@ -85,7 +85,7 @@
     "rhs": " ParDiff ( r_z , t )"
   },
   "20": {
-    "lhs": "Mm",
+    "lhs": "_Mm",
     "network": "material >>> macroscopic",
     "rhs": " Mm"
   },
@@ -167,17 +167,17 @@
   "36": {
     "lhs": "m",
     "network": "macroscopic",
-    "rhs": " Mm | S in N & S | n"
+    "rhs": " _Mm | S in N & S | n"
   },
   "37": {
-    "lhs": "m",
+    "lhs": "_m",
     "network": "macroscopic >>> material",
     "rhs": " m"
   },
   "38": {
     "lhs": "density",
     "network": "material",
-    "rhs": " m . inv ( V )"
+    "rhs": " _m . inv ( V )"
   },
   "39": {
     "lhs": "T_NK",
@@ -200,19 +200,9 @@
     "rhs": " inv ( V ) : n"
   },
   "45": {
-    "lhs": "c",
+    "lhs": "_c",
     "network": "macroscopic >>> reactions",
     "rhs": " c"
-  },
-  "46": {
-    "lhs": "c_KS",
-    "network": "reactions",
-    "rhs": " c | N & S | P_NS_KS"
-  },
-  "47": {
-    "lhs": "co_KS",
-    "network": "reactions",
-    "rhs": " Instantiate ( c_KS , value )"
   },
   "48": {
     "lhs": "Ayz",
@@ -230,94 +220,94 @@
     "rhs": " r_x . r_y"
   },
   "51": {
-    "lhs": "density",
+    "lhs": "_density",
     "network": "material >>> macroscopic",
     "rhs": " density"
   },
   "52": {
-    "lhs": "h",
+    "lhs": "_h",
     "network": "material >>> macroscopic",
     "rhs": " h"
   },
   "53": {
-    "lhs": "kq_x",
+    "lhs": "_kq_x",
     "network": "material >>> macroscopic",
     "rhs": " kq_x"
   },
   "54": {
-    "lhs": "Cv",
+    "lhs": "_Cv",
     "network": "material >>> macroscopic",
     "rhs": " Cv"
   },
   "55": {
-    "lhs": "kq_y",
+    "lhs": "_kq_y",
     "network": "material >>> macroscopic",
     "rhs": " kq_y"
   },
   "56": {
-    "lhs": "kq_z",
+    "lhs": "_kq_z",
     "network": "material >>> macroscopic",
     "rhs": " kq_z"
   },
   "57": {
-    "lhs": "kq",
+    "lhs": "_kq",
     "network": "material >>> macroscopic",
     "rhs": " kq"
   },
   "58": {
-    "lhs": "kc_x",
+    "lhs": "_kc_x",
     "network": "material >>> macroscopic",
     "rhs": " kc_x"
   },
   "59": {
-    "lhs": "Cp",
+    "lhs": "_Cp",
     "network": "material >>> macroscopic",
     "rhs": " Cp"
   },
   "60": {
-    "lhs": "kc_y",
+    "lhs": "_kc_y",
     "network": "material >>> macroscopic",
     "rhs": " kc_y"
   },
   "61": {
-    "lhs": "kc_z",
+    "lhs": "_kc_z",
     "network": "material >>> macroscopic",
     "rhs": " kc_z"
   },
   "62": {
-    "lhs": "kc",
+    "lhs": "_kc",
     "network": "material >>> macroscopic",
     "rhs": " kc"
   },
   "63": {
-    "lhs": "kd_x",
+    "lhs": "_kd_x",
     "network": "material >>> macroscopic",
     "rhs": " kd_x"
   },
   "64": {
-    "lhs": "kd_y",
+    "lhs": "_kd_y",
     "network": "material >>> macroscopic",
     "rhs": " kd_y"
   },
   "65": {
-    "lhs": "kd_z",
+    "lhs": "_kd_z",
     "network": "material >>> macroscopic",
     "rhs": " kd_z"
   },
   "66": {
-    "lhs": "kd",
+    "lhs": "_kd",
     "network": "material >>> macroscopic",
     "rhs": " kd"
   },
   "67": {
     "lhs": "fV",
     "network": "macroscopic",
-    "rhs": " inv ( density ) . kc_x . Ayz . D | N | p"
+    "rhs": " inv ( _density ) . _kc_x . Ayz . D | N | p"
   },
   "68": {
     "lhs": "fnd_AS",
     "network": "macroscopic",
-    "rhs": " Ayz : neg ( kd_x ) . D_NS_AS | N & S | chemPot"
+    "rhs": " Ayz : neg ( _kd_x ) . D_NS_AS | N & S | chemPot"
   },
   "69": {
     "lhs": "fnd",
@@ -327,7 +317,7 @@
   "70": {
     "lhs": "fHd_A",
     "network": "macroscopic",
-    "rhs": " ( F_NS_AS | N & S | h ) | S in A & S | fnd_AS"
+    "rhs": " ( F_NS_AS | N & S | _h ) | S in A & S | fnd_AS"
   },
   "71": {
     "lhs": "fHd",
@@ -362,7 +352,7 @@
   "77": {
     "lhs": "fHc_A",
     "network": "macroscopic",
-    "rhs": " ( F_NS_AS | N & S | h ) | S in A & S | fnc_AS"
+    "rhs": " ( F_NS_AS | N & S | _h ) | S in A & S | fnc_AS"
   },
   "78": {
     "lhs": "fHc",
@@ -382,7 +372,7 @@
   "81": {
     "lhs": "fq_A_x",
     "network": "macroscopic",
-    "rhs": " Ayz . kq_x . D | N | T"
+    "rhs": " Ayz . _kq_x . D | N | T"
   },
   "82": {
     "lhs": "fq",
@@ -425,14 +415,14 @@
     "rhs": " TotalDiff ( charge , t )"
   },
   "90": {
-    "lhs": "i",
+    "lhs": "_i",
     "network": "macroscopic >>> material",
     "rhs": " i"
   },
   "91": {
     "lhs": "elResist",
     "network": "material",
-    "rhs": " inv ( i ) . Ue"
+    "rhs": " inv ( _i ) . Ue"
   },
   "92": {
     "lhs": "elResist",
@@ -445,14 +435,14 @@
     "rhs": " inv ( elResist ) . additive"
   },
   "94": {
-    "lhs": "elConductC",
+    "lhs": "_elConductC",
     "network": "material >>> macroscopic",
     "rhs": " elConductC"
   },
   "95": {
     "lhs": "Ue",
     "network": "macroscopic",
-    "rhs": " inv ( elConductC ) . i"
+    "rhs": " inv ( _elConductC ) . i"
   },
   "96": {
     "lhs": "dUedt",
@@ -470,17 +460,17 @@
     "rhs": " Instantiate ( dUedt , zero )"
   },
   "99": {
-    "lhs": "i",
+    "lhs": "_i",
     "network": "macroscopic >>> control",
     "rhs": " i"
   },
   "104": {
-    "lhs": "additive",
+    "lhs": "_additive",
     "network": "material >>> control",
     "rhs": " additive"
   },
   "105": {
-    "lhs": "T",
+    "lhs": "_T",
     "network": "macroscopic >>> control",
     "rhs": " T"
   },
@@ -515,29 +505,29 @@
     "rhs": " Integral ( I_N_D | D | dxdt :: t in [ to , te ] )"
   },
   "112": {
-    "lhs": "additive",
+    "lhs": "_additive",
     "network": "material >>> macroscopic",
     "rhs": " additive"
   },
   "113": {
     "lhs": "Imeasured",
     "network": "control",
-    "rhs": " i"
+    "rhs": " _i"
   },
   "114": {
-    "lhs": "Ue",
+    "lhs": "_Ue",
     "network": "macroscopic >>> control",
     "rhs": " Ue"
   },
   "115": {
     "lhs": "UeMeasured",
     "network": "control",
-    "rhs": " Ue"
+    "rhs": " _Ue"
   },
   "116": {
     "lhs": "addMeasured",
     "network": "control",
-    "rhs": " additive"
+    "rhs": " _additive"
   },
   "117": {
     "lhs": "RComputed",
@@ -553,5 +543,20 @@
     "lhs": "setPoint",
     "network": "control",
     "rhs": " Instantiate ( setPoint , value )"
+  },
+  "123": {
+    "lhs": "c",
+    "network": "reactions",
+    "rhs": " P_NK . ( P_NS_KS | N & S | _c )"
+  },
+  "124": {
+    "lhs": "co",
+    "network": "reactions",
+    "rhs": " Instantiate ( c , value )"
+  },
+  "125": {
+    "lhs": "x",
+    "network": "reactions",
+    "rhs": " inv ( co ) . c"
   }
 }

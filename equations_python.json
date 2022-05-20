@@ -245,18 +245,6 @@
     "network": "macroscopic >>> reactions",
     "rhs": "c"
   },
-  "46": {
-    "variable_ID": 68,
-    "lhs": "c_KS",
-    "network": "reactions",
-    "rhs": "np.transpose(np.dot(np.transpose(c), P_NS_KS))"
-  },
-  "47": {
-    "variable_ID": 69,
-    "lhs": "co_KS",
-    "network": "reactions",
-    "rhs": "np.ones(np.shape(c_KS)), value"
-  },
   "48": {
     "variable_ID": 71,
     "lhs": "Ayz",
@@ -664,5 +652,23 @@
     "lhs": "setPoint",
     "network": "control",
     "rhs": "np.ones(np.shape(setPoint)), value"
+  },
+  "123": {
+    "variable_ID": 151,
+    "lhs": "c",
+    "network": "reactions",
+    "rhs": "np.multiply(P_NK, (np.dot(np.transpose(P_NS_KS), c)))"
+  },
+  "124": {
+    "variable_ID": 152,
+    "lhs": "co",
+    "network": "reactions",
+    "rhs": "np.ones(np.shape(c)), value"
+  },
+  "125": {
+    "variable_ID": 153,
+    "lhs": "x",
+    "network": "reactions",
+    "rhs": "np.multiply(np.reciprocal(co), c)"
   }
 }

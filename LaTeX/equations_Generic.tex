@@ -164,14 +164,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{c}{_{{N S}}} := \left( {V}{_{N}} \right)^{-1} \, {\odot} \, {n}{_{{N S}}}\end{eq} &
     \begin{lay}molar composition\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:68"}{ 46 }\hypertarget{"e:46"}{  } &
-    \begin{eq}{c}{_{{K S}}} := {c}{_{{N S}}} \stackrel{{N S}}{\,\star\,} {P}{_{{N S}, {K S}}}\end{eq} &
-    \begin{lay}concentrations associated with reactions\end{lay} &
-    \begin{lay}reactions\end{lay} \\
-\hyperlink{"v:69"}{ 47 }\hypertarget{"e:47"}{  } &
-    \begin{eq}{{c^o}}{_{{K S}}} := \text{Instantiate}({c}{_{{K S}}}, {\#}{_{}})\end{eq} &
-    \begin{lay}norming concentrations\end{lay} &
-    \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:71"}{ 48 }\hypertarget{"e:48"}{  } &
     \begin{eq}{{A_{yz}}}{_{N}} := {{r_y}}{_{N}} \, . \, {{r_z}}{_{N}}\end{eq} &
     \begin{lay}cross sectional area yz\end{lay} &
@@ -329,7 +321,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}state\end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:141"}{ 113 }\hypertarget{"e:113"}{  } &
-    \begin{eq}{{\ckeck{I}}}{_{N}} := {I}{_{N}}\end{eq} &
+    \begin{eq}{{\check{I}}}{_{N}} := {I}{_{N}}\end{eq} &
     \begin{lay}measured current\end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:143"}{ 115 }\hypertarget{"e:115"}{  } &
@@ -341,16 +333,28 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}measured additive fraction\end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:145"}{ 117 }\hypertarget{"e:117"}{  } &
-    \begin{eq}{RComputed}{_{N}} := \left( {{\ckeck{I}}}{_{N}} \right)^{-1} \, . \, {{\check{U}^e}}{_{N}}\end{eq} &
+    \begin{eq}{RComputed}{_{N}} := \left( {{\check{I}}}{_{N}} \right)^{-1} \, . \, {{\check{U}^e}}{_{N}}\end{eq} &
     \begin{lay}measured resistance \end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:146"}{ 118 }\hypertarget{"e:118"}{  } &
-    \begin{eq}{store}{_{}} := \text{MixedStack}\left( {{\ckeck{I}}}{_{N}},{{\check{U}^e}}{_{N}},{RComputed}{_{N}},{{\check{\xi}}}{_{}} \right)\end{eq} &
+    \begin{eq}{store}{_{}} := \text{MixedStack}\left( {{\check{I}}}{_{N}},{{\check{U}^e}}{_{N}},{RComputed}{_{N}},{{\check{\xi}}}{_{}} \right)\end{eq} &
     \begin{lay}quantities to be stored\end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:133"}{ 119 }\hypertarget{"e:119"}{  } &
     \begin{eq}{{y^o}}{_{A}} := \text{Instantiate}({{y^o}}{_{A}}, {\#}{_{}})\end{eq} &
     \begin{lay}set point\end{lay} &
     \begin{lay}control\end{lay} \\
+\hyperlink{"v:151"}{ 123 }\hypertarget{"e:123"}{  } &
+    \begin{eq}{c}{_{{N K}, {K S}}} := {P}{_{{N K}}} \, . \, \left({P}{_{{N S}, {K S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\right)\end{eq} &
+    \begin{lay}var doc : \end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:152"}{ 124 }\hypertarget{"e:124"}{  } &
+    \begin{eq}{co}{_{{N K}, {K S}}} := \text{Instantiate}({c}{_{{N K}, {K S}}}, {\#}{_{}})\end{eq} &
+    \begin{lay}norming concentration\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:153"}{ 125 }\hypertarget{"e:125"}{  } &
+    \begin{eq}{x}{_{{N K}, {K S}}} := \left( {co}{_{{N K}, {K S}}} \right)^{-1} \, . \, {c}{_{{N K}, {K S}}}\end{eq} &
+    \begin{lay}matrix of normed, dimensionless mole fractions \end{lay} &
+    \begin{lay}reactions\end{lay} \\
 \hline
 \end{longtable}

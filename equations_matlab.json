@@ -245,18 +245,6 @@
     "network": "macroscopic >>> reactions",
     "rhs": "c"
   },
-  "46": {
-    "variable_ID": 68,
-    "lhs": "c_KS",
-    "network": "reactions",
-    "rhs": "( ( c )'  * P_NS_KS )' "
-  },
-  "47": {
-    "variable_ID": 69,
-    "lhs": "co_KS",
-    "network": "reactions",
-    "rhs": "Instantiate(c_KS, value)"
-  },
   "48": {
     "variable_ID": 71,
     "lhs": "Ayz",
@@ -664,5 +652,23 @@
     "lhs": "setPoint",
     "network": "control",
     "rhs": "Instantiate(setPoint, value)"
+  },
+  "123": {
+    "variable_ID": 151,
+    "lhs": "c",
+    "network": "reactions",
+    "rhs": "P_NK .* (( P_NS_KS )'  * c)"
+  },
+  "124": {
+    "variable_ID": 152,
+    "lhs": "co",
+    "network": "reactions",
+    "rhs": "Instantiate(c, value)"
+  },
+  "125": {
+    "variable_ID": 153,
+    "lhs": "x",
+    "network": "reactions",
+    "rhs": "inv(co) .* c"
   }
 }
