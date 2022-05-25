@@ -670,5 +670,11 @@
     "lhs": "{x}{_{{N K}, {K S}}}",
     "network": "reactions",
     "rhs": "\\left( {co}{_{{N K}, {K S}}} \\right)^{-1} \\, . \\, {c}{_{{N K}, {K S}}}"
+  },
+  "126": {
+    "variable_ID": 154,
+    "lhs": "{y}{_{A}}",
+    "network": "control",
+    "rhs": "{C}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {x}{_{N}}  + {D}{_{A}} \\, . \\, {e}{_{A}}"
   }
 }

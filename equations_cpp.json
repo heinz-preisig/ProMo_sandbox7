@@ -670,5 +670,11 @@
     "lhs": "x",
     "network": "reactions",
     "rhs": "ganger(np.reciprocal(co), c)"
+  },
+  "126": {
+    "variable_ID": 154,
+    "lhs": "y",
+    "network": "control",
+    "rhs": "np.add(np.dot(np.transpose(C), x), ganger(D, e))"
   }
 }

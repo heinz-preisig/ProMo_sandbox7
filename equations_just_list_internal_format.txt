@@ -110,3 +110,4 @@
 123 :: c =  P_NK . ( P_NS_KS | N & S | _c )
 124 :: co =  Instantiate ( c , value )
 125 :: x =  inv ( co ) . c
+126 :: y =  C | N | x + D . e

@@ -558,5 +558,10 @@
     "lhs": "x",
     "network": "reactions",
     "rhs": " inv ( co ) . c"
+  },
+  "126": {
+    "lhs": "y",
+    "network": "control",
+    "rhs": " C | N | x + D . e"
   }
 }

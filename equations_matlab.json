@@ -670,5 +670,11 @@
     "lhs": "x",
     "network": "reactions",
     "rhs": "inv(co) .* c"
+  },
+  "126": {
+    "variable_ID": 154,
+    "lhs": "y",
+    "network": "control",
+    "rhs": "( C )'  * x + D .* e"
   }
 }
