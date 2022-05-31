@@ -54,16 +54,6 @@
     "network": "physical",
     "rhs": " U + p . V - T . S"
   },
-  "12": {
-    "lhs": "Boltzmann",
-    "network": "physical",
-    "rhs": " Instantiate ( S , value )"
-  },
-  "13": {
-    "lhs": "GasConstant",
-    "network": "physical",
-    "rhs": " Avogadro . Boltzmann"
-  },
   "14": {
     "lhs": "Ue",
     "network": "physical",
@@ -187,12 +177,12 @@
   "41": {
     "lhs": "Ea",
     "network": "reactions",
-    "rhs": " Instantiate ( P_N_NK | N | GasConstant . T_NK , value )"
+    "rhs": " Instantiate ( Gas . T_NK , value )"
   },
   "42": {
     "lhs": "K_NK",
     "network": "reactions",
-    "rhs": " Ko : exp ( neg ( Ea ) . inv ( GasConstant | N | P_N_NK . T_NK ) )"
+    "rhs": " Ko : exp ( neg ( Ea ) . inv ( Gas . T_NK ) )"
   },
   "44": {
     "lhs": "c",
@@ -563,5 +553,10 @@
     "lhs": "y",
     "network": "control",
     "rhs": " C | N | x + D . e"
+  },
+  "127": {
+    "lhs": "Gas",
+    "network": "reactions",
+    "rhs": " Avogadro . Boltz"
   }
 }

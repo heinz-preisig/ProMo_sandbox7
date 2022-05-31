@@ -65,18 +65,6 @@
     "network": "physical",
     "rhs": " V_13 O_0 V_17 O_4 V_15 O_1 V_18 O_4 V_14"
   },
-  "12": {
-    "variable_ID": 25,
-    "lhs": " V_25",
-    "network": "physical",
-    "rhs": " O_11 D_0 V_14 D_7 V_1 D_1"
-  },
-  "13": {
-    "variable_ID": 26,
-    "lhs": " V_26",
-    "network": "physical",
-    "rhs": " V_24 O_4 V_25"
-  },
   "14": {
     "variable_ID": 27,
     "lhs": " V_27",
@@ -225,13 +213,13 @@
     "variable_ID": 62,
     "lhs": " V_62",
     "network": "reactions",
-    "rhs": " O_11 D_0 V_35  O_5  I_1 O_5  V_26 O_4 V_60 D_7 V_1 D_1"
+    "rhs": " O_11 D_0 V_157 O_4 V_60 D_7 V_1 D_1"
   },
   "42": {
     "variable_ID": 63,
     "lhs": " V_63",
     "network": "reactions",
-    "rhs": " V_38 O_3 F_0 D_0 F_11 D_0 V_62 D_1 O_4 F_15 D_0 V_26  O_5  I_1 O_5  V_35 O_4 V_60 D_1 D_1"
+    "rhs": " V_38 O_3 F_0 D_0 F_11 D_0 V_62 D_1 O_4 F_15 D_0 V_157 O_4 V_60 D_1 D_1"
   },
   "44": {
     "variable_ID": 66,
@@ -676,5 +664,11 @@
     "lhs": " V_154",
     "network": "control",
     "rhs": " V_131  O_5  I_1 O_5  V_136 O_0 V_132 O_4 V_135"
+  },
+  "127": {
+    "variable_ID": 157,
+    "lhs": " V_157",
+    "network": "reactions",
+    "rhs": " V_24 O_4 V_155"
   }
 }

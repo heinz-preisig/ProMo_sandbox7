@@ -65,18 +65,6 @@
     "network": "physical",
     "rhs": "{U}{_{N}}  + {p}{_{N}} \\, . \\, {V}{_{N}}  - {T}{_{N}} \\, . \\, {S}{_{N}}"
   },
-  "12": {
-    "variable_ID": 25,
-    "lhs": "{{k^B}}{_{N}}",
-    "network": "physical",
-    "rhs": "\\text{Instantiate}({S}{_{N}}, {\\#}{_{}})"
-  },
-  "13": {
-    "variable_ID": 26,
-    "lhs": "{R}{_{N}}",
-    "network": "physical",
-    "rhs": "{{A^v}}{_{}} \\, . \\, {{k^B}}{_{N}}"
-  },
   "14": {
     "variable_ID": 27,
     "lhs": "{Ue}{_{N}}",
@@ -225,13 +213,13 @@
     "variable_ID": 62,
     "lhs": "{{E^a}}{_{{N K}}}",
     "network": "reactions",
-    "rhs": "\\text{Instantiate}({P}{_{N, {N K}}} \\stackrel{N}{\\,\\star\\,} {R}{_{N}} \\, . \\, {T}{_{{N K}}}, {\\#}{_{}})"
+    "rhs": "\\text{Instantiate}({Gas}{_{}} \\, . \\, {T}{_{{N K}}}, {\\#}{_{}})"
   },
   "42": {
     "variable_ID": 63,
     "lhs": "{K}{_{{N K}}}",
     "network": "reactions",
-    "rhs": "{{K^o}}{_{K}} \\, {\\odot} \\, exp(\\left( -{{E^a}}{_{{N K}}} \\right) \\, . \\, \\left( {R}{_{N}} \\stackrel{N}{\\,\\star\\,} {P}{_{N, {N K}}} \\, . \\, {T}{_{{N K}}} \\right)^{-1})"
+    "rhs": "{{K^o}}{_{K}} \\, {\\odot} \\, exp(\\left( -{{E^a}}{_{{N K}}} \\right) \\, . \\, \\left( {Gas}{_{}} \\, . \\, {T}{_{{N K}}} \\right)^{-1})"
   },
   "44": {
     "variable_ID": 66,
@@ -676,5 +664,11 @@
     "lhs": "{y}{_{A}}",
     "network": "control",
     "rhs": "{C}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {x}{_{N}}  + {D}{_{A}} \\, . \\, {e}{_{A}}"
+  },
+  "127": {
+    "variable_ID": 157,
+    "lhs": "{Gas}{_{}}",
+    "network": "reactions",
+    "rhs": "{{A^v}}{_{}} \\, . \\, {Boltz}{_{}}"
   }
 }

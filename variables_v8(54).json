@@ -289,6 +289,30 @@
       "type": "constant",
       "units": "[0, 0, -1, 0, 0, 0, 0, 0]"
     },
+    "25": {
+      "aliases": "{'global_ID': ' V_25', 'python': 'Boltzmann', 'cpp': 'Boltzmann', 'matlab': 'Boltzmann', 'latex': '{k^B}', 'internal_code': 'Boltzmann'}",
+      "doc": "Boltzmann constant",
+      "equations": "{12: {'rhs': ' O_11 D_0 V_14 D_7 V_1 D_1', 'type': 'generic', 'doc': 'Boltzmann constant', 'network': 'physical', 'incidence_list': ['1', '14']}}",
+      "index_structures": "[1]",
+      "label": "Boltzmann",
+      "network": "physical",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[-2, 2, 0, 1, -1, 0, 0, 0]"
+    },
+    "26": {
+      "aliases": "{'global_ID': ' V_26', 'python': 'GasConstant', 'cpp': 'GasConstant', 'matlab': 'GasConstant', 'latex': 'R', 'internal_code': 'GasConstant'}",
+      "doc": "gas constant",
+      "equations": "{13: {'rhs': ' V_24 O_4 V_25', 'type': 'generic', 'doc': 'gas constant', 'network': 'physical', 'incidence_list': ['24', '25']}}",
+      "index_structures": "[1]",
+      "label": "GasConstant",
+      "network": "physical",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[-2, 2, -1, 1, -1, 0, 0, 0]"
+    },
     "27": {
       "aliases": "{'global_ID': ' V_27', 'python': 'Ue', 'cpp': 'Ue', 'matlab': 'Ue', 'latex': 'Ue', 'internal_code': 'Ue'}",
       "doc": "electrical potential -- voltage",
@@ -676,7 +700,7 @@
     "62": {
       "aliases": "{'global_ID': ' V_62', 'python': 'Ea', 'cpp': 'Ea', 'matlab': 'Ea', 'latex': '{E^a}', 'internal_code': 'Ea'}",
       "doc": "Arrhenius activation energy",
-      "equations": "{41: {'rhs': ' O_11 D_0 V_157 O_4 V_60 D_7 V_1 D_1', 'type': 'generic', 'doc': 'Arrhenius activation energy', 'network': 'reactions', 'incidence_list': ['1', '157', '60']}}",
+      "equations": "{41: {'rhs': ' O_11 D_0 V_35  O_5  I_1 O_5  V_26 O_4 V_60 D_7 V_1 D_1', 'type': 'generic', 'doc': 'Arrhenius activation energy', 'network': 'reactions', 'incidence_list': ['1', '26', '35', '60']}}",
       "index_structures": "[7]",
       "label": "Ea",
       "network": "reactions",
@@ -688,7 +712,7 @@
     "63": {
       "aliases": "{'global_ID': ' V_63', 'python': 'K_NK', 'cpp': 'K_NK', 'matlab': 'K_NK', 'latex': 'K', 'internal_code': 'K_NK'}",
       "doc": "Arrhenius reaction 'constant'",
-      "equations": "{42: {'rhs': ' V_38 O_3 F_0 D_0 F_11 D_0 V_62 D_1 O_4 F_15 D_0 V_157 O_4 V_60 D_1 D_1', 'type': 'generic', 'doc': \"Arrhenius reaction 'constant'\", 'network': 'reactions', 'incidence_list': ['157', '38', '60', '62']}}",
+      "equations": "{42: {'rhs': ' V_38 O_3 F_0 D_0 F_11 D_0 V_62 D_1 O_4 F_15 D_0 V_26  O_5  I_1 O_5  V_35 O_4 V_60 D_1 D_1', 'type': 'generic', 'doc': \"Arrhenius reaction 'constant'\", 'network': 'reactions', 'incidence_list': ['26', '35', '38', '60', '62']}}",
       "index_structures": "[7]",
       "label": "K_NK",
       "network": "reactions",
@@ -1656,30 +1680,6 @@
       "tokens": "[]",
       "type": "algebraic",
       "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
-    },
-    "155": {
-      "aliases": "{'global_ID': ' V_155', 'python': 'Boltz', 'cpp': 'Boltz', 'matlab': 'Boltz', 'latex': 'Boltz', 'internal_code': 'Boltz'}",
-      "doc": "Boltzmann constant",
-      "equations": "{}",
-      "index_structures": "[]",
-      "label": "Boltz",
-      "network": "reactions",
-      "port_variable": "True",
-      "tokens": "[]",
-      "type": "constant",
-      "units": "[-2, 2, 0, 1, -1, 0, 0, 0]"
-    },
-    "157": {
-      "aliases": "{'global_ID': ' V_157', 'python': 'Gas', 'cpp': 'Gas', 'matlab': 'Gas', 'latex': 'Gas', 'internal_code': 'Gas'}",
-      "doc": "gas constant",
-      "equations": "{127: {'rhs': ' V_24 O_4 V_155', 'type': 'generic', 'doc': 'gas constant', 'network': 'reactions', 'incidence_list': ['155', '24']}}",
-      "index_structures": "[]",
-      "label": "Gas",
-      "network": "reactions",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "constant",
-      "units": "[-2, 2, -1, 1, -1, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1989,7 +1989,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 157,
-    "equation": 127
+    "variable": 154,
+    "equation": 126
   }
 }

@@ -56,14 +56,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{G}{_{N}} := {U}{_{N}}  + {p}{_{N}} \, . \, {V}{_{N}}  - {T}{_{N}} \, . \, {S}{_{N}}\end{eq} &
     \begin{lay}Gibbs free energy\end{lay} &
     \begin{lay}physical\end{lay} \\
-\hyperlink{"v:25"}{ 12 }\hypertarget{"e:12"}{  } &
-    \begin{eq}{{k^B}}{_{N}} := \text{Instantiate}({S}{_{N}}, {\#}{_{}})\end{eq} &
-    \begin{lay}Boltzmann constant\end{lay} &
-    \begin{lay}physical\end{lay} \\
-\hyperlink{"v:26"}{ 13 }\hypertarget{"e:13"}{  } &
-    \begin{eq}{R}{_{N}} := {{A^v}}{_{}} \, . \, {{k^B}}{_{N}}\end{eq} &
-    \begin{lay}gas constant\end{lay} &
-    \begin{lay}physical\end{lay} \\
 \hyperlink{"v:27"}{ 14 }\hypertarget{"e:14"}{  } &
     \begin{eq}{Ue}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
     \begin{lay}electrical potential -- voltage\end{lay} &
@@ -153,11 +145,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}temperature of the reactive system\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:62"}{ 41 }\hypertarget{"e:41"}{  } &
-    \begin{eq}{{E^a}}{_{{N K}}} := \text{Instantiate}({P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {R}{_{N}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{{E^a}}{_{{N K}}} := \text{Instantiate}({Gas}{_{}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} &
     \begin{lay}Arrhenius activation energy\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:63"}{ 42 }\hypertarget{"e:42"}{  } &
-    \begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {R}{_{N}} \stackrel{N}{\,\star\,} {P}{_{N, {N K}}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
+    \begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {Gas}{_{}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
     \begin{lay}Arrhenius reaction 'constant'\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:66"}{ 44 }\hypertarget{"e:44"}{  } &
@@ -360,5 +352,9 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{y}{_{A}} := {C}{_{N, A}} \stackrel{N}{\,\star\,} {x}{_{N}}  + {D}{_{A}} \, . \, {e}{_{A}}\end{eq} &
     \begin{lay}output equation\end{lay} &
     \begin{lay}control\end{lay} \\
+\hyperlink{"v:157"}{ 127 }\hypertarget{"e:127"}{  } &
+    \begin{eq}{Gas}{_{}} := {{A^v}}{_{}} \, . \, {Boltz}{_{}}\end{eq} &
+    \begin{lay}gas constant\end{lay} &
+    \begin{lay}reactions\end{lay} \\
 \hline
 \end{longtable}

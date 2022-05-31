@@ -9,8 +9,6 @@
 9 :: H =  U - p . V
 10 :: A =  U - T . S
 11 :: G =  U + p . V - T . S
-12 :: Boltzmann =  Instantiate ( S , value )
-13 :: GasConstant =  Avogadro . Boltzmann
 14 :: Ue =  inv ( charge ) . U
 15 :: v_x =  ParDiff ( r_x , t )
 16 :: v_y =  ParDiff ( r_y , t )
@@ -35,8 +33,8 @@
 37 :: _m =  m
 38 :: density =  _m . inv ( V )
 39 :: T_NK =  P_N_NK | N | T
-41 :: Ea =  Instantiate ( P_N_NK | N | GasConstant . T_NK , value )
-42 :: K_NK =  Ko : exp ( neg ( Ea ) . inv ( GasConstant | N | P_N_NK . T_NK ) )
+41 :: Ea =  Instantiate ( Gas . T_NK , value )
+42 :: K_NK =  Ko : exp ( neg ( Ea ) . inv ( Gas . T_NK ) )
 44 :: c =  inv ( V ) : n
 45 :: _c =  c
 48 :: Ayz =  r_y . r_z
@@ -111,3 +109,4 @@
 124 :: co =  Instantiate ( c , value )
 125 :: x =  inv ( co ) . c
 126 :: y =  C | N | x + D . e
+127 :: Gas =  Avogadro . Boltz
