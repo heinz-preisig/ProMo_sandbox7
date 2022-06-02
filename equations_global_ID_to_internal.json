@@ -177,12 +177,12 @@
   "41": {
     "lhs": "Ea",
     "network": "reactions",
-    "rhs": " Instantiate ( Gas . T_NK , value )"
+    "rhs": " Instantiate ( GasConstant . T_NK , value )"
   },
   "42": {
     "lhs": "K_NK",
     "network": "reactions",
-    "rhs": " Ko : exp ( neg ( Ea ) . inv ( Gas . T_NK ) )"
+    "rhs": " Ko : exp ( neg ( Ea ) . inv ( GasConstant . T_NK ) )"
   },
   "44": {
     "lhs": "c",
@@ -555,8 +555,18 @@
     "rhs": " C | N | x + D . e"
   },
   "127": {
-    "lhs": "Gas",
+    "lhs": "GasConstant",
     "network": "reactions",
-    "rhs": " Avogadro . Boltz"
+    "rhs": " Avogadro . Boltzmann"
+  },
+  "128": {
+    "lhs": "N_NK_KS",
+    "network": "reactions",
+    "rhs": " P_K_NK | K | N_K_KS"
+  },
+  "129": {
+    "lhs": "phi",
+    "network": "reactions",
+    "rhs": " Product ( x ^ ( N_NK_KS ) , K & S )"
   }
 }

@@ -213,13 +213,13 @@
     "variable_ID": 62,
     "lhs": "{{E^a}}{_{{N K}}}",
     "network": "reactions",
-    "rhs": "\\text{Instantiate}({Gas}{_{}} \\, . \\, {T}{_{{N K}}}, {\\#}{_{}})"
+    "rhs": "\\text{Instantiate}({R}{_{}} \\, . \\, {T}{_{{N K}}}, {\\#}{_{}})"
   },
   "42": {
     "variable_ID": 63,
     "lhs": "{K}{_{{N K}}}",
     "network": "reactions",
-    "rhs": "{{K^o}}{_{K}} \\, {\\odot} \\, exp(\\left( -{{E^a}}{_{{N K}}} \\right) \\, . \\, \\left( {Gas}{_{}} \\, . \\, {T}{_{{N K}}} \\right)^{-1})"
+    "rhs": "{{K^o}}{_{K}} \\, {\\odot} \\, exp(\\left( -{{E^a}}{_{{N K}}} \\right) \\, . \\, \\left( {R}{_{}} \\, . \\, {T}{_{{N K}}} \\right)^{-1})"
   },
   "44": {
     "variable_ID": 66,
@@ -649,7 +649,7 @@
   },
   "124": {
     "variable_ID": 152,
-    "lhs": "{co}{_{{N K}, {K S}}}",
+    "lhs": "{{c^o}}{_{{N K}, {K S}}}",
     "network": "reactions",
     "rhs": "\\text{Instantiate}({c}{_{{N K}, {K S}}}, {\\#}{_{}})"
   },
@@ -657,7 +657,7 @@
     "variable_ID": 153,
     "lhs": "{x}{_{{N K}, {K S}}}",
     "network": "reactions",
-    "rhs": "\\left( {co}{_{{N K}, {K S}}} \\right)^{-1} \\, . \\, {c}{_{{N K}, {K S}}}"
+    "rhs": "\\left( {{c^o}}{_{{N K}, {K S}}} \\right)^{-1} \\, . \\, {c}{_{{N K}, {K S}}}"
   },
   "126": {
     "variable_ID": 154,
@@ -667,8 +667,20 @@
   },
   "127": {
     "variable_ID": 157,
-    "lhs": "{Gas}{_{}}",
+    "lhs": "{R}{_{}}",
     "network": "reactions",
-    "rhs": "{{A^v}}{_{}} \\, . \\, {Boltz}{_{}}"
+    "rhs": "{{A^v}}{_{}} \\, . \\, {B}{_{}}"
+  },
+  "128": {
+    "variable_ID": 159,
+    "lhs": "{N}{_{{N K}, {K S}}}",
+    "network": "reactions",
+    "rhs": "{P}{_{K, {N K}}} \\stackrel{K}{\\,\\star\\,} {N}{_{K, {K S}}}"
+  },
+  "129": {
+    "variable_ID": 160,
+    "lhs": "{\\phi}{_{{N K}}}",
+    "network": "reactions",
+    "rhs": "\\prod_{K S}  {x}{_{{N K}, {K S}}}^{{N}{_{{N K}, {K S}}}} "
   }
 }

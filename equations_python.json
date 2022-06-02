@@ -213,13 +213,13 @@
     "variable_ID": 62,
     "lhs": "Ea",
     "network": "reactions",
-    "rhs": "np.ones(np.shape(np.multiply(Gas, T_NK))), value"
+    "rhs": "np.ones(np.shape(np.multiply(GasConstant, T_NK))), value"
   },
   "42": {
     "variable_ID": 63,
     "lhs": "K_NK",
     "network": "reactions",
-    "rhs": "khatriRao(Ko, [K], np.exp(np.multiply(np.negative(Ea), np.reciprocal(np.multiply(Gas, T_NK)))), [N_x_K])"
+    "rhs": "khatriRao(Ko, [K], np.exp(np.multiply(np.negative(Ea), np.reciprocal(np.multiply(GasConstant, T_NK)))), [N_x_K])"
   },
   "44": {
     "variable_ID": 66,
@@ -667,8 +667,20 @@
   },
   "127": {
     "variable_ID": 157,
-    "lhs": "Gas",
+    "lhs": "GasConstant",
     "network": "reactions",
-    "rhs": "np.multiply(Avogadro, Boltz)"
+    "rhs": "np.multiply(Avogadro, Boltzmann)"
+  },
+  "128": {
+    "variable_ID": 159,
+    "lhs": "N_NK_KS",
+    "network": "reactions",
+    "rhs": "np.dot(np.transpose(P_K_NK), N_K_KS)"
+  },
+  "129": {
+    "variable_ID": 160,
+    "lhs": "phi",
+    "network": "reactions",
+    "rhs": "Product( np.power(x, N_NK_KS) \\, K_x_S )"
   }
 }

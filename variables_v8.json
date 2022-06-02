@@ -1622,7 +1622,7 @@
       "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
     },
     "152": {
-      "aliases": "{'global_ID': ' V_152', 'python': 'co', 'cpp': 'co', 'matlab': 'co', 'latex': 'co', 'internal_code': 'co'}",
+      "aliases": "{'global_ID': ' V_152', 'python': 'co', 'cpp': 'co', 'matlab': 'co', 'latex': '{c^o}', 'internal_code': 'co'}",
       "doc": "norming concentration",
       "equations": "{124: {'rhs': ' O_11 D_0 V_151 D_7 V_1 D_1', 'type': 'generic', 'doc': 'norming concentration', 'network': 'reactions', 'incidence_list': ['1', '151']}}",
       "index_structures": "[7, 8]",
@@ -1658,11 +1658,11 @@
       "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
     },
     "155": {
-      "aliases": "{'global_ID': ' V_155', 'python': 'Boltz', 'cpp': 'Boltz', 'matlab': 'Boltz', 'latex': 'Boltz', 'internal_code': 'Boltz'}",
+      "aliases": "{'global_ID': ' V_155', 'python': 'Boltzmann', 'cpp': 'Boltzmann', 'matlab': 'Boltzmann', 'latex': 'B', 'internal_code': 'Boltzmann'}",
       "doc": "Boltzmann constant",
       "equations": "{}",
       "index_structures": "[]",
-      "label": "Boltz",
+      "label": "Boltzmann",
       "network": "reactions",
       "port_variable": "True",
       "tokens": "[]",
@@ -1670,16 +1670,52 @@
       "units": "[-2, 2, 0, 1, -1, 0, 0, 0]"
     },
     "157": {
-      "aliases": "{'global_ID': ' V_157', 'python': 'Gas', 'cpp': 'Gas', 'matlab': 'Gas', 'latex': 'Gas', 'internal_code': 'Gas'}",
+      "aliases": "{'global_ID': ' V_157', 'python': 'GasConstant', 'cpp': 'GasConstant', 'matlab': 'GasConstant', 'latex': 'R', 'internal_code': 'GasConstant'}",
       "doc": "gas constant",
       "equations": "{127: {'rhs': ' V_24 O_4 V_155', 'type': 'generic', 'doc': 'gas constant', 'network': 'reactions', 'incidence_list': ['155', '24']}}",
       "index_structures": "[]",
-      "label": "Gas",
+      "label": "GasConstant",
       "network": "reactions",
       "port_variable": "False",
       "tokens": "[]",
       "type": "constant",
       "units": "[-2, 2, -1, 1, -1, 0, 0, 0]"
+    },
+    "158": {
+      "aliases": "{'global_ID': ' V_158', 'python': 'N_K_KS', 'cpp': 'N_K_KS', 'matlab': 'N_K_KS', 'latex': 'N', 'internal_code': 'N_K_KS'}",
+      "doc": "stoichiometry",
+      "equations": "{}",
+      "index_structures": "[4, 8]",
+      "label": "N_K_KS",
+      "network": "reactions",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "159": {
+      "aliases": "{'global_ID': ' V_159', 'python': 'N_NK_KS', 'cpp': 'N_NK_KS', 'matlab': 'N_NK_KS', 'latex': 'N', 'internal_code': 'N_NK_KS'}",
+      "doc": "extended stoichiometrix matrix",
+      "equations": "{128: {'rhs': ' V_33  O_5  I_4 O_5  V_158', 'type': 'generic', 'doc': 'extended stoichiometrix matrix', 'network': 'reactions', 'incidence_list': ['158', '33']}}",
+      "index_structures": "[7, 8]",
+      "label": "N_NK_KS",
+      "network": "reactions",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "160": {
+      "aliases": "{'global_ID': ' V_160', 'python': 'phi', 'cpp': 'phi', 'matlab': 'phi', 'latex': '\\\\phi', 'internal_code': 'phi'}",
+      "doc": "probability function for reactions",
+      "equations": "{129: {'rhs': ' O_10 D_0 V_153 O_2 D_0 V_159 D_1 D_7 I_8 D_1', 'type': 'generic', 'doc': 'probability function for reactions', 'network': 'reactions', 'incidence_list': ['153', '159']}}",
+      "index_structures": "[7]",
+      "label": "phi",
+      "network": "reactions",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "secondaryState",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1989,7 +2025,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 157,
-    "equation": 127
+    "variable": 160,
+    "equation": 129
   }
 }

@@ -670,5 +670,17 @@
     "lhs": " V_157",
     "network": "reactions",
     "rhs": " V_24 O_4 V_155"
+  },
+  "128": {
+    "variable_ID": 159,
+    "lhs": " V_159",
+    "network": "reactions",
+    "rhs": " V_33  O_5  I_4 O_5  V_158"
+  },
+  "129": {
+    "variable_ID": 160,
+    "lhs": " V_160",
+    "network": "reactions",
+    "rhs": " O_10 D_0 V_153 O_2 D_0 V_159 D_1 D_7 I_8 D_1"
   }
 }

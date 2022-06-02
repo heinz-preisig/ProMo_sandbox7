@@ -145,11 +145,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}temperature of the reactive system\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:62"}{ 41 }\hypertarget{"e:41"}{  } &
-    \begin{eq}{{E^a}}{_{{N K}}} := \text{Instantiate}({Gas}{_{}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{{E^a}}{_{{N K}}} := \text{Instantiate}({R}{_{}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} &
     \begin{lay}Arrhenius activation energy\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:63"}{ 42 }\hypertarget{"e:42"}{  } &
-    \begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {Gas}{_{}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
+    \begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {R}{_{}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
     \begin{lay}Arrhenius reaction 'constant'\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:66"}{ 44 }\hypertarget{"e:44"}{  } &
@@ -341,11 +341,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}var doc : \end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:152"}{ 124 }\hypertarget{"e:124"}{  } &
-    \begin{eq}{co}{_{{N K}, {K S}}} := \text{Instantiate}({c}{_{{N K}, {K S}}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{{c^o}}{_{{N K}, {K S}}} := \text{Instantiate}({c}{_{{N K}, {K S}}}, {\#}{_{}})\end{eq} &
     \begin{lay}norming concentration\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:153"}{ 125 }\hypertarget{"e:125"}{  } &
-    \begin{eq}{x}{_{{N K}, {K S}}} := \left( {co}{_{{N K}, {K S}}} \right)^{-1} \, . \, {c}{_{{N K}, {K S}}}\end{eq} &
+    \begin{eq}{x}{_{{N K}, {K S}}} := \left( {{c^o}}{_{{N K}, {K S}}} \right)^{-1} \, . \, {c}{_{{N K}, {K S}}}\end{eq} &
     \begin{lay}matrix of normed, dimensionless mole fractions \end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:154"}{ 126 }\hypertarget{"e:126"}{  } &
@@ -353,8 +353,16 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}output equation\end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:157"}{ 127 }\hypertarget{"e:127"}{  } &
-    \begin{eq}{Gas}{_{}} := {{A^v}}{_{}} \, . \, {Boltz}{_{}}\end{eq} &
+    \begin{eq}{R}{_{}} := {{A^v}}{_{}} \, . \, {B}{_{}}\end{eq} &
     \begin{lay}gas constant\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:159"}{ 128 }\hypertarget{"e:128"}{  } &
+    \begin{eq}{N}{_{{N K}, {K S}}} := {P}{_{K, {N K}}} \stackrel{K}{\,\star\,} {N}{_{K, {K S}}}\end{eq} &
+    \begin{lay}extended stoichiometrix matrix\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:160"}{ 129 }\hypertarget{"e:129"}{  } &
+    \begin{eq}{\phi}{_{{N K}}} := \prod_{K S}  {x}{_{{N K}, {K S}}}^{{N}{_{{N K}, {K S}}}} \end{eq} &
+    \begin{lay}probability function for reactions\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hline
 \end{longtable}
