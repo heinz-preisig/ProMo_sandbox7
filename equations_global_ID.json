@@ -405,7 +405,7 @@
     "variable_ID": 101,
     "lhs": " V_101",
     "network": "macroscopic",
-    "rhs": " V_100 O_0 V_94"
+    "rhs": " V_100 O_0 V_94 O_0 V_164"
   },
   "77": {
     "variable_ID": 102,
@@ -682,5 +682,17 @@
     "lhs": " V_160",
     "network": "reactions",
     "rhs": " O_10 D_0 V_153 O_2 D_0 V_159 D_1 D_7 I_8 D_1"
+  },
+  "130": {
+    "variable_ID": 163,
+    "lhs": " V_163",
+    "network": "reactions",
+    "rhs": " V_15  O_5  I_1 O_5  D_0 V_35  O_5  I_7 O_5  D_0 D_0 V_63 O_4 V_160 D_1 O_4 D_0 V_36  O_5  I_8 O_5  V_159 D_1 D_1 D_1"
+  },
+  "131": {
+    "variable_ID": 164,
+    "lhs": " V_164",
+    "network": "reactions >>> macroscopic",
+    "rhs": " V_163"
   }
 }

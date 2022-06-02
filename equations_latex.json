@@ -405,7 +405,7 @@
     "variable_ID": 101,
     "lhs": "{\\dot{n}}{_{{N S}}}",
     "network": "macroscopic",
-    "rhs": "{{\\hat{n}^c}}{_{{N S}}}  + {{\\hat{n}^{d}}}{_{{N S}}}"
+    "rhs": "{{\\hat{n}^c}}{_{{N S}}}  + {{\\hat{n}^{d}}}{_{{N S}}}  + {\\tilde{n}}{_{{N S}}}"
   },
   "77": {
     "variable_ID": 102,
@@ -682,5 +682,17 @@
     "lhs": "{\\phi}{_{{N K}}}",
     "network": "reactions",
     "rhs": "\\prod_{K S}  {x}{_{{N K}, {K S}}}^{{N}{_{{N K}, {K S}}}} "
+  },
+  "130": {
+    "variable_ID": 163,
+    "lhs": "{\\tilde{n}}{_{{N S}}}",
+    "network": "reactions",
+    "rhs": "{V}{_{N}} \\stackrel{N}{\\,\\star\\,} \\left({P}{_{N, {N K}}} \\stackrel{{N K}}{\\,\\star\\,} \\left(\\left({K}{_{{N K}}} \\, . \\, {\\phi}{_{{N K}}}\\right) \\, . \\, \\left({P}{_{{N S}, {K S}}} \\stackrel{{K S}}{\\,\\star\\,} {N}{_{{N K}, {K S}}}\\right)\\right)\\right)"
+  },
+  "131": {
+    "variable_ID": 164,
+    "lhs": "{\\tilde{n}}{_{{N S}}}",
+    "network": "reactions >>> macroscopic",
+    "rhs": "{\\tilde{n}}{_{{N S}}}"
   }
 }

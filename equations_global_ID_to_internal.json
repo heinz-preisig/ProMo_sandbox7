@@ -337,7 +337,7 @@
   "76": {
     "lhs": "dndt",
     "network": "macroscopic",
-    "rhs": " fnc + fnd"
+    "rhs": " fnc + fnd + _nProd"
   },
   "77": {
     "lhs": "fHc_A",
@@ -568,5 +568,15 @@
     "lhs": "phi",
     "network": "reactions",
     "rhs": " Product ( x ^ ( N_NK_KS ) , K & S )"
+  },
+  "130": {
+    "lhs": "nProd",
+    "network": "reactions",
+    "rhs": " V | N | ( P_N_NK | N & K | ( ( K_NK . phi ) . ( P_NS_KS | K & S | N_NK_KS ) ) )"
+  },
+  "131": {
+    "lhs": "_nProd",
+    "network": "reactions >>> macroscopic",
+    "rhs": " nProd"
   }
 }

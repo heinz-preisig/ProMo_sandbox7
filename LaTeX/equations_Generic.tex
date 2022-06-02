@@ -205,7 +205,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}net molar convectional mass flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:101"}{ 76 }\hypertarget{"e:76"}{  } &
-    \begin{eq}{\dot{n}}{_{{N S}}} := {{\hat{n}^c}}{_{{N S}}}  + {{\hat{n}^{d}}}{_{{N S}}}\end{eq} &
+    \begin{eq}{\dot{n}}{_{{N S}}} := {{\hat{n}^c}}{_{{N S}}}  + {{\hat{n}^{d}}}{_{{N S}}}  + {\tilde{n}}{_{{N S}}}\end{eq} &
     \begin{lay}differential species balance\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:102"}{ 77 }\hypertarget{"e:77"}{  } &
@@ -363,6 +363,10 @@ no & equation &documentation &layer \\\hline\hline
 \hyperlink{"v:160"}{ 129 }\hypertarget{"e:129"}{  } &
     \begin{eq}{\phi}{_{{N K}}} := \prod_{K S}  {x}{_{{N K}, {K S}}}^{{N}{_{{N K}, {K S}}}} \end{eq} &
     \begin{lay}probability function for reactions\end{lay} &
+    \begin{lay}reactions\end{lay} \\
+\hyperlink{"v:163"}{ 130 }\hypertarget{"e:130"}{  } &
+    \begin{eq}{\tilde{n}}{_{{N S}}} := {V}{_{N}} \stackrel{N}{\,\star\,} \left({P}{_{N, {N K}}} \stackrel{{N K}}{\,\star\,} \left(\left({K}{_{{N K}}} \, . \, {\phi}{_{{N K}}}\right) \, . \, \left({P}{_{{N S}, {K S}}} \stackrel{{K S}}{\,\star\,} {N}{_{{N K}, {K S}}}\right)\right)\right)\end{eq} &
+    \begin{lay}the species production term\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hline
 \end{longtable}

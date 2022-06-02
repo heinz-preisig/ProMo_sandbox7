@@ -405,7 +405,7 @@
     "variable_ID": 101,
     "lhs": "dndt",
     "network": "macroscopic",
-    "rhs": "np.add(fnc, fnd)"
+    "rhs": "np.add(np.add(fnc, fnd), _nProd)"
   },
   "77": {
     "variable_ID": 102,
@@ -682,5 +682,17 @@
     "lhs": "phi",
     "network": "reactions",
     "rhs": "Product( np.power(x, N_NK_KS) \\, K_x_S )"
+  },
+  "130": {
+    "variable_ID": 163,
+    "lhs": "nProd",
+    "network": "reactions",
+    "rhs": "np.transpose(np.dot(np.transpose(V), (np.dot(P_N_NK, np.transpose((np.multiply(np.transpose((np.multiply(K_NK, phi))), (np.dot(P_NS_KS, np.transpose(N_NK_KS))))))))))"
+  },
+  "131": {
+    "variable_ID": 164,
+    "lhs": "_nProd",
+    "network": "reactions >>> macroscopic",
+    "rhs": "nProd"
   }
 }

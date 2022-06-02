@@ -65,7 +65,7 @@
 73 :: c_AS =  ( onehalf . ( F_NS_AS - d : abs ( F_NS_AS ) ) ) | N & S | c
 74 :: fnc_AS =  fV : c_AS
 75 :: fnc =  F_NS_AS | A & S | fnc_AS
-76 :: dndt =  fnc + fnd
+76 :: dndt =  fnc + fnd + _nProd
 77 :: fHc_A =  ( F_NS_AS | N & S | _h ) | S in A & S | fnc_AS
 78 :: fHc =  F_N_A | A | fHc_A
 79 :: fw_A =  Instantiate ( fHc_A , value )
@@ -112,3 +112,5 @@
 127 :: GasConstant =  Avogadro . Boltzmann
 128 :: N_NK_KS =  P_K_NK | K | N_K_KS
 129 :: phi =  Product ( x ^ ( N_NK_KS ) , K & S )
+130 :: nProd =  V | N | ( P_N_NK | N & K | ( ( K_NK . phi ) . ( P_NS_KS | K & S | N_NK_KS ) ) )
+131 :: _nProd =  nProd

@@ -405,7 +405,7 @@
     "variable_ID": 101,
     "lhs": "dndt",
     "network": "macroscopic",
-    "rhs": "fnc + fnd"
+    "rhs": "fnc + fnd + _nProd"
   },
   "77": {
     "variable_ID": 102,
@@ -682,5 +682,17 @@
     "lhs": "phi",
     "network": "reactions",
     "rhs": "Product( x ** (N_NK_KS) \\, K_x_S )"
+  },
+  "130": {
+    "variable_ID": 163,
+    "lhs": "nProd",
+    "network": "reactions",
+    "rhs": "( ( V )'  * (P_N_NK * ( (( (K_NK .* phi) )'  .* (P_NS_KS * ( N_NK_KS )' )) )' ) )' "
+  },
+  "131": {
+    "variable_ID": 164,
+    "lhs": "_nProd",
+    "network": "reactions >>> macroscopic",
+    "rhs": "nProd"
   }
 }
