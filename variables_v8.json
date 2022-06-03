@@ -16,7 +16,7 @@
     "2": {
       "aliases": "{'global_ID': ' V_2', 'python': 'one', 'cpp': 'one', 'matlab': 'one', 'latex': '1', 'internal_code': 'one'}",
       "doc": "numerical value one",
-      "equations": "{1: {'rhs': ' O_11 D_0 V_1 D_7 V_1 D_1', 'type': 'generic', 'doc': 'numerical value 1', 'network': 'root', 'incidence_list': ['1']}}",
+      "equations": "{1: {'rhs': ' O_11 D_0 V_1 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'numerical value 1', 'network': 'root', 'incidence_list': ['1']}}",
       "index_structures": "[]",
       "label": "one",
       "network": "root",
@@ -28,7 +28,7 @@
     "3": {
       "aliases": "{'global_ID': ' V_3', 'python': 'zero', 'cpp': 'zero', 'matlab': 'zero', 'latex': '0', 'internal_code': 'zero'}",
       "doc": "numerical value zero",
-      "equations": "{2: {'rhs': ' O_11 D_0 V_1 D_7 V_1 D_1', 'type': 'generic', 'doc': 'numerical value zero', 'network': 'root', 'incidence_list': ['1']}}",
+      "equations": "{2: {'rhs': ' O_11 D_0 V_1 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'numerical value zero', 'network': 'root', 'incidence_list': ['1']}}",
       "index_structures": "[]",
       "label": "zero",
       "network": "root",
@@ -40,7 +40,7 @@
     "4": {
       "aliases": "{'global_ID': ' V_4', 'python': 'onehalf', 'cpp': 'onehalf', 'matlab': 'onehalf', 'latex': '0.5', 'internal_code': 'onehalf'}",
       "doc": "numerical value one half",
-      "equations": "{3: {'rhs': ' O_11 D_0 V_1 D_7 V_1 D_1', 'type': 'generic', 'doc': 'numerical value one half', 'network': 'root', 'incidence_list': ['1']}}",
+      "equations": "{3: {'rhs': ' O_11 D_0 V_1 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'numerical value one half', 'network': 'root', 'incidence_list': ['1']}}",
       "index_structures": "[]",
       "label": "onehalf",
       "network": "root",
@@ -64,7 +64,7 @@
     "6": {
       "aliases": "{'global_ID': ' V_6', 'python': 'to', 'cpp': 'to', 'matlab': 'to', 'latex': '{t^o}', 'internal_code': 'to'}",
       "doc": "starting time",
-      "equations": "{4: {'rhs': ' O_11 D_0 V_5 D_7 V_1 D_1', 'type': 'generic', 'doc': 'starting time', 'network': 'root', 'incidence_list': ['1', '5']}}",
+      "equations": "{4: {'rhs': ' O_11 D_0 V_5 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'starting time', 'network': 'root', 'incidence_list': ['1', '5']}}",
       "index_structures": "[]",
       "label": "to",
       "network": "root",
@@ -76,7 +76,7 @@
     "7": {
       "aliases": "{'global_ID': ' V_7', 'python': 'te', 'cpp': 'te', 'matlab': 'te', 'latex': '{t^e}', 'internal_code': 'te'}",
       "doc": "end time",
-      "equations": "{5: {'rhs': ' O_11 D_0 V_5 D_7 V_1 D_1', 'type': 'generic', 'doc': 'end time', 'network': 'root', 'incidence_list': ['1', '5']}}",
+      "equations": "{5: {'rhs': ' O_11 D_0 V_5 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'end time', 'network': 'root', 'incidence_list': ['1', '5']}}",
       "index_structures": "[]",
       "label": "te",
       "network": "root",
@@ -676,7 +676,7 @@
     "62": {
       "aliases": "{'global_ID': ' V_62', 'python': 'Ea', 'cpp': 'Ea', 'matlab': 'Ea', 'latex': '{E^a}', 'internal_code': 'Ea'}",
       "doc": "Arrhenius activation energy",
-      "equations": "{41: {'rhs': ' O_11 D_0 V_157 O_4 V_60 D_7 V_1 D_1', 'type': 'generic', 'doc': 'Arrhenius activation energy', 'network': 'reactions', 'incidence_list': ['1', '157', '60']}}",
+      "equations": "{41: {'rhs': ' O_11 D_0 V_157 O_4 V_60 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'Arrhenius activation energy', 'network': 'reactions', 'incidence_list': ['1', '157', '60']}}",
       "index_structures": "[7]",
       "label": "Ea",
       "network": "reactions",
@@ -1144,7 +1144,7 @@
     "104": {
       "aliases": "{'global_ID': ' V_104', 'python': 'fw_A', 'cpp': 'fw_A', 'matlab': 'fw_A', 'latex': '{\\\\hat{w}}', 'internal_code': 'fw_A'}",
       "doc": "sample work stream",
-      "equations": "{79: {'rhs': ' O_11 D_0 V_102 D_7 V_1 D_1', 'type': 'generic', 'doc': 'sample work stream', 'network': 'macroscopic', 'incidence_list': ['1', '102']}}",
+      "equations": "{79: {'rhs': ' O_11 D_0 V_102 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'sample work stream', 'network': 'macroscopic', 'incidence_list': ['1', '102']}}",
       "index_structures": "[2]",
       "label": "fw_A",
       "network": "macroscopic",
@@ -1204,7 +1204,7 @@
     "109": {
       "aliases": "{'global_ID': ' V_109', 'python': 'Ho', 'cpp': 'Ho', 'matlab': 'Ho', 'latex': '{H^o}', 'internal_code': 'Ho'}",
       "doc": "initial enthalpy",
-      "equations": "{84: {'rhs': ' O_11 D_0 V_20 D_7 V_1 D_1', 'type': 'generic', 'doc': 'initial enthalpy', 'network': 'macroscopic', 'incidence_list': ['1', '20']}}",
+      "equations": "{84: {'rhs': ' O_11 D_0 V_20 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'initial enthalpy', 'network': 'macroscopic', 'incidence_list': ['1', '20']}}",
       "index_structures": "[1]",
       "label": "Ho",
       "network": "macroscopic",
@@ -1216,7 +1216,7 @@
     "110": {
       "aliases": "{'global_ID': ' V_110', 'python': 'no', 'cpp': 'no', 'matlab': 'no', 'latex': '{n^o}', 'internal_code': 'no'}",
       "doc": "initial species",
-      "equations": "{85: {'rhs': ' O_11 D_0 V_16 D_7 V_1 D_1', 'type': 'generic', 'doc': 'initial species', 'network': 'macroscopic', 'incidence_list': ['1', '16']}}",
+      "equations": "{85: {'rhs': ' O_11 D_0 V_16 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'initial species', 'network': 'macroscopic', 'incidence_list': ['1', '16']}}",
       "index_structures": "[5]",
       "label": "no",
       "network": "macroscopic",
@@ -1228,7 +1228,7 @@
     "112": {
       "aliases": "{'global_ID': ' V_112', 'python': 'additive', 'cpp': 'additive', 'matlab': 'additive', 'latex': '\\\\xi', 'internal_code': 'additive'}",
       "doc": "fraction of additives",
-      "equations": "{88: {'rhs': ' O_11 D_0 V_112 D_7 V_1 D_1', 'type': 'generic', 'doc': 'fraction of additives', 'network': 'material', 'incidence_list': ['1', '112']}}",
+      "equations": "{88: {'rhs': ' O_11 D_0 V_112 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'fraction of additives', 'network': 'material', 'incidence_list': ['1', '112']}}",
       "index_structures": "[]",
       "label": "additive",
       "network": "material",
@@ -1264,7 +1264,7 @@
     "115": {
       "aliases": "{'global_ID': ' V_115', 'python': 'elResist', 'cpp': 'elResist', 'matlab': 'elResist', 'latex': '{R^e}', 'internal_code': 'elResist'}",
       "doc": "electrical resistant",
-      "equations": "{91: {'rhs': ' F_15 D_0 V_114 D_1 O_4 V_27', 'type': 'generic', 'doc': 'electrical resistant', 'network': 'material', 'incidence_list': ['114', '27']}, 92: {'rhs': ' O_11 D_0 V_115 D_7 V_1 D_1', 'type': 'generic', 'doc': 'electrical resistant', 'network': 'material', 'incidence_list': ['1', '115']}}",
+      "equations": "{91: {'rhs': ' F_15 D_0 V_114 D_1 O_4 V_27', 'type': 'instantiate', 'doc': 'electrical resistant', 'network': 'material', 'incidence_list': ['114', '27']}, 92: {'rhs': ' O_11 D_0 V_115 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'electrical resistant', 'network': 'material', 'incidence_list': ['1', '115']}}",
       "index_structures": "[1]",
       "label": "elResist",
       "network": "material",
@@ -1300,7 +1300,7 @@
     "118": {
       "aliases": "{'global_ID': ' V_118', 'python': 'dUedt', 'cpp': 'dUedt', 'matlab': 'dUedt', 'latex': '{\\\\dot{U}^e}', 'internal_code': 'dUedt'}",
       "doc": "Kirkhoff first law",
-      "equations": "{96: {'rhs': ' V_2 O_4 V_27', 'type': 'generic', 'doc': 'Kirkhoff first law', 'network': 'macroscopic', 'incidence_list': ['2', '27']}, 97: {'rhs': ' F_18 D_0 V_27 D_1', 'type': 'generic', 'doc': 'Kirkhoff first law', 'network': 'macroscopic', 'incidence_list': ['27']}, 98: {'rhs': ' O_11 D_0 V_118 D_7 V_3 D_1', 'type': 'generic', 'doc': 'Kirkhoff first law', 'network': 'macroscopic', 'incidence_list': ['118', '3']}}",
+      "equations": "{96: {'rhs': ' V_2 O_4 V_27', 'type': 'generic', 'doc': 'Kirkhoff first law', 'network': 'macroscopic', 'incidence_list': ['2', '27']}, 97: {'rhs': ' F_18 D_0 V_27 D_1', 'type': 'generic', 'doc': 'Kirkhoff first law', 'network': 'macroscopic', 'incidence_list': ['27']}, 98: {'rhs': ' O_11 D_0 V_118 D_7 V_3 D_1', 'type': 'instantiate', 'doc': 'Kirkhoff first law', 'network': 'macroscopic', 'incidence_list': ['118', '3']}}",
       "index_structures": "[1]",
       "label": "dUedt",
       "network": "macroscopic",
@@ -1432,7 +1432,7 @@
     "133": {
       "aliases": "{'global_ID': ' V_133', 'python': 'setPoint', 'cpp': 'setPoint', 'matlab': 'setPoint', 'latex': '{y^o}', 'internal_code': 'setPoint'}",
       "doc": "set point",
-      "equations": "{119: {'rhs': ' O_11 D_0 V_133 D_7 V_1 D_1', 'type': 'generic', 'doc': 'set point', 'network': 'control', 'incidence_list': ['1', '133']}}",
+      "equations": "{119: {'rhs': ' O_11 D_0 V_133 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'set point', 'network': 'control', 'incidence_list': ['1', '133']}}",
       "index_structures": "[2]",
       "label": "setPoint",
       "network": "control",
@@ -1480,7 +1480,7 @@
     "137": {
       "aliases": "{'global_ID': ' V_137', 'python': 'xo', 'cpp': 'xo', 'matlab': 'xo', 'latex': 'xo', 'internal_code': 'xo'}",
       "doc": "initial state",
-      "equations": "{109: {'rhs': ' O_11 D_0 V_136 D_7 V_1 D_1', 'type': 'generic', 'doc': 'initial state', 'network': 'control', 'incidence_list': ['1', '136']}}",
+      "equations": "{109: {'rhs': ' O_11 D_0 V_136 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'initial state', 'network': 'control', 'incidence_list': ['1', '136']}}",
       "index_structures": "[1]",
       "label": "xo",
       "network": "control",
@@ -1624,7 +1624,7 @@
     "152": {
       "aliases": "{'global_ID': ' V_152', 'python': 'co', 'cpp': 'co', 'matlab': 'co', 'latex': '{c^o}', 'internal_code': 'co'}",
       "doc": "norming concentration",
-      "equations": "{124: {'rhs': ' O_11 D_0 V_151 D_7 V_1 D_1', 'type': 'generic', 'doc': 'norming concentration', 'network': 'reactions', 'incidence_list': ['1', '151']}}",
+      "equations": "{124: {'rhs': ' O_11 D_0 V_151 D_7 V_1 D_1', 'type': 'instantiate', 'doc': 'norming concentration', 'network': 'reactions', 'incidence_list': ['1', '151']}}",
       "index_structures": "[7, 8]",
       "label": "co",
       "network": "reactions",
@@ -1718,7 +1718,7 @@
       "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
     },
     "162": {
-      "aliases": "{'global_ID': ' V_162', 'python': 'P_N_NS', 'cpp': 'P_N_NS', 'matlab': 'P_N_NS', 'latex': 'P_N_NS', 'internal_code': 'P_N_NS'}",
+      "aliases": "{'global_ID': ' V_162', 'python': 'P_N_NS', 'cpp': 'P_N_NS', 'matlab': 'P_N_NS', 'latex': 'P', 'internal_code': 'P_N_NS'}",
       "doc": "projection of nodes onto the node species",
       "equations": "{}",
       "index_structures": "[1, 5]",

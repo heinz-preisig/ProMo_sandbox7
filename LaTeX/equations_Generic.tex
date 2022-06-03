@@ -12,26 +12,6 @@ no & equation &documentation &layer \\\hline\hline
 \hline
 \endlastfoot
 
-\hyperlink{"v:2"}{ 1 }\hypertarget{"e:1"}{  } &
-    \begin{eq}{1}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
-    \begin{lay}numerical value 1\end{lay} &
-    \begin{lay}root\end{lay} \\
-\hyperlink{"v:3"}{ 2 }\hypertarget{"e:2"}{  } &
-    \begin{eq}{0}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
-    \begin{lay}numerical value zero\end{lay} &
-    \begin{lay}root\end{lay} \\
-\hyperlink{"v:4"}{ 3 }\hypertarget{"e:3"}{  } &
-    \begin{eq}{0.5}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} &
-    \begin{lay}numerical value one half\end{lay} &
-    \begin{lay}root\end{lay} \\
-\hyperlink{"v:6"}{ 4 }\hypertarget{"e:4"}{  } &
-    \begin{eq}{{t^o}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} &
-    \begin{lay}starting time\end{lay} &
-    \begin{lay}root\end{lay} \\
-\hyperlink{"v:7"}{ 5 }\hypertarget{"e:5"}{  } &
-    \begin{eq}{{t^e}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} &
-    \begin{lay}end time\end{lay} &
-    \begin{lay}root\end{lay} \\
 \hyperlink{"v:17"}{ 6 }\hypertarget{"e:6"}{  } &
     \begin{eq}{p}{_{N}} := \left( -\ParDiff{{U}{_{N}}}{{V}{_{N}}} \right)\end{eq} &
     \begin{lay}thermodynamic pressure\end{lay} &
@@ -144,10 +124,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{T}{_{{N K}}} := {P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {T}{_{N}}\end{eq} &
     \begin{lay}temperature of the reactive system\end{lay} &
     \begin{lay}reactions\end{lay} \\
-\hyperlink{"v:62"}{ 41 }\hypertarget{"e:41"}{  } &
-    \begin{eq}{{E^a}}{_{{N K}}} := \text{Instantiate}({R}{_{}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} &
-    \begin{lay}Arrhenius activation energy\end{lay} &
-    \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:63"}{ 42 }\hypertarget{"e:42"}{  } &
     \begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {R}{_{}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} &
     \begin{lay}Arrhenius reaction 'constant'\end{lay} &
@@ -216,10 +192,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{\hat{H}^c}}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {{\hat{H}^c}}{_{A}}\end{eq} &
     \begin{lay}net convectional enthalpy stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:104"}{ 79 }\hypertarget{"e:79"}{  } &
-    \begin{eq}{{\hat{w}}}{_{A}} := \text{Instantiate}({{\hat{H}^c}}{_{A}}, {\#}{_{}})\end{eq} &
-    \begin{lay}sample work stream\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:105"}{ 80 }\hypertarget{"e:80"}{  } &
     \begin{eq}{{\hat{w}}}{_{N}} := {F}{_{N, A}} \stackrel{A}{\,\star\,} {{\hat{w}}}{_{A}}\end{eq} &
     \begin{lay}net work stream\end{lay} &
@@ -236,14 +208,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{\dot{H}}}{_{N}} := {{\hat{H}^c}}{_{N}}  + {{\hat{H}^d}}{_{N}}  + {{\hat{q}}}{_{N}}  + {{\hat{w}}}{_{N}}\end{eq} &
     \begin{lay}differential enthalpy balance\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:109"}{ 84 }\hypertarget{"e:84"}{  } &
-    \begin{eq}{{H^o}}{_{N}} := \text{Instantiate}({H}{_{N}}, {\#}{_{}})\end{eq} &
-    \begin{lay}initial enthalpy\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:110"}{ 85 }\hypertarget{"e:85"}{  } &
-    \begin{eq}{{n^o}}{_{{N S}}} := \text{Instantiate}({n}{_{{N S}}}, {\#}{_{}})\end{eq} &
-    \begin{lay}initial species\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:16"}{ 86 }\hypertarget{"e:86"}{  } &
     \begin{eq}{n}{_{{N S}}} := \int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \, {\dot{n}}{_{{N S}}} \enskip d\,{t}{_{}}\end{eq} &
     \begin{lay}fundamental state -- molar mass\end{lay} &
@@ -252,22 +216,10 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{H}{_{N}} := \int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \, {{\dot{H}}}{_{N}} \enskip d\,{t}{_{}}\end{eq} &
     \begin{lay}enthalpy\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:112"}{ 88 }\hypertarget{"e:88"}{  } &
-    \begin{eq}{\xi}{_{}} := \text{Instantiate}({\xi}{_{}}, {\#}{_{}})\end{eq} &
-    \begin{lay}fraction of additives\end{lay} &
-    \begin{lay}material\end{lay} \\
 \hyperlink{"v:113"}{ 89 }\hypertarget{"e:89"}{  } &
     \begin{eq}{I}{_{N}} := \TotDiff{{C}{_{N}}}{{t}{_{}}}\end{eq} &
     \begin{lay}electrical current definition\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:115"}{ 91 }\hypertarget{"e:91"}{  } &
-    \begin{eq}{{R^e}}{_{N}} := \left( {i}{_{N}} \right)^{-1} \, . \, {Ue}{_{N}}\end{eq} &
-    \begin{lay}electrical resistant\end{lay} &
-    \begin{lay}material\end{lay} \\
-\hyperlink{"v:115"}{ 92 }\hypertarget{"e:92"}{  } &
-    \begin{eq}{{R^e}}{_{N}} := \text{Instantiate}({{R^e}}{_{N}}, {\#}{_{}})\end{eq} &
-    \begin{lay}electrical resistant\end{lay} &
-    \begin{lay}material\end{lay} \\
 \hyperlink{"v:116"}{ 93 }\hypertarget{"e:93"}{  } &
     \begin{eq}{{k^{e,\xi}}}{_{N}} := \left( {{R^e}}{_{N}} \right)^{-1} \, . \, {\xi}{_{}}\end{eq} &
     \begin{lay}simple model for the electrical conductivity as a function of the additive\end{lay} &
@@ -284,10 +236,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{\dot{U}^e}}{_{N}} := Root\left( {Ue}{_{N}}\right)\end{eq} &
     \begin{lay}Kirkhoff first law\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:118"}{ 98 }\hypertarget{"e:98"}{  } &
-    \begin{eq}{{\dot{U}^e}}{_{N}} := \text{Instantiate}({{\dot{U}^e}}{_{N}}, {0}{_{}})\end{eq} &
-    \begin{lay}Kirkhoff first law\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:126"}{ 106 }\hypertarget{"e:106"}{  } &
     \begin{eq}{\phi}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}},{Ue}{_{N}} \right)\end{eq} &
     \begin{lay}collected intensities\end{lay} &
@@ -299,10 +247,6 @@ no & equation &documentation &layer \\\hline\hline
 \hyperlink{"v:135"}{ 108 }\hypertarget{"e:108"}{  } &
     \begin{eq}{e}{_{A}} := {m}{_{A}}  - {{y^o}}{_{A}}\end{eq} &
     \begin{lay}control error\end{lay} &
-    \begin{lay}control\end{lay} \\
-\hyperlink{"v:137"}{ 109 }\hypertarget{"e:109"}{  } &
-    \begin{eq}{xo}{_{N}} := \text{Instantiate}({x}{_{N}}, {\#}{_{}})\end{eq} &
-    \begin{lay}initial state\end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:138"}{ 110 }\hypertarget{"e:110"}{  } &
     \begin{eq}{{\dot{x}}}{_{D}} := {A}{_{N, D}} \stackrel{N}{\,\star\,} {x}{_{N}}  + {B}{_{A, D}} \stackrel{A}{\,\star\,} {e}{_{A}}\end{eq} &
@@ -332,17 +276,9 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{store}{_{}} := \text{MixedStack}\left( {{\check{I}}}{_{N}},{{\check{U}^e}}{_{N}},{RComputed}{_{N}},{{\check{\xi}}}{_{}} \right)\end{eq} &
     \begin{lay}quantities to be stored\end{lay} &
     \begin{lay}control\end{lay} \\
-\hyperlink{"v:133"}{ 119 }\hypertarget{"e:119"}{  } &
-    \begin{eq}{{y^o}}{_{A}} := \text{Instantiate}({{y^o}}{_{A}}, {\#}{_{}})\end{eq} &
-    \begin{lay}set point\end{lay} &
-    \begin{lay}control\end{lay} \\
 \hyperlink{"v:151"}{ 123 }\hypertarget{"e:123"}{  } &
     \begin{eq}{c}{_{{N K}, {K S}}} := {P}{_{{N K}}} \, . \, \left({P}{_{{N S}, {K S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\right)\end{eq} &
     \begin{lay}var doc : \end{lay} &
-    \begin{lay}reactions\end{lay} \\
-\hyperlink{"v:152"}{ 124 }\hypertarget{"e:124"}{  } &
-    \begin{eq}{{c^o}}{_{{N K}, {K S}}} := \text{Instantiate}({c}{_{{N K}, {K S}}}, {\#}{_{}})\end{eq} &
-    \begin{lay}norming concentration\end{lay} &
     \begin{lay}reactions\end{lay} \\
 \hyperlink{"v:153"}{ 125 }\hypertarget{"e:125"}{  } &
     \begin{eq}{x}{_{{N K}, {K S}}} := \left( {{c^o}}{_{{N K}, {K S}}} \right)^{-1} \, . \, {c}{_{{N K}, {K S}}}\end{eq} &
